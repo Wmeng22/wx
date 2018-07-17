@@ -1,0 +1,204 @@
+.container{
+    position: relative;
+    padding: 0 40rpx 100rpx;
+}
+.flex_row{
+    display: flex;
+    flex-direction: row;
+}
+.top{
+    border-bottom: 1px solid #2a2a2a;
+    height: 98rpx;
+    line-height: 98rpx;
+    position: relative;
+}
+.top .un{
+    height: 4rpx;
+    background-color: #ffffff;
+    width: 32rpx;
+    position: absolute;
+    bottom:0;
+    left: 25rpx
+}
+.nav{
+    padding-right: 70rpx;
+    padding-left: 10rpx;
+    line-height: 98rpx;
+
+}
+.nav.active{
+    font-weight: bold;
+    color: #fff;
+}
+.order_head{
+    height: 95rpx;
+    box-sizing: border-box;
+    padding-left: 26rpx;
+    padding-top: 50rpx;
+ 
+}
+.order_head .time{
+    color:#6f6f6f;
+    font-size: 24rpx;
+}
+.order_head .status{
+    color:#c6451b;
+    font-size: 24rpx;
+    padding-left: 30rpx
+}
+.order_body{
+    height: 265rpx;
+    background-color: #ecedef;
+    border-radius: 8rpx;
+    position: relative;
+    overflow: hidden;
+}
+.order_body .name,.order_body .price,.order_body image,.order_body .btn,.order_body .kezi_content{
+    position: absolute;
+}
+.order_body .kezi_content{
+    transform:rotate(7deg);
+    text-align:center;
+    width:110rpx;
+    left:246rpx;
+    top:100rpx;
+    font-size:18rpx;
+    z-index:9;
+}
+.order_body .name{
+    left: 50rpx;
+    top: 64rpx;
+    width: 190rpx;
+    font-size: 30rpx;
+    font-weight: 700;
+    color:#404040;
+}
+.order_body .price{
+    left: 50rpx;
+    top: 165rpx;
+    font-size: 30rpx;
+    font-weight: 700;
+    background-color: #c6451b;
+    border-radius: 20rpx;
+    height: 40rpx;
+    padding:0 20rpx;
+    color:#1a1a1a;
+    line-height: 40rpx;
+    text-align: center
+}
+.order_body .btn{
+    border: none;
+    height: 54rpx;
+    width: 156rpx;
+    background-color: black;
+    line-height: 54rpx;
+    text-align: center;
+    bottom: 18rpx;
+    right: 32rpx;
+    color:#ffffff;
+    font-size: 24rpx;
+    border-radius: 0
+}
+.order_body .img{
+    height:320rpx;
+    width:375rpx;
+    top:-70rpx;
+    right:50rpx;
+
+}
+.null_wrap{
+    padding-top: 55rpx;
+    width: 450rpx;
+    height: 544rpx;
+    background-color: #ecedef;
+    left: 50%;
+    margin-left: -225rpx;
+    position: absolute;
+    top: 252rpx;
+    border-radius: 10rpx ;
+    box-sizing: border-box;
+}
+.null_wrap .t1{
+    text-align: center;
+    font-size:34rpx;
+    color:#1a1a1a;
+    line-height: 60rpx;
+}
+.null_wrap .t2{
+    text-align: center;
+    font-size:26rpx;
+    color:#9b9b9b;
+}
+.null_wrap .icon{
+    padding-top: 60rpx;
+    width: 150rpx;
+    height: 150rpx;
+    margin:0 auto;
+}
+.null_wrap .start{
+    width: 190rpx;
+    height: 60rpx;
+    background-color: black;
+    text-align: center;
+    line-height: 60rpx;
+    font-size: 26rpx;
+    margin:66rpx auto 0;
+}
+.goMenu{
+    height: 64rpx;
+    width: 64rpx;
+    background-image:url('https://static.heygears.com/wxapp/imgs/icon_list.png');
+    background-repeat:no-repeat;
+    background-size:64rpx 64rpx;
+    position: absolute;
+    top:20rpx;
+    right:40rpx;
+    z-index: 999
+}
+.goMenu.showMenu{
+    background-image:url('https://static.heygears.com/wxapp/imgs/icon_close64x64.png');
+    background-repeat:no-repeat;
+    background-size:64rpx 64rpx;
+}
+.MenuList{
+    position: absolute;
+    height: 670rpx;
+    width: 590rpx;
+    left:50%;
+    margin-left: -285rpx;
+    z-index: 999;
+    background-color: #0e0f0f;
+    padding-top: 50rpx;
+    top: 157rpx;
+}
+.MenuList .item{
+    height: 150rpx;
+    border-bottom: 3rpx solid #333333;
+    box-sizing: border-box;
+    line-height: 150rpx;
+    color: #fff;
+    font-size: 30rpx;
+    width: 394rpx;
+    margin: 0 auto;
+    padding-left: 178rpx;
+}
+.MenuList .item:last-child{
+    border-bottom: none
+}
+.MenuList .item.index{
+    background: url('https://static.heygears.com/wxapp/imgs/icon_design44x44@2x.png') 80rpx center no-repeat;
+    background-size: 42rpx 42rpx;
+}
+.MenuList .item.order{
+    background: url('https://static.heygears.com/wxapp/imgs/icon_orde_listr44x44@2x.png') 80rpx center no-repeat;
+    background-size: 42rpx 42rpx;
+}
+.MenuList .item.setting{
+    background: url('https://static.heygears.com/wxapp/imgs/icon_setting44x44@2x.png') 80rpx center no-repeat;
+    background-size: 42rpx 42rpx;
+}
+.MenuList .item.login{
+    background: url('https://static.heygears.com/wxapp/imgs/User.png') 80rpx center no-repeat;
+    background-size: 34rpx 34rpx;
+}
+

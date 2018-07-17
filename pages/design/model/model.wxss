@@ -1,0 +1,127 @@
+.wrap{
+    padding-top: 27rpx;
+}
+.modelItem{
+    position: relative;
+    height: 325rpx;
+    width: 606rpx;
+    border-radius: 12rpx;
+    background-color: #313131;
+    margin: 0 auto;
+    margin-top: 57rpx;
+    border: 1rpx solid #313131;
+    box-sizing: border-box;
+}
+.modelItem.highlighted{
+    border: 1rpx solid #c6451b;
+}
+.modelItem .modelImg{
+    width: 331rpx;
+    height: 325rpx;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.modelItem .modelName{
+    position: absolute;
+    top: 26rpx;
+    left: 330rpx;
+    font-size: 30rpx;
+}
+.modelItem .modelName .property_name{
+    height: 34rpx;
+    line-height: 34rpx;
+    color: #fff;
+}
+.modelItem .modelDes{
+    position: absolute;
+    top: 82rpx;
+    left: 325rpx;
+}
+.modelItem .modelDes.isPRI{
+    top: 114rpx;
+}
+.modelItem .modelDes .itemDes{
+    color: #6d6d6d;
+    height: 34rpx;
+    line-height: 34rpx;
+}
+.modelItem .modelPrice {
+    position: absolute;
+    z-index: 9;
+    font-size: 30rpx;
+    color: #fff;
+    bottom: 20rpx;
+    right: 20rpx;
+}
+.modelItem .question{
+    position: absolute;
+    width: 33rpx;
+    height: 33rpx;
+    top: 16rpx;
+    right: 17rpx;
+}
+/*条款*/
+
+.treaty .title{
+    text-align: center;
+    width: 100%;
+    font-size: 30rpx;
+    color: #fff;
+    padding-top: 94rpx;
+}
+.treaty .content .item{
+    padding: 48rpx 97rpx 0;
+    line-height: 28rpx;
+    color: #5f5f5f;
+    font-size: 26rpx;
+}
+.treaty .agreeIcon{
+    font-size: 30rpx;
+    margin-top: 96rpx;
+    padding-top: 14rpx;
+    padding-bottom: 20rpx;
+    color: #fff;
+    margin-right: 100rpx;
+    text-align: right;
+    background: url('https://static.heygears.com/wxapp/imgs/icon_selected_nor44x44@2x.png') 375rpx 0rpx no-repeat;
+    background-size: 56rpx 56rpx;
+}
+.treaty .agreeIcon.highlighted{
+    background: url('https://static.heygears.com/wxapp/imgs/icon_selected_sel44x44@2x.png') 375rpx 0rpx no-repeat;
+    background-size: 56rpx 56rpx;
+}
+.showQuestion{
+    width: 487rpx;
+    height: 488rpx;
+    background-color: #313131;
+    border-radius: 10rpx;
+    position: absolute;
+    top: 200rpx;
+    left: 50%;
+    margin-left: -243rpx;
+    z-index: 999;
+}
+.showQuestion .title{
+    color: #fff;
+    text-align: center;
+    padding-bottom: 18rpx;
+    padding-top: 54rpx;
+    font-size: 30rpx;
+}
+.showQuestion .content{
+    color: #6f6f6f;
+    margin-top: 30rpx ;
+    margin-left: 50rpx;
+    margin-right: 40rpx;
+    font-size: 26rpx;
+    line-height: 30rpx;
+}
+.showQuestion .closeQuestion{
+    position: absolute;
+    width: 34rpx;
+    height: 34rpx;
+    top: 10rpx;
+    right: 20rpx;
+}

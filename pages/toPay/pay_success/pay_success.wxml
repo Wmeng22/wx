@@ -1,0 +1,12 @@
+<view class="container flex_column">
+    <text class="success_tip">您已经成功支付！</text>
+    <text  wx:if="{{model == 'PRIVATEMODEL'}}" class="thank_tip">我们会先为您邮寄一个快递盒，供您将耳印寄回给我们。盒内附有一张到付的快递单，您只需填写好邮寄信息寄至黑格即可。</text>
+    <text  wx:else class="thank_tip">感谢您对黑格的支持</text>
+    <block wx:if="{{model == 'PRIVATEMODEL'}}">
+        <view class='hasColor' bindtap='toMap'>取耳印需知</view>
+    </block>
+    <block wx:else >
+        <view class='hasColor' bindtap='order_detail'>查看详情</view>
+        <navigator url="/pages/index/index" open-type="redirectTo" class='noColor'>返回首页</navigator>
+    </block>
+</view>

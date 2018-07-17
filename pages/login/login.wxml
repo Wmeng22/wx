@@ -1,0 +1,40 @@
+<view class="glo_err_tip" wx:if="{{iphone_err}}" >{{iphone_err_tip}}</view>
+<view class='goMenu {{showFade?"showMenu":""}}' bindtap='goMenu'></view>
+<view class="fade" wx:if='{{showFade}}'>
+</view>
+<view wx:if='{{showFade}}' class="MenuList">
+  <view bindtap='goNav' data-nav='index' class='item index'>定制主页</view>
+  <view bindtap='goNav'  data-nav='order' class='item order'>我的订单</view>
+  <view  bindtap='goNav' data-nav='setting' class='item setting'>常用设置</view>
+  <view  bindtap='goNav' data-nav='login' class='item login'>
+    <text wx:if='{{!isLogined}}' class="" bindtap='toLogin'>注册/登录</text>
+    <text wx:else class="" bindtap='cancelLogin'>退出当前账号</text>
+  </view>
+</view>
+<view class='view_container'>
+  <view class='header'>
+   <!--  <image class='avatar' bindtap='chooseAvatar' style='width:200rpx;height:200rpx;border-radius:50%' src="{{avatar}}"></image> -->
+       <text class='tip'>您好！为能更好的享受接下来的服务，请先注册。</text>
+  </view>
+  <view class="content">
+    <form action="">
+      <!-- <text class='label'>昵称</text>
+      <view class="wrap">
+        <input name='name' bindinput="nameInput" placeholder="请输入您的昵称" value='{{name}}' />
+      </view> -->
+      <text class='label'>手机号</text>
+      <view class="wrap">
+        <input name='phone' bindblur="iphoneBlur" placeholder="请输入手机号码" value='{{iphone}}' />
+        <text class='send_code' bindtap="send_code">{{code_status}}</text>
+      </view>
+      <text class='label'>验证码</text>
+      <view class="wrap">
+        <input name='code' bindblur='isCodeNull'  placeholder="请输入验证码" value='{{code}}' />
+        <text class='err_tip' wx:if="{{code_tip}}">验证码不能为空</text>
+        <image class='tip_img' wx:if="{{isCorrect}}" style='width:36rpx;height:36rpx' src="https://static.heygears.com/wxapp/imgs/icon_correct36x36@2x.png"></image>
+        <image class='tip_img' wx:if="{{isWrong}}" style='width:36rpx;height:36rpx' src="https://static.heygears.com/wxapp/imgs/icon_wrong36x36@2x.png"></image>
+      </view>
+      <button type="submit" bindtap='submit' class='submit'>注册</button>
+    </form>
+  </view>
+</view>

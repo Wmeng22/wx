@@ -1,0 +1,170 @@
+.list_title {
+    margin-top: 44rpx;
+    color: #c6451b;
+    font-size: 24rpx;
+    height: 46rpx;
+    line-height: 46rpx;
+}
+.list_content {
+    border-bottom: 1px solid #313131;
+    /*height: 79rpx;*/
+    line-height: 80rpx;
+    font-size: 24rpx;
+    color: #818181;
+}
+.detailWrap{
+    padding-bottom: 300rpx;
+}
+.container {
+    position: relative;
+    padding: 0 76rpx;
+}
+.order_status{
+    width: 100%;
+    color:#c6451b;
+    font-size: 24rpx;
+    text-align: center
+}
+.order_img{
+    height: 380rpx;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin-top:10rpx;
+
+}
+.order_img .img,.order_img .kezi{
+    width:675rpx;
+    height:576rpx;
+    position:absolute;
+    top:-100rpx;
+    left:30rpx;
+}
+.order_img .kezi .kezi_content{
+    position: absolute;
+    left:45rpx;
+    top:310rpx;
+    transform:rotate(7deg);
+    text-align: center;
+    width: 110rpx;
+}
+.order_num{
+    font-size: 25rpx;
+    border-bottom: 1px solid #313131;
+    height: 79rpx;
+    line-height: 80rpx;
+}
+.wrap .service{
+    position: absolute;
+    top:45rpx;
+    right:0;
+    font-size:22rpx;
+    color:#c6451b;
+    padding-left: 40rpx;
+    background: url('https://static.heygears.com/wxapp/imgs/icon_service24x24@2x.png') no-repeat left center;
+    background-size: 20rpx 20rpx;
+    border: none;
+}
+.list_content .pro_name{
+    width: 500rpx;
+    font-size: 26rpx
+}
+
+.list_content .pro_value{
+    line-height: 38rpx;
+    padding:10px;
+    padding-top: 24rpx;
+    width:100%;
+    text-align:right;
+}
+.container_2{
+    padding-bottom: 400rpx
+}
+button[plain].bottomButton{
+    position:fixed;
+    bottom:0;
+    width: 256rpx;
+    color:black;
+    background-color:#1a1a1a;
+    color:#c6451b;
+    height:88rpx;
+    text-align:center;
+    line-height:88rpx;
+    font-size:30rpx;
+    border-radius:0;
+    border:1px solid #1a1a1a;
+}
+/*view.bottomButton{*/
+    /*display: inline-block;*/
+    /*width: 494rpx;*/
+    /*right: 0;*/
+    /*color:#fff*/
+/*}*/
+.bottomButton.check_makerecordlist{
+    position:fixed;
+    right: 0;
+    bottom: 0;
+    width: 494rpx;
+    color: #fff;
+    background-color:#c6451b;
+    height: 88rpx;
+    text-align:center;
+    line-height: 88rpx;
+    font-size: 30rpx;
+    border-radius:0;
+}
+.bottomButton_2{
+    position:fixed;
+    bottom:0;
+    width: 100%;
+    background-color: #c6451b;
+    color:#fff;
+    height:88rpx;
+    text-align:center;
+    line-height:88rpx;
+    font-size:30rpx;
+    border-radius:0;
+    border:none;
+}
+.list_style{
+    border-bottom: 1px solid #313131;
+    padding: 14rpx 0;
+}
+.list_detail{
+    font-size: 26rpx;
+    line-height: 52rpx;
+}
+.list_detail .pro_title{
+    color: #818181;
+}
+.list_detail .pro_title.titleHide{
+    color: #1a1a1a
+}
+.list_detail .pro_des{
+    color: #fff;
+}
+.list_detail .pro_price{
+    color: #fff;
+    text-align: right;
+    float: right;
+}
+.order_number{
+    font-size: 26rpx;
+}
+.bottom_btn_db .goPre{
+    width: 180rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    text-align: center;
+    background: #1a1a1a ;
+    color: #c6451b;
+    font-size:30rpx;
+}
+.order_num .earName{
+    font-size: 28rpx;
+    color:#fff;
+}
+.order_num .earPrice{
+    font-size: 44rpx;
+    color: #c6451b;
+}

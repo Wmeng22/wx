@@ -1,0 +1,127 @@
+
+.header{
+    height: 348rpx;
+    position: relative;
+}
+/*请为您的耳机命名*/
+.header .named_title{
+    position: absolute;
+    font-size: 30rpx;
+    top:108rpx;
+    left: 90rpx;
+    color: #fff;
+}
+/*命名输入框*/
+.header .named_input{
+    position: absolute;
+    top:190rpx;
+    left: 78rpx;
+    height: 55rpx;
+    width: 327rpx;
+    line-height: 55rpx;
+    background-color: #313131;
+    color: #fff;
+    border-radius: 12rpx;
+    padding-left: 12rpx;
+}
+/*命名错误提示*/
+.header .errorTip{
+    position: absolute;
+    top: 267rpx;
+    left: 90rpx;
+    color: #777777;
+    font-size: 24rpx;
+}
+/*水平线*/
+.header .hr{
+    position: absolute;
+    top: 348rpx;
+    width: 632rpx;
+    height: 3rpx;
+    background-color: #373737;
+    left: 50%;
+    margin-left: -316rpx;
+}
+/*官方推荐start*/
+.recommend{
+    margin:  0 66rpx;
+    /*background-color: pink;*/
+    /*height: 400rpx;*/
+}
+.recommend .official{
+    width: 100%;
+    text-align: center;
+    font-size: 30rpx;
+    padding-top: 76rpx;
+    color: #fff
+}
+.recommend .des{
+    font-size: 24rpx;
+    text-align: center;
+    padding-top: 23rpx;
+}
+.recommend swiper{
+    margin-top: 63rpx;
+    height: 450rpx;
+}
+.recommend .official_item{
+    width: 50%;
+    box-sizing: border-box;
+    border: 1rpx solid #313131;
+    height: 450rpx;
+    margin: 0 18rpx;
+    background-color: #313131;
+    border-radius: 14rpx;
+    position: relative;
+}
+.recommend .official_item.active{
+    border: 1rpx solid #c6451b;
+}
+.official_item .design_imgurl{
+    position: absolute;
+    /*left: 23rpx;*/
+    width: 285rpx;
+    height: 206rpx;
+}
+.official_item .design_name{
+    position: absolute;
+    left: 23rpx;
+    font-size: 30rpx;
+    color: #fff;
+    top: 208rpx;
+}
+.official_item .design_des{
+    position: absolute;
+    left: 23rpx;
+    top: 262rpx;
+    color: #676767;
+    width: 241rpx;
+    line-height: 28rpx;
+}
+.official_item .sale_price{
+    position: absolute;
+    left: 23rpx;
+    font-size: 30rpx;
+    color: #fff;
+    top: 400rpx;
+}
+.swiper-btn-wrapper {
+    margin-top: 50rpx;
+}
+.swiper-btn-wrapper .swiper-btn-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-btn-wrapper .swiper-btn-list .dot{
+    margin-left: 16rpx;
+    width: 17rpx;
+    height: 17rpx;
+    /*border:1px solid #c6451b;*/
+    background-color: #484848;
+    border-radius: 50%
+}
+.swiper-btn-wrapper .swiper-btn-list .dot.on{
+    background-color: #fff
+}
+/*官方推荐end*/

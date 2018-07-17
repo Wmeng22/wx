@@ -1,0 +1,25 @@
+<!-- <view class="container flex_column">
+    <text class="title d3b787">关注黑格科技</text>
+    <text class="sub_title gray">关注黑格科技</text>
+    <image bindtap='preview' style='width: 100%;margin:60rpx 0' src='https://static.heygears.com/wxapp/imgs/err/%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg'></image>
+    <text class="sub_title">扫一扫二维码或长按复制</text>
+</view> -->
+
+<view class="container">
+    <view class="title">1. 耳机售后政策：</view>
+    <view class="content">
+        定制耳机可享受一年保修服务，如有质量问题可联系客服进行维修或换货处理，寄回产品需保持配件和包装完好；由于定制耳机的特殊性，均不参加7天无理由退换货服务。
+    </view>
+    <view class="title">2. 配件售后政策：</view>
+    <view class="content">
+        单独购买的配件如不合适可申请退换货，赠送的配件不参加售后服务。请您于签收后48小时内联系客服办理退换货，运费需自理。寄回商品需保持完好，没有使用痕迹，不影响二次销售。
+    </view>
+    <view class="title">3. 售后流程申请：</view>
+    <view class="content">
+        点击小程序任意页面右上角找到客服，提供订单编号、收件人姓名与手机号，简要说明产品问题提交即可。售后人员审核通过后，将短信通知到您的手机号，您只需按指定地址寄回整套耳机（包括配件和说明书）即可。为了您享受到更高效的售后服务，请寄回耳机后将您的物流单号提交给客服。
+    </view>
+    <view class="title">4. 保修范围：</view>
+    <view class="content">
+        产品购买一年内非人为原因损坏可享受免费维修或者换新，（意外事故、误用、滥用、疏忽、非正常的物理、电力或机电压力，或者对产品任何部件进行修改所造成的缺陷或损坏，包括外观损坏不属于保修范围）；一年以上可以维修。
+    </view>
+</view>

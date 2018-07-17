@@ -1,0 +1,279 @@
+<canvas wx:if='{{hasCanvas}}' style="width: 750px; height: 640px;visibility:hidden;position: fixed;top:1500rpx;"  canvas-id='mycanvas'></canvas>
+<!-- 导航栏教程 -->
+<view class='tutorial_wrap' wx:if='{{tutorial_nav}}' disable-scroll="true" >
+    <image src='https://static.heygears.com/wxapp/imgs/tutorial/design_nav.png'></image>
+    <view bindtap='tutorial_nav_close' class='tutorial_nav_close'>关闭教程</view>
+</view>
+<!-- 左右耳切换教程 -->
+<view class='tutorial_wrap' wx:if='{{tutorial_err}}'>
+    <swiper bindchange="swiperChange" >
+        <swiper-item>
+            <image src='https://static.heygears.com/wxapp/imgs/tutorial/design_err1.png'></image>
+            <view bindtap='tutorial_err_close' class='tutorial_err_close'>关闭教程</view>
+        </swiper-item>
+        <swiper-item >
+            <image src='https://static.heygears.com/wxapp/imgs/tutorial/design_err2.png'></image>
+            <view bindtap='tutorial_err_close' class='tutorial_err_close'>关闭教程</view>
+        </swiper-item>
+        <swiper-item >
+        </swiper-item>
+    </swiper>
+    <view class="swiper-btn-wrapper" >
+        <view class="swiper-btn-list" >
+            <view  class="dot {{idx==tutorial_circle_active?'on':''}}"  wx:key='{{idx}}' wx:for="{{tutorial_circle}}" wx:for-index="idx" wx:for-item="itemName"></view>
+        </view>
+    </view>
+</view>
+<!-- 弹框 start-->
+<view class="popUp" wx:if='{{popUp}}'>
+    <view class="text">{{pop_content}}</view>
+    <view class="confirm" bindtap='confirmAction'>确认</view>
+    <view class="cancel" bindtap='cancelAction'>取消</view>
+</view>
+<!-- 弹框 end-->
+<!-- 选项的遮罩层 start -->
+<view class="fade" wx:if='{{showFade}}'>
+</view>
+<view class="fade_content" wx:if='{{showFade}}'>
+    <view class="nav">
+        <view bindtap='choose_nav' class="nav_item" data-idx='{{idx}}' wx:key='{{idx}}' wx:for="{{nav}}" wx:for-index="idx" wx:for-item="item">
+            <view class="nav_item_i {{idx==nav_idx?'highlighted':''}} {{idx==nav.length-1?'noborderR':''}}">{{item}}</view>
+        </view>
+    </view>
+    <scroll-view class="list" scroll-y>
+        <!-- 机身 -->
+        <block  wx:if='{{nav_idx==0}}' >
+            <view class="tipWrap">
+                <view class='tip'>底壳这里对材质进行选择后，</view>
+                <view class='tip'>每个材质也有相应颜色可供筛选。</view>
+            </view>
+            <view bindtap='choose_first'class="list_wrap {{first_fuse==idx?'choosed':''}}"  data-idx='{{idx}}' wx:key='{{idx}}' wx:for="{{fuse_Ptylist_l}}" wx:for-index="idx" wx:for-item="item">
+                <view class="list_item">
+                    <view class="line" wx:if='{{idx!=fuse_Ptylist_l.length-1 && first_fuse!=idx && first_fuse!=idx+1 }}'></view>
+                    <image class="small_kind" src='{{item.ptycategory_imgurl}}'></image>
+                    <text class="list_title">{{item.ptycategory_name}}</text>
+                    <text class="list_price">+ ¥ {{item.ptylist[0].property_price*1}}</text>
+                    <text class="list_des">{{item.ptycategory_des}}</text>
+                </view>
+            </view>
+            <!--<view  wx:if='{{nav_idx==0}}' class="list_wrap">-->
+            <!--<view class="list_item">-->
+            <!--<image class="small_kind" src='{{item.ptycategory_imgurl`}}'></image>-->
+            <!--<text class="list_title">金属炫彩底壳</text>-->
+            <!--<text class="list_price">+ ¥ 0</text>-->
+            <!--<text class="list_des">开发中...</text>-->
+            <!--<text class="list_des2">Coming soon</text>-->
+            <!--</view>-->
+            <!--</view>-->
+        </block>
+        <!-- 面板 -->
+        <block wx:if='{{nav_idx ==1}}'  >
+            <view class="tipWrap">
+                <view class='tip'>面板这里对材质进行选择后，</view>
+                <view class='tip'>每个材质也有相应颜色可供筛选。</view>
+            </view>
+            <view bindtap='choose_first'class="list_wrap {{first_panel==idx?'choosed':''}}"  data-idx='{{idx}}' wx:key='{{idx}}' wx:for="{{panel_Ptylist_l}}" wx:for-index="idx" wx:for-item="item">
+                <view class="list_item">
+                    <view class="line" wx:if='{{idx!=panel_Ptylist_l.length-1 && first_panel!=idx && first_panel!=idx+1 }}'></view>
+                    <image class="small_kind" src='{{item.ptycategory_imgurl}}'></image>
+                    <text class="list_title">{{item.ptycategory_name}}</text>
+                    <text class="list_price">+ ¥ {{item.ptylist[0].property_price*1}}</text>
+                    <text class="list_des">{{item.ptycategory_des}}</text>
+                    <text class="list_des"></text>
+                </view>
+            </view>
+        </block>
+        <!-- 刻字 -->
+        <view class='kezi_wrap' wx:if='{{nav_idx==2}}' >
+            <text>请输入您想在外壳上呈现的内容：</text>
+            <text class="{{kezi_wrong2?'highlighted':''}}">* 不能包含特殊字符</text>
+            <text class="{{kezi_wrong1?'highlighted':''}}">* 您最多可输入2个中文字符，4个英文/数字字符</text>
+            <text>* 温馨提示：刻字目前只限左耳</text>
+            <input value='{{kezi}}' bindinput='writeName' placeholder='点击输入' class='kezi_input' type="text" />
+            <image  wx:if='{{kezi!=""&&!kezi_wrong2&&!kezi_wrong1}}'  class='icon' src='https://static.heygears.com/wxapp/imgs/success.png'></image>
+            <image wx:if='{{kezi_wrong2 || kezi_wrong1}}' class='icon' src='https://static.heygears.com/wxapp/imgs/wrong.png'></image>
+            <text class='choose_position'>选择刻字位置</text>
+            <view class='front'>
+                <view class='keziContent'>{{kezi}}</view>
+            </view>
+            <view class='upside'></view>
+        </view>
+        <!-- LOGO -->
+        <view class='logo_wrap'  wx:if='{{nav_idx==3}}' >
+            <text>注意：</text>
+            <text>* 若您已经选择“刻字”，Logo仅会在右耳出现</text>
+            <text>* 若您未选择“刻字”，Logo则会默认在双耳均出现</text>
+        </view>
+        <!-- 线材 -->
+        <block wx:if='{{ nav_idx==4 }}'>
+            <view class="tipWrap">
+                <view class='tip'>线材这里有多样的选择，</view>
+                <view class='tip'>满足多钟需求。</view>
+            </view>
+            <view  class="list_wrap" data-idx='{{idx}}' wx:key='{{idx}}' wx:for="{{line_Ptylist}}" wx:for-index="idx" wx:for-item="item">
+                <view class="list_item {{item.show?'show':''}}">
+                    <view class="line" wx:if='{{idx!=line_Ptylist.length-1}}'></view>
+                    <view class='tapWrap'  bindtap='showDetail' data-idx='{{idx}}'>
+                        <image wx:if='{{!item.show}}' class="small_kind" src='{{item.litimg}}'></image>
+                        <image wx:else class="small_kind" src='{{item.bigimg}}'></image>
+                        <text class="list_title">{{item.accessory_name}}<text wx:if='{{item.property_name}}'>【</text>{{item.property_name}}<text wx:if='{{item.property_name}}'>】</text> </text>
+                        <text wx:if='{{total==0}}' class="list_price linePrice">+ ¥ {{item.comb_price*1}}</text>
+                        <text wx:else class="list_price linePrice">+ ¥ {{item.sale_price*1}}</text>
+                        <view wx:if='{{!item.show}}' class="list_des">
+                            <view class="quality" >音质 {{item.detail_des.tone}}/5</view>
+                            <view class="appearance" >外观 {{item.detail_des.facade}}/5</view>
+                            <view class="driveByWire " >线控 {{item.detail_des.dbw?'有':'无'}}</view>
+                        </view>
+                        <view wx:else  class="list_des">
+                            <view class="quality">音质
+                                <image wx:if='{{subidx<=item.detail_des.tone}}' wx:key='{{subidx}}' wx:for="{{starArr}}" wx:for-index="subidx" wx:for-item="subitem" class='star' src='https://static.heygears.com/wxapp/imgs/star.png'></image>
+                            </view>
+                            <view class="appearance" >外观
+                                <image wx:if='{{subidx<=item.detail_des.facade}}' wx:key='{{subidx}}' wx:for="{{starArr}}" wx:for-index="subidx" wx:for-item="subitem" class='star' src='https://static.heygears.com/wxapp/imgs/star.png'></image>
+                            </view>
+                            <view class="driveByWire" >线控
+                                <block wx:if='{{item.detail_des.dbw}}'>
+                                    <image class='suport' src='https://static.heygears.com/wxapp/imgs/successSuport.png'></image>
+                                    <text class="hassuport"> 支持</text>
+                                </block>
+                                <block wx:else>
+                                    <image class='suport' src='https://static.heygears.com/wxapp/imgs/wrongSuport.png'></image>
+                                    <text class=""> 不支持</text>
+                                </block>
+                            </view>
+                        </view>
+                    </view>
+                    <image data-idx='{{idx}}' bindtap='subtract' class='subtractIcon' src='https://static.heygears.com/wxapp/imgs/subtract.png'></image>
+                    <text class="quantity">{{item.quantity}}</text>
+                    <image data-idx='{{idx}}' bindtap='add' class='addIcon' src='https://static.heygears.com/wxapp/imgs/add.png'></image>
+                </view>
+            </view>
+        </block>
+    </scroll-view>
+    <view class="bottom_btn_db">
+        <view bindtap='cancel' class='goPre'></view>
+        <view bindtap='submit_first' class="confirm {{flag?'highlighted':''}}">确认</view>
+    </view>
+</view>
+<!-- 选项的遮罩层 end -->
+<!-- 价格的遮罩层 start-->
+<view class="fade_price" wx:if='{{showPriceFade}}' bindtap='remove_price_fade' catchtouchmove='remove_price_fade'></view>
+<!-- 价格的遮罩层 end-->
+<!-- 价格列表 start -->
+<view  class="price_list" animation='{{animationData}}'>
+    <view class="list_title" bindtap='remove_price_fade'>
+        当前价格：
+        <text class="total_price">¥{{total_price}}</text>
+    </view>
+    <scroll-view class="list_content" scroll-y>
+        <view wx:key='{{idx}}' wx:for="{{fenpinList}}" wx:for-index="idx" wx:for-item="item" class="list_content_item">
+            <view class='wrap'>
+                <view class="item_title">分频 - {{item.name}}</view>
+            </view>
+            <view class="item_price">+{{item.price}}</view>
+        </view>
+        <view wx:key='{{idx}}' wx:for="{{modelList}}" wx:for-index="idx" wx:for-item="item" class="list_content_item">
+            <view class='wrap'>
+                <view class="item_title">模型 - {{item.name}}</view>
+            </view>
+            <view class="item_price">+{{item.price*1}}</view>
+        </view>
+        <view wx:key='{{idx}}' wx:for="{{list}}" wx:for-index="idx" wx:for-item="item" class="list_content_item">
+            <view class='wrap'>
+                <view class="item_title">{{item.name_l}}<text wx:if='{{item.name_l!=item.name_r}}' class=''>【左】</text></view>
+                <view wx:if='{{item.name_l!=item.name_r}}' class="item_title">{{item.name_r}}<text wx:if='{{item.name_l!=item.name_r}}' class=''>【右】</text></view>
+            </view>
+            <view class="item_price {{item.name_l!=item.name_r?'double':''}}">+{{item.price}}</view>
+        </view>
+        <view wx:key='{{idx}}' wx:for="{{lineList}}" wx:for-index="idx" wx:for-item="item" class="list_content_item">
+            <view class='wrap'>
+                <view class="item_title">{{item.name}}</view>
+            </view>
+            <view class="item_price">+{{item.price}}</view>
+        </view>
+        <view wx:key='{{idx}}' wx:for="{{peijianList}}" wx:for-index="idx" wx:for-item="item" class="list_content_item">
+            <view class='wrap'>
+                <view class="item_title">{{item.name}}</view>
+            </view>
+            <view class="item_price">+{{item.price}}</view>
+        </view>
+    </scroll-view>
+</view>
+<!-- 价格列表 end -->
+<view class="wrap">
+    <!-- 头部 时长/全景/主页 -->
+    <view class="header">
+        <view class="dot"></view>
+        <view class="production_time">制作时长：{{info.err.pty_list[8].pty_num=='PUBLICMODEL' ? 3:7}} 天</view>
+        <!--<view class="customer_service">客服</view>-->
+        <button open-type='contact' plain='true' class='customer_service'>客服</button>
+        <!--<view class="line line1"></view>-->
+        <!--<view class="panoramic_view">全景</view>-->
+        <view class="line line2"></view>
+        <view bindtap='goHome' class="home_page">主页</view>
+    </view>
+    <!-- 耳机展示 -->
+    <view class="img_wrap">
+        <!--默认黑图 公模-->
+        <image wx:if='{{model_isprivate=="PUBLICMODEL"}}' class="the_img" src='https://static.heygears.com/wxapp/imgs/model_nor_L@2x.png'></image>
+        <image wx:if='{{model_isprivate=="PUBLICMODEL"}}' class="the_img" src='https://static.heygears.com/wxapp/imgs/model_nor_R@2x.png'></image>
+        <!--默认黑图 私模-->
+        <image wx:if='{{model_isprivate=="PRIVATEMODEL"}}' class="the_img" src='https://static.heygears.com/wxapp/imgs/Private_mode.png'></image>
+            <!--左右机身-->
+        <image class="the_img" src='{{fl_img}}'></image>
+        <image class="the_img" src='{{fr_img}}'></image>
+        <!--耳机线-->
+        <image class="the_img" src='{{line_img}}'></image>
+        <!--左右面板-->
+        <image class="the_img" src='{{pl_img}}'></image>
+        <image class="the_img" src='{{pr_img}}'></image>
+        <!--logo-->
+        <image wx:if='{{kezi==""}}' class='the_logo_l' src='{{logo_img_l}}'></image>
+        <image class='the_logo_r' src='{{logo_img_r}}'></image>
+        <!--刻字内容-->
+        <text class="the_kezi" style='color:{{kezi_color}}' wx:if='{{kezi!=""}}'>{{kezi}}</text>
+        <!--切换左右耳点击面-->
+        <view wx:if='{{isDesign}}' class='left_tap' data-idx='0' bindtap='bindPickerChange'></view>
+        <view wx:if='{{isDesign}}' class='right_tap' data-idx='1' bindtap='bindPickerChange'></view>
+        <!--灰图 公模-->
+        <block wx:if='{{model_isprivate=="PUBLICMODEL"}}'>
+            <image  wx:if='{{(kezi!=""&&nav_idx==3&&isDesign)||(err==1&&isDesign)}}'  class="the_img gray_left" src='https://static.heygears.com/wxapp/imgs/model_dis_L2@2x.png'></image>
+            <image  wx:if='{{err==0&&isDesign}}'  class="the_img gray_right" src='https://static.heygears.com/wxapp/imgs/model_dis_R2@2x.png'></image>
+        </block>
+        <!--灰图 私模-->
+        <block wx:if='{{model_isprivate=="PRIVATEMODEL"}}'>
+            <image  wx:if='{{(kezi!=""&&nav_idx==3&&isDesign)||(err==1&&isDesign)}}'  class="the_img gray_left" src='https://static.heygears.com/wxapp/imgs/Private_mode_dis_L2@2x.png'></image>
+            <image  wx:if='{{err==0&&isDesign}}'  class="the_img gray_right" src='https://static.heygears.com/wxapp/imgs/Private_mode_dis_R2@2x.png'></image>
+        </block>
+        <!--左右圆点-->
+        <view  wx:if='{{isDesign}}'  class='circle left'>
+            <view class="inCircle {{err==0||err==2? 'highlighted':''}}"></view>
+            <view class="inCircle"  wx:if='{{kezi!=""&&nav_idx==3}}'></view>
+        </view>
+        <view  wx:if='{{isDesign}}' class='circle right'>
+            <view class="inCircle {{err==1||err==2 ? 'highlighted':''}}"></view>
+        </view>
+        <!-- 提示-->
+        <view  wx:if='{{isDesign}}'  class='tip'>展示效果，仅供参考</view>
+    </view>
+    <!-- 开始设计入口 -->
+    <view bindtap='go_design' class="design_button" wx:if='{{!isDesign}}'></view>
+    <!-- 可选择项 -->
+    <scroll-view scroll-y class="choose_list" wx:else>
+        <view bindtap='choose_second' data-idx='{{idx}}' wx:key='{{idx}}' wx:for="{{ptylist_second}}" wx:for-index="idx" wx:for-item="item" class="list_item flex_column {{second_active==idx?'highlighted':''}} {{idx>3?'top33':''}}">
+            <image class="item_img" src='{{item.property_imgurl}}'></image>
+            <text class="item_title">{{item.property_name}}</text>
+            <view class="line" wx:if='{{(idx+1)%4==0?false:true}}'></view>
+        </view>
+    </scroll-view>
+    <!-- 底部 上一步/价格/下一步 -->
+    <view class="bottom_price">
+        <view bindtap='goPre' class="goPre" wx:if='{{!isDesign}}'></view>
+        <view bindtap='cancel' class="goPre isDesign" wx:else></view>
+        <view bindtap='view_price' class="price_wrap">
+            当前价格：<text class="price_total">¥{{total_price}}</text>
+        </view>
+        <view bindtap='goNext' class="goNext {{!hasDesign? 'hide' :''}}" wx:if='{{!isDesign}}'></view>
+        <view bindtap='save_design' class="goNext isDesign" wx:else></view>
+    </view>
+</view>

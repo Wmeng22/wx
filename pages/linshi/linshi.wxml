@@ -1,0 +1,8 @@
+<!--<map id="map" style="width: 100%; height: 600px;"></map>-->
+<!--<view class='img-ct show'>-->
+    <!--<image src="https://static.heygears.com/hg_website_v2.0/static/imgs/YpvaV2R.png" class="img-spc" />-->
+<!--</view>-->
+
+<view bindtap='go' class=" desc-detail {{is_sec3_animation?'secanimation': ''}}">
+    <image src="https://static.heygears.com/hg_website_v2.0/static/imgs/YpvaV2R.png" alt="" />
+</view>

@@ -1,0 +1,79 @@
+/* weixin_pay.wxss */
+.list_title {
+    margin-top: 44rpx;
+    color: #c6451b;
+    font-size: 24rpx;
+    height: 46rpx;
+    line-height: 46rpx;
+}
+.list_content {
+    border-bottom: 1px solid #313131;
+    line-height: 80rpx;
+    font-size: 24rpx;
+    color: #818181;
+}
+.container{
+    position: relative;
+    padding: 0 76rpx;
+}
+.list_content .value.price{
+    color:#c6451b;
+    font-size: 44rpx
+}
+.bottom_new{
+    position: fixed;
+    bottom:0;
+    height: 88rpx;
+    left: 0;
+    width: 100%;
+    text-align: center
+}
+.bottom_new .goNext2{
+    float: left;
+    width: 70%;
+    line-height: 88rpx;
+    background-color: #c6451b;
+    color:black;
+    font-size: 32rpx
+}
+.bottom_new .exit2{
+    width: 30%;
+    float: left;
+    line-height: 88rpx;
+    background-color: #1a1a1a;
+    color:#c6451b;
+    font-size: 32rpx
+}
+.fade_pop2{
+    width: 534rpx;
+    height: 284rpx;
+    background: black;
+    position: fixed;
+    left: 50%;
+    top: 45%;
+    margin-left: -267rpx;
+    margin-top: -142rpx;
+    z-index: 999;
+    box-sizing: border-box;
+}
+.fade_pop2 .text{
+    position: absolute;
+    top: 67rpx;
+    left: 70rpx;
+    color:#fbfbfb;
+    font-size: 32rpx
+}
+.fade_pop2 .cancel{
+    position: absolute;
+    left: 406rpx;
+    top: 179rpx;
+    color:#c6451b;
+    font-size: 30rpx
+}
+.fade_pop2 .confirm{
+    position: absolute;
+    color:#7e7e7e;
+    top: 179rpx;
+    left: 240rpx;
+    font-size: 30rpx
+}

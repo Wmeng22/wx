@@ -1,0 +1,15 @@
+<view class="container">
+
+    <view class="text">
+        <view>  
+            <text class="strong">广州黑格智能科技有限公司</text><text class="small">（下文称「黑格」）</text>
+        </view>
+        <view class='gray'>承诺尊重黑格应用程序用户的隐私权。</view>黑格制定此隐私政策，是为了解释其信息收集和使用方式，以及在你访问和使用网站和应用程序时保护你的信息。
+    </view>
+    <view class="text">本隐私政策仅适用于微信小程序，不适用于第三方拥有或运行的任何网站或应用程序（“第三方网站/应用程序”），第三方网站/应用程序可能以与本隐私政策极不相同的方式收集、存储和使用数据。
+    </view>
+    <view class="text">使用本微信小程序，即表示你声明并保证你已阅读、理解并同意本隐私政策的条款。
+        <view class='gray'>如果你不理解或不同意遵守本隐私政策，则不得使用本微信小程序。</view>
+   </view>
+
+</view>

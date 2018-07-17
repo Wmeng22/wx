@@ -1,0 +1,137 @@
+
+.view_container{
+    padding: 0 75rpx;
+    /*background-color: pink;*/
+    height: 100%;
+
+}
+.header{
+    height: 300rpx;
+    /*background-color: blue;*/
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 97rpx;
+    position: relative
+}
+.avatar{
+  position: absolute;
+  bottom:0;
+  left: 50%;
+  margin-left: -100rpx;
+  /* margin-top: -100rpx */
+}
+.tip{
+  color:#ffffff;
+  line-height: 50rpx;
+  font-size: 32rpx;
+  display: block
+}
+.content{
+  width: 100%
+}
+.label{
+    font-size: 24rpx;
+    color:#c6451b;
+    margin:63rpx 0 15rpx; 
+    display: block
+}
+.content input{
+    border:none;
+    border-bottom: 1px solid #313131;
+    font-size: 30rpx;
+    color:#ffffff;
+    /* margin:30rpx 0; */
+    height: 78rpx
+}
+.content .submit{
+    width: 100%;
+    height:70rpx;
+    border:1px solid #c6451b;
+    text-align: center;
+    color:#c6451b;
+    margin-top: 100rpx;
+    margin-bottom: 0;
+    font-size: 28rpx;
+    background: #1a1a1a;
+    line-height: 70rpx
+}
+
+.tip_img{
+  position: absolute;
+  top:24rpx;
+  right:0;
+}
+.send_code{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #c6451b;
+    font-size: 26rpx;
+    z-index: 99;
+    height:  78rpx;
+    line-height: 78rpx
+}
+.err_tip{
+    position: absolute;
+    top:22rpx;
+    right: 0;
+    color: #e52739;
+    font-size: 30rpx;
+}
+.goMenu{
+    height: 64rpx;
+    width: 64rpx;
+    background-image:url('https://static.heygears.com/wxapp/imgs/icon_list.png');
+    background-repeat:no-repeat;
+    background-size:64rpx 64rpx;
+    position: absolute;
+    top:20rpx;
+    right:40rpx;
+    z-index: 999
+}
+.goMenu.showMenu{
+    background-image:url('https://static.heygears.com/wxapp/imgs/icon_close64x64.png');
+    background-repeat:no-repeat;
+    background-size:64rpx 64rpx;
+}
+.MenuList{
+    position: absolute;
+    height: 670rpx;
+    width: 590rpx;
+    left:50%;
+    margin-left: -285rpx;
+    z-index: 999;
+    background-color: #0e0f0f;
+    padding-top: 50rpx;
+    top: 157rpx;
+}
+.MenuList .item{
+    height: 150rpx;
+    border-bottom: 3rpx solid #333333;
+    box-sizing: border-box;
+    line-height: 150rpx;
+    color: #fff;
+    font-size: 30rpx;
+    width: 394rpx;
+    margin: 0 auto;
+    padding-left: 178rpx;
+}
+.MenuList .item:last-child{
+    border-bottom: none
+}
+.MenuList .item.index{
+    background: url('https://static.heygears.com/wxapp/imgs/icon_design44x44@2x.png') 80rpx center no-repeat;
+    background-size: 42rpx 42rpx;
+}
+.MenuList .item.order{
+    background: url('https://static.heygears.com/wxapp/imgs/icon_orde_listr44x44@2x.png') 80rpx center no-repeat;
+    background-size: 42rpx 42rpx;
+}
+.MenuList .item.setting{
+    background: url('https://static.heygears.com/wxapp/imgs/icon_setting44x44@2x.png') 80rpx center no-repeat;
+    background-size: 42rpx 42rpx;
+}
+.MenuList .item.login{
+    background: url('https://static.heygears.com/wxapp/imgs/User.png') 80rpx center no-repeat;
+    background-size: 34rpx 34rpx;
+}

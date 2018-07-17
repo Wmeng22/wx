@@ -1,0 +1,140 @@
+.peijian_wrap{
+    padding: 0 40rpx;
+}
+.peijian_wrap .label{
+    position: relative;
+    font-size: 30rpx;
+    color: #fff;
+    height: 86rpx;
+    line-height: 86rpx;
+    padding-left: 46rpx;
+}
+.peijian_wrap .label .sai_tip{
+    position: absolute;
+    left: 160rpx;
+    top: 5rpx;
+    font-size: 24rpx;
+    color: #5f5f5f
+}
+.peijian_wrap .peijian_item{
+    position: relative;
+    height: 108rpx;
+    background-color: #0e0f0f;
+}
+.peijian_wrap .subtractIconWrap{
+    width: 50rpx;
+    height: 50rpx;
+    position: absolute;
+    top: 30rpx;
+    left: 500rpx;
+    /*background-color: pink;*/
+    padding-left: 6rpx;
+    padding-top: 6rpx;
+    box-sizing: border-box;
+}
+.peijian_wrap .addIconWrap{
+    width: 50rpx;
+    height: 50rpx;
+    position: absolute;
+    top: 30rpx;
+    left: 598rpx;
+    padding-left: 6rpx;
+    padding-top: 6rpx;
+    /*background-color: pink;*/
+    box-sizing: border-box;
+
+}
+.peijian_wrap .subtractIcon{
+    width: 39rpx;
+    height: 39rpx;
+}
+.peijian_wrap .addIcon{
+    width: 39rpx;
+    height: 39rpx;
+}
+.peijian_wrap .quantity{
+    position: absolute;
+    top: 43rpx;
+    left: 545rpx;
+    width: 60rpx;
+    text-align: center;
+    font-size: 30rpx;
+    color: #fff;
+}
+.peijian_item .icon{
+    position: absolute;
+    top: 26rpx;
+    width: 60rpx;
+    height: 60rpx;
+    left: 32rpx;
+}
+.peijian_item .pro_name{
+    position: absolute;
+    color: #fff;
+    font-size: 24rpx;
+    top: 42rpx;
+    left: 120rpx;
+}
+.peijian_item .pro_name.gray{
+    color: #575757;
+}
+.peijian_item .pro_price{
+    position: absolute;
+    color: #575757;
+    font-size: 30rpx;
+    top: 40rpx;
+    left: 324rpx;
+}
+.peijian_item .pro_des{
+    display: none;
+}
+.peijian_item .noSale{
+    position: absolute;
+    color: #575757;
+    top: 43rpx;
+    left: 520rpx;
+    font-size: 26rpx;
+}
+.peijian_item .line{
+    position: absolute;
+    bottom: 0;
+    height: 2rpx;
+    background-color: #333333;
+    width: 610rpx;
+    left: 29rpx;
+}
+.peijian_wrap_PB{
+    padding-bottom: 140rpx;
+}
+.tapWrap{
+    height: 108rpx;
+    width: 470rpx;
+    /*background-color: pink;*/
+}
+.peijian_item.show .tapWrap{
+    height: 216rpx;
+}
+.peijian_item.show{
+    height: 216rpx;
+}
+.peijian_item.show .icon{
+    width: 168rpx;
+    height: 168rpx;
+}
+.peijian_item.show .pro_name{
+    left: 234rpx;
+}
+.peijian_item.show .pro_price{
+    top: 84rpx;
+    left: 234rpx;
+}
+.peijian_item.show .pro_des{
+    display: block;
+    position: absolute;
+    top: 130rpx;
+    left: 234rpx;
+    color: #575757;
+    line-height: 28rpx;
+    width: 410rpx;
+}
+

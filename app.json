@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/design/design",
+    "pages/design/fenpin/fenpin",
+    "pages/design/model/model",
+    "pages/design/named/named",
+    "pages/design/peijian/peijian",
+    "pages/design/tutorial/tutorial",
+    "pages/login/login",
+    "pages/order/order",
+    "pages/order/detail/detail",
+    "pages/setting/privacy/privacy",
+    "pages/setting/explain/explain",
+    "pages/setting/setting",
+    "pages/toPay/toPay",
+    "pages/toPay/pay_success/pay_success",
+    "pages/toPay/weixin_pay/weixin_pay",
+    "pages/order/detail/makerecordlist/makerecordlist",
+    "pages/setting/about/about",
+    "pages/address/address"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#1a1a1a",
+    "navigationBarTextStyle": "light",
+    "navigationBarTitleText": "黑格定制",
+    "backgroundColor": "#1a1a1a",
+    "backgroundTextStyle": "light",
+    "onReachBottomDistance": 0
+  }
+}

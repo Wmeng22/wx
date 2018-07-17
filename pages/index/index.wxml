@@ -1,0 +1,42 @@
+<!--<view wx:if='{{!earAudit}}'  class='goMenu {{showFade?"showMenu":"" }}' bindtap='goMenu'></view>-->
+<view class="header">
+    <button open-type='contact' plain='true' class='customer_service'>客服</button>
+</view>
+<view wx:if='{{earAudit}}'  class='closeAudit showMenu' bindtap='closeAudit'></view>
+<view class="fade" wx:if='{{showFade}}'>
+</view>
+<!--提示耳印是否通过start-->
+<view class="fade" wx:if='{{earAudit}}'></view>
+<view id="earAudit" wx:if='{{earAudit}}'>
+    <block wx:if='{{auditStatas == 1}}'>
+        <view class="title success">恭喜</view>
+        <view class="content">您的耳印已成功通过筛选</view>
+        <view class="content">我们即日起将为您制作专属的耳机</view>
+        <view class="content">您也可以在点击查看制造进度</view>
+        <view class="content last">感谢您对黑格科技的支持</view>
+        <view bindtap='toOrder' class="toOrder">查看制作进度</view>
+    </block>
+    <block wx:if='{{auditStatas == 2}}'>
+        <view class="title fail">抱歉</view>
+        <view class="content">您的耳印未通过筛选</view>
+        <view class="content">我们的客服将稍后给您联系</view>
+        <view class="content">您需要再次去医院/助听器店获取耳印</view>
+        <view class="content last">感谢您对黑格科技的支持</view>
+        <view bindtap='closeAudit' class="toOrder fail">确定</view>
+    </block>
+</view>
+<!--提示耳印是否通过end-->
+<!--<view wx:if='{{showFade}}' class="MenuList">-->
+    <!--<view bindtap='goNav' class='item index'>定制主页</view>-->
+    <!--<view bindtap='goNav'  data-nav='order' class='item order'>我的订单</view>-->
+    <!--<view  bindtap='goNav' data-nav='setting' class='item setting'>常用设置</view>-->
+    <!--<view  bindtap='goNav' data-nav='login' class='item login'>-->
+        <!--<text wx:if='{{!isLogined}}' class="" bindtap='toLogin'>注册/登录</text>-->
+        <!--<text wx:else class="" bindtap='cancelLogin'>退出当前账号</text>-->
+    <!--</view>-->
+<!--</view>-->
+<view class='bottom_button'>
+    <view  bindtap='goNav' data-nav='setting' class='item setting'></view>
+    <view bindtap='start'  data-nav='index' class="item index">开始定制</view>
+    <view  bindtap='goNav'  data-nav='order' class='item order'></view>
+</view>

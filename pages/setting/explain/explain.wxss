@@ -1,0 +1,27 @@
+/*.container{
+    padding: 135rpx 140rpx 0;
+}*/
+/*.title{
+    font-size: 46rpx;
+    text-align: center;
+    height: 100rxp;
+    line-height: 100rpx;
+}
+.sub_title{
+    font-size: 24rpx;
+    text-align: center
+}*/
+.container{
+    padding:80rpx 76rpx 0;
+}
+.container .title{
+    font-size: 30rpx;
+    color:#ffffff;
+    line-height: 42rpx;
+}
+.container .content{
+    font-size: 28rpx;
+    color:#b9b9b9;
+    line-height: 38rpx;
+    margin-bottom: 38rpx;
+}

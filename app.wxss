@@ -1,0 +1,385 @@
+ /* base start*/
+ page{
+    height: 100%;
+    background-color: #1a1a1a;
+    margin: 0;
+    padding: 0;
+    font: 24rpx/1.0 "Helvetica Neue", "Helvetica", "Arial", "PingFang SC", "Microsoft YaHei", "sans-serif"; 
+}
+view,input,button,textarea{
+    margin: 0;
+    padding: 0;
+    color: #b8b8b8;
+}
+.wrap{
+     position: relative;
+}
+.theColor{
+     color: #c6451b; /*主题色*/
+}
+/* base end*/
+/* flex 布局*/
+/*垂直*/
+.flex_column{ 
+  display: flex;
+  flex-direction: column;
+  /*justify-content:center;*/
+  /*align-items: center;*/
+}
+/*水平两端*/
+.flex_row{
+  display: flex;
+  flex-direction: row;
+  /*justify-content:space-between*/
+}
+/* public start */
+.header{
+    position: relative;
+    margin-top: 14rpx;
+    height: 93rpx;
+}
+.header .dot{
+    position: absolute;
+    top: 20rpx;
+    left: 42rpx;
+    background-color:#c6451b;
+    width: 10rpx;
+    height: 10rpx;
+    border-radius: 50%
+}
+.header .production_time{
+    position: absolute;
+    top: 14rpx;
+    left: 74rpx;
+    font-size: 24rpx;
+}
+.header .panoramic_view,.header .home_page,.header .customer_service{
+    border: none;
+    position: absolute;
+    width: 98rpx;
+    height: 93rpx;
+    font-size: 26rpx;
+    color:#c6451b;
+    padding-top: 58rpx;
+    line-height: 1;
+    text-align: center;
+    box-sizing: border-box;
+}
+.header .line{
+    position: absolute;
+    height: 77rpx;
+    background-color: #434343;
+    width: 2rpx;
+    top: 8rpx;
+    z-index: 1;
+}
+ .header .line.line1{
+     right: 237rpx;
+ }
+ .header .line.line2{
+     right: 136rpx;
+ }
+.header .panoramic_view{
+    /*border-radius: 6rpx 0 0 6rpx;*/
+    right: 138rpx;
+    background: #0e0f0f url('https://static.heygears.com/wxapp/imgs/icon_all@2x.png') no-repeat  32rpx 13rpx;
+    background-size: 35rpx 35rpx;
+}
+.header .home_page{
+    border-radius: 0 6rpx 6rpx 0;
+    right: 42rpx;
+    background: #0e0f0f url('https://static.heygears.com/wxapp/imgs/icon_home@2x.png') no-repeat  32rpx 13rpx;
+    background-size: 35rpx 35rpx;
+}
+.header .customer_service{
+     border-radius: 0 6rpx 6rpx 0;
+     /*right: 234rpx;*/
+     right: 138rpx;
+     background: #0e0f0f url('https://static.heygears.com/wxapp/imgs/icon_service.png') no-repeat  32rpx 13rpx;
+     background-size: 35rpx 35rpx;
+}
+/* 底部按钮 带价格 start*/
+.bottom_price{
+    position: fixed;
+    bottom: 0;
+    height: 90rpx;
+    width: 100%;
+}
+.bottom_price .goPre,.bottom_price .price_wrap,.bottom_price .goNext{
+    float: left;
+}
+.bottom_price .goPre{
+    height: 100%;
+    width: 180rpx;
+    box-sizing: border-box;
+    background: #4d4d4d url('https://static.heygears.com/wxapp/imgs/icon_back@2x.png') no-repeat  69rpx 22rpx; 
+    background-size: 40rpx 44rpx;
+}
+.bottom_price .goPre.isDesign{
+    background: #4d4d4d url('https://static.heygears.com/wxapp/imgs/icon_close40@2x.png') no-repeat  69rpx 22rpx; 
+    background-size: 40rpx 44rpx;
+}
+.bottom_price .price_wrap{
+    width: 390rpx;
+    box-sizing: border-box;
+    height: 100%;   
+    background-color: #262626;
+    color: #a8a8a8;
+    font-size: 24rpx;
+    font-family: '黑体';
+    line-height: 90rpx;
+    text-align: center;
+    position: relative;
+}
+.price_wrap .price_total{
+    color: #ffffff;
+    font-size: 30rpx;
+}
+.bottom_price .goNext{
+    height: 100%;
+    width: 180rpx;
+    box-sizing: border-box;
+    background: #c6451b url('https://static.heygears.com/wxapp/imgs/icon_next@2x.png') no-repeat  69rpx 22rpx;
+    background-size: 40rpx 44rpx;
+}
+.bottom_price .goNext.isDesign{
+    background: #c6451b url('https://static.heygears.com/wxapp/imgs/icon_ok40@2x.png') no-repeat  69rpx 22rpx; 
+    background-size: 40rpx 44rpx;
+}
+/* 底部按钮 带价格 end*/
+/* 底部按钮 仅确认 start*/
+.bottom_button{
+    position: fixed;
+    bottom:0;
+    height: 90rpx;
+    width: 100%;
+    background-color: #262626;
+    text-align: center;
+    line-height: 90rpx;
+    color:#3c3c3c;
+    font-size: 30rpx;
+    font-weight: bold
+}
+ .bottom_button.highlighted{
+     background-color: #c6451b;
+     color:#fff;
+ }
+/* 底部按钮 end*/
+/* 底部按钮 上一步&确认start*/
+ .bottom_btn_db{
+     position: fixed;
+     bottom:0;
+     height: 90rpx;
+     width: 100%;
+     display: flex;
+     flex-direction: row;
+ }
+ .bottom_btn_db .goPre{
+     width: 180rpx;
+     height: 90rpx;
+     line-height: 90rpx;
+     background: #4d4d4d url('https://static.heygears.com/wxapp/imgs/icon_back@2x.png') no-repeat  69rpx 22rpx;
+     background-size: 40rpx 44rpx;
+ }
+ .bottom_btn_db .confirm{
+     width: 570rpx;
+     height: 90rpx;
+     line-height: 90rpx;
+     text-align: center;
+     background-color: #262626;
+     color: #303030;
+     font-size: 30rpx;
+ }
+ .bottom_btn_db .confirm.highlighted{
+     color: #fff;
+     background-color: #c6451b;
+ }
+/* 底部按钮 上一步&确认end*/
+
+/* 遮罩层 start */
+.fade{
+    width:100%;
+    height:100%;
+    background:rgba(26, 26, 26, 0.9);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99;
+}
+.fade_content{
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+}
+/* 遮罩层 end */
+/* 价格遮罩层 start*/
+.fade_price{
+    background:rgba(0, 0, 0, 0);
+   width:100%;
+   height:100%;
+   position: fixed;
+   left: 0;
+   top: 0;
+   z-index: 999;
+}
+/* 价格遮罩层 end*/
+/* 价格列表 start*/
+.price_list{
+    box-sizing: border-box;
+    width: 390rpx;
+    background-color: #262626; 
+    position: fixed;
+    bottom: -250px;
+    height: 250px;
+    left: 180rpx;
+    border-radius: 12rpx 12rpx 0 0;
+    padding:0 13rpx 38rpx;
+    z-index: 999;
+}
+.price_list .list_title{
+    color:#86391f;
+    font-size: 24rpx;
+    text-align: center;
+    width: 100%;
+    height: 90rpx;
+    line-height: 110rpx
+}
+.price_list .list_title .total_price{
+    color:#c6451b;
+    font-size: 30rpx;
+    font-weight: bold;
+}
+.price_list .list_content{
+    height: 343rpx;
+    width: 100%;
+}
+.price_list .list_content .list_content_item{
+    border-top:3rpx solid #333333;
+    overflow: hidden;
+    /*line-height: 70rpx;*/
+    color:#a8a8a8;
+}
+.price_list .list_content .list_content_item:nth-child(1){
+    border-top: none
+}
+ .price_list .list_content .list_content_item .wrap{
+     float: left;
+     width: 70%;
+     box-sizing: border-box;
+ }
+.price_list .list_content .list_content_item .item_title{
+    /*float: left;*/
+    /*width: 70%;*/
+    height: 70rpx;
+    line-height: 70rpx;
+    box-sizing: border-box;
+    padding-left: 12rpx;
+    text-align: left;
+    font-size: 24rpx;
+}
+.price_list .list_content .list_content_item .item_price{
+    float: left;
+    width: 30%;
+    line-height: 70rpx;
+    box-sizing: border-box;
+    font-size: 30rpx;
+    color:#ffffff;
+    height: 100%;
+    /*line-height: 100%;*/
+}
+ .price_list .list_content .list_content_item .item_price.double{
+     line-height: 140rpx;
+     height: 140rpx;
+ }
+
+/* 价格列表 end*/
+ /* 错误提示 start*/
+ .errorTip{
+     position: fixed;
+     top:0;
+     left: 0;
+     height: 48rpx;
+     width:100%;
+     background-color:#e52739;
+     line-height: 48rpx;
+     text-align: center;
+     color:#ffffff;
+     font-size: 26rpx;
+     z-index: 999
+ }
+ /* 错误提示 end*/
+
+ /* 弹框 start*/
+ .popUp {
+     /*position: relative;*/
+     width: 534rpx;
+     height: 284rpx;
+     background: black;
+     position: fixed;
+     left: 50%;
+     top: 45%;
+     margin-left: -267rpx;
+     margin-top: -142rpx;
+     z-index: 999;
+     box-sizing: border-box;
+ }
+ .popUp .text{
+     position: absolute;
+     top: 67rpx;
+     left: 70rpx;
+     color:#fbfbfb;
+     font-size: 32rpx
+ }
+ .popUp .cancel{
+     position: absolute;
+     top: 179rpx;
+     color:#7e7e7e;
+     left: 240rpx;
+     font-size: 30rpx
+ }
+ .popUp .confirm{
+     position: absolute;
+     color:#c6451b;
+     top: 179rpx;
+     left: 406rpx;
+     font-size: 30rpx
+ }
+ /* 弹框 end*/
+
+ /* 旧 列表start*/
+ /*.list_title{*/
+     /*margin-top: 44rpx;*/
+     /*color:#c6451b;*/
+     /*font-size: 24rpx;*/
+     /*height: 46rpx;*/
+     /*line-height: 46rpx;*/
+ /*}*/
+ /*.list_content{*/
+     /*border-bottom: 1px solid #313131;*/
+     /*!*height: 79rpx;*!*/
+     /*line-height: 80rpx;*/
+     /*font-size: 24rpx;*/
+     /*color:#818181;*/
+ /*}*/
+ /* 旧 列表end*/
+ .glo_err_tip{
+     position: fixed;
+     top:0;
+     left: 0;
+     height: 48rpx;
+     width:100%;
+     background-color:#e52739;
+     line-height: 48rpx;
+     text-align: center;
+     color:#ffffff;
+     font-size: 26rpx;
+     z-index: 999
+ }
+ .err_tip{
+     position: absolute;
+     top:22rpx;
+     right: 0;
+     color: #e52739;
+     font-size: 30rpx;
+ }
+/* public end */

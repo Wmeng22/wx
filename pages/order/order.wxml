@@ -1,0 +1,81 @@
+<view class='goMenu {{showFade?"showMenu":""}}' bindtap='goMenu'></view>
+<view class="fade" wx:if='{{showFade}}'>
+</view>
+<view wx:if='{{showFade}}' class="MenuList">
+    <view bindtap='goNav' data-nav='index' class='item index'>定制主页</view>
+    <view bindtap='goNav'  data-nav='order' class='item order'>我的订单</view>
+    <view  bindtap='goNav' data-nav='setting' class='item setting'>常用设置</view>
+    <view  bindtap='goNav' data-nav='login' class='item login'>
+        <text wx:if='{{!isLogined}}' class="" bindtap='toLogin'>注册/登录</text>
+        <text wx:else class="" bindtap='cancelLogin'>退出当前账号</text>
+    </view>
+</view>
+<view class="container">
+    <view class="top flex_row">
+        <view class="nav {{active==0?'active':''}}" bindtap='choose' data-idx='0'>全部</view>   
+        <view class="nav {{active==1?'active':''}}" bindtap='choose' data-idx='1'>未完成</view>   
+        <view class="nav {{active==2?'active':''}}" bindtap='choose' data-idx='2'>已完成</view>   
+        <view class="un" animation='{{animationData}}'></view>
+    </view>
+    <view wx:if='{{active==0}}'>
+        <view data-no='{{itemName.order_id}}' data-status='{{itemName.status_des}}'  data-kezicontent='{{itemName.kezi_content}}'   bindtap='chooseOrder' data-idx='{{idx}}' wx:key='{{idx}}' wx:for="{{orderList}}" wx:for-index="idx" wx:for-item="itemName" >
+            <view class="order_head">
+                <text class="time">{{itemName.create_date}}</text>
+                <text class="status">{{itemName.status_des}}</text>
+            </view>
+            <view class="order_body">
+                <text class="kezi_content" style='color:{{itemName.kezi_color}}'>{{itemName.kezi_content}}</text>
+                <text class="name">{{itemName.ear_nickname}}</text>
+                <view class="price">¥ {{itemName.price*1}}</view>
+                <image class='img' src='{{itemName.sku_litimg}}'></image>
+                <view wx:if='{{itemName.status_des == "未付款"}}' class='btn' data-idx='{{idx}}' data-kezicontent='{{itemName.kezi_content}}' data-status='{{itemName.status_des}}' data-no='{{itemName.order_id}}' catchtap='chooseOrder' >立即付款</view>
+                <view wx:if='{{itemName.status_des == "设计完成"}}' class='btn' data-idx='{{idx}}' data-kezicontent='{{itemName.kezi_content}}' data-status='{{itemName.status_des}}' data-no='{{itemName.order_id}}' catchtap='chooseOrder' >立即下单</view>
+                <view wx:if='{{itemName.status_des == "设计中"}}' class='btn'  data-idx='{{idx}}'  data-kezicontent='{{itemName.kezi_content}}' data-status='{{itemName.status_des}}'  data-no='{{itemName.order_id}}' catchtap='chooseOrder'>继续设计</view>
+                <view wx:if='{{itemName.status_des == "已付全款" || itemName.status_des == "已完成" ||itemName.status_des == "已发货" || itemName.status_des == "线下交易"}}' data-kezicontent='{{itemName.kezi_content}}'   data-status='{{itemName.status_des}}'  data-idx='{{idx}}'  data-no='{{itemName.order_id}}'  class='btn'  catchtap='chooseOrder'  >联系客服</view>
+            </view>
+        </view>
+    </view>
+    <view wx:if='{{active==1}}'>
+        <view  data-no='{{itemName.order_id}}'  data-status='{{itemName.status_des}}'  data-kezicontent='{{itemName.kezi_content}}'    bindtap='chooseOrder' data-idx='{{idx}}'  wx:if='{{itemName.status_des == "设计中" || itemName.status_des == "未付款" || itemName.status_des == "已付全款"  ||itemName.status_des == "已发货" }}' wx:key='{{idx}}' wx:for="{{orderList}}" wx:for-index="idx" wx:for-item="itemName">
+            <view class="order_head">
+                <text class="time">{{itemName.create_date}}</text>
+                <text class="status">{{itemName.status_des}}</text>
+            </view>
+            <view class="order_body">
+                <text class="kezi_content" style='color:{{itemName.kezi_color}}'>{{itemName.kezi_content}}</text>
+                <text class="name" >{{itemName.ear_nickname}}</text>
+                <view class="price">¥ {{itemName.price*1}}</view>
+                <image src='{{itemName.sku_litimg}}' class='img'/>
+                <view class='btn' data-no='{{itemName.order_id}}'  wx:if='{{itemName.status_des == "未付款"}}' data-kezicontent='{{itemName.kezi_content}}'   data-status='{{itemName.status_des}}'  data-idx='{{idx}}' catchtap='chooseOrder'>立即付款</view>
+                <view class='btn' data-no='{{itemName.order_id}}'  wx:if='{{itemName.status_des == "设计中"}}'  data-kezicontent='{{itemName.kezi_content}}' data-status='{{itemName.status_des}}'  data-idx='{{idx}}' catchtap='chooseOrder'>继续设计</view>
+                <view class='btn' data-no='{{itemName.order_id}}'  wx:if='{{itemName.status_des == "设计完成"}}'  data-kezicontent='{{itemName.kezi_content}}' data-status='{{itemName.status_des}}'  data-idx='{{idx}}' catchtap='chooseOrder'>立即下单</view>
+                <view wx:if='{{itemName.status_des == "已发货" || itemName.status_des == "已付全款"}}'  data-kezicontent='{{itemName.kezi_content}}'  data-status='{{itemName.status_des}}'  data-idx='{{idx}}'  class='btn' data-no='{{itemName.order_id}}'  catchtap='chooseOrder' >联系客服</view>
+            </view>
+        </view>
+    </view>
+    <view wx:if='{{active==2}}'>
+        <view data-no='{{itemName.order_id}}'  data-status='{{itemName.status_des}}'  data-kezicontent='{{itemName.kezi_content}}'  bindtap='chooseOrder' data-idx='{{idx}}'  wx:if='{{itemName.status_des == "已完成"  || itemName.status_des == "线下交易" }}' wx:key='{{idx}}' wx:for="{{orderList}}" wx:for-index="idx" wx:for-item="itemName">
+            <view class="order_head">
+                <text class="time">{{itemName.create_date}}</text>
+                <text class="status">{{itemName.status_des}}</text>
+            </view>
+            <view class="order_body">
+                <text class="kezi_content" style='color:{{itemName.kezi_color}}'>{{itemName.kezi_content}}</text>
+                <text class="name" >{{itemName.ear_nickname}}</text>
+                <view class="price">¥ {{itemName.price*1}}</view>
+                <image src='{{itemName.sku_litimg}}' class='img'/>
+                <!-- <view class='btn' wx:if='{{itemName.status == 100}}'  data-idx='{{idx}}'  catchtap='chooseOrder'>立即付款</view> -->
+                <view class='btn' catchtap='chooseOrder'  data-kezicontent='{{itemName.kezi_content}}'  data-idx='{{idx}}'  data-status='{{itemName.status_des}}'  data-no='{{itemName.order_id}}' >联系客服</view>
+            </view>
+        </view>
+
+    </view>
+    <view class="null_wrap" wx:if='{{isNull}}'>
+        <view class="flex_column">
+            <text class='t1'>列表为空</text>
+            <text class='t2'>开始定制第一款专属耳机吧!</text>
+            <image class="icon" src='https://static.heygears.com/wxapp/imgs/icon_design@2x.png'></image>
+            <navigator class="start"  open-type="reLaunch" url='/pages/index/index'>开始定制</navigator>
+        </view>
+    </view>    
+</view>

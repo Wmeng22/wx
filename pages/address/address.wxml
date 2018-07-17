@@ -1,0 +1,61 @@
+<canvas wx:if='{{hasCanvas}}' style="width: 750px; height: 640px;visibility:hidden;position: fixed;top:1500rpx;"  canvas-id='mycanvas'></canvas>
+<view class="fade" wx:if='{{tankuang}}'></view>
+<view class="fade_pop2 wrap"  wx:if='{{tankuang}}'>
+  <view class="text" >是否退出当前的操作</view>
+  <view class="cancel" bindtap='cancelAction'>取消</view>
+  <view class="confirm" bindtap='confirmAction'>确认</view>
+</view>
+<view class="container bg_gray">
+    <view class="content">
+        <text class='label'>姓名</text>
+        <view class="wrap">
+            <input name='name' bindblur="nameBlur" placeholder="请输入收货姓名" value='{{name}}' />
+            <text class='err_tip' wx:if="{{name_err}}">姓名不能为空</text>
+            <text class='err_tip' wx:if="{{name_err2}}">{{err_content}}</text>
+        </view>
+        <text class='label'>手机号</text>
+        <view class="wrap">
+            <input name='phone' bindblur="iphoneBlur" placeholder="请输入手机号码" value='{{iphone}}' />
+            <text class='err_tip' wx:if="{{iphone_err}}">{{err_content}}</text>
+        </view>
+        <text class='label'>收货地区</text>
+        <view class="wrap">
+            <!-- <picker mode="region" bindchange="bindRegionChange" value="{{region}}"> -->
+                <view class="picker" bindtap="open">
+                    {{_province}} {{_city}} {{_county}}
+                    <view class="arrow" wx:if='{{isLoading}}'></view>
+                </view>
+            <!-- </picker> -->
+        </view>
+        <text class='label'>详细地址</text>
+        <view class="wrap">
+            <input name='address' bindblur="addressBlur" placeholder="请输入详细地址" value='{{address}}' />
+             <text class='err_tip' wx:if="{{add_err}}">地址不能为空</text>
+             <!--<text class='err_tip' wx:if="{{add_err2}}">{{err_content}}</text>-->
+        </view>
+    </view>
+</view>
+<!-- <view class='bottomButton' bindtap='submit'>确定</view> -->
+<view  wx:if='{{completedDesign}}' bindtap='submit' class='bottomButton'>确认</view>
+<view class="bottom_btn_db" wx:else>
+    <view bindtap='goPre' class='goPre'></view>
+    <view bindtap='submit' class="confirm highlighted">确认</view>
+</view>
+
+<view wx:if="{{condition}}" class="citypicker">
+  <picker-view indicator-style="height: 40px;" style="" value="{{value}}" bindchange="bindChange" class="citybody">
+    <view class="cityheader">
+      <view bindtap="cancel" class="city-cancel">取消</view>
+      <view bindtap="confirm" class="city-true">确定</view>
+    </view>
+    <picker-view-column>
+      <view wx:for="{{provinces}}" wx:key="item" >{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{citys}}" wx:key="item" >{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view  wx:for="{{countys}}" wx:key="item">{{item}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>

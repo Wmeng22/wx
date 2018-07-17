@@ -1,0 +1,41 @@
+<view wx:if='{{!showTreaty}}' class='wrap'>
+    <view bindtap='chooseModel' data-idx='{{idx}}' data-price='{{item.property_price}}'  data-model='{{item.property_number}}'  wx:key='{{idx}}' wx:for="{{ptylist}}" wx:for-index="idx" wx:for-item="item"  class="modelItem {{active==idx?'highlighted':''}}">
+        <image src='{{item.attribute_imgurl}}' class="modelImg"></image>
+        <view class="modelName">
+            <view class='property_name' wx:for="{{item.property_name}}" wx:for-index="subidx" wx:for-item="subitem"  wx:key='{{subidx}}' >{{subitem}}</view>
+        </view>
+        <view class='modelDes {{item.property_number == "PRIVATEMODEL" ? "isPRI":""}}'>
+            <view class='itemDes' wx:for="{{item.property_des}}" wx:for-index="idx" wx:for-item="item"  wx:key='{{idx}}'>
+                · {{item}}
+            </view>
+        </view>
+        <view class='modelPrice'> ¥ {{item.property_price*1 + fenpinPrice*1}}</view>
+        <image bindtap='openQuestion' src='https://static.heygears.com/wxapp/imgs/问号.png' class='question' wx:if='{{item.property_number == "PRIVATEMODEL"}}' ></image>
+    </view>
+</view>
+<view wx:else class='treaty'>
+    <view class="title">选择须知</view>
+    <view class="content">
+        <view class='item'>CIEMs是一种高度定制化的耳机解决方案，需要您先提供耳印，方能享受到定制化的耳机；</view>
+        <view class='item'>您需要在线下就近寻找一家助听器门店采集您的耳印（一般门店耳模采集立等可取）；</view>
+        <view class='item'>SYREN小程序平台中提供地图服务，帮助您尽快就近找到服务门店；</view>
+        <view class='item'>耳印采集过程可能会产生一定费用，具体以该门店收费为准；</view>
+        <view class='item'>耳印采集完毕后，需要您将其寄送回黑格科技。</view>
+        <view class='item'>我们收到您的快递后，将立刻进入生产制作流程，并全程短信通知您制作进度。</view>
+    </view>
+    <view class='agreeIcon {{isAgreed?"highlighted":""}}' bindtap='toAgree'>
+        同意以上描述
+    </view>
+</view>
+<view class="fade" wx:if='{{showQuestion}}' bindtap='remove_question_fade' catchtouchmove='remove_question_fade'></view>
+<view class='showQuestion' wx:if='{{showQuestion}}'>
+    <image class='closeQuestion' bindtap='remove_question_fade' src='https://static.heygears.com/wxapp/imgs/closeICON.png'></image>
+    <view class='title'>注意</view>
+    <view class='content'>CIEMs是一种高度定制化的耳机解决方案，需要您提供耳印；</view>
+    <view class='content'>您可在附近助听器门店采集耳印，然后将耳印寄送回黑格科技；</view>
+    <view class='content'>可能产生的采集耳印费用以门店收费为准。</view>
+</view>
+<view class="bottom_btn_db">
+    <view bindtap='cancel' class='goPre'></view>
+    <view bindtap='goNext' class="confirm {{flag?'highlighted':''}} ">确认</view>
+</view>

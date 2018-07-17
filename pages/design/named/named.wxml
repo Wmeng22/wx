@@ -1,0 +1,36 @@
+<!--错误提示-->
+<view wx:if='{{errorTipShow}}' class='errorTip'>{{errorTip}}</view>
+<!--命名-->
+<view class='header'>
+    <view class="named_title">给您的专属耳机取个名字：</view>
+    <input value='{{errName}}'  bindinput='nameInput'  placeholder='点击输入昵称' type="text" class="named_input" />
+    <image class='tipIcon' src='{{tipIcon}}'></image>
+    <!--<view class='hr'></view>-->
+</view>
+<!--官方推荐-->
+<!--<view  class='recommend'>-->
+    <!--<view class="official">官方推荐</view>-->
+    <!--<view class="des">您也可直接选择官方推荐经典设计</view>-->
+    <!--<swiper bindchange="swiperChange" >-->
+        <!--<block wx:key='{{idx}}' wx:for="{{recommendList}}" wx:for-index="idx" wx:for-item="item">-->
+            <!--<swiper-item class='flex_row'>-->
+                <!--<view bindtap='chooseRecommend' data-idx='{{idx}}' data-subidx='{{sub_idx}}' class='official_item {{first==idx&&sub_idx==second?"active":""}}' wx:key='{{sub_idx}}' wx:for="{{item}}" wx:for-index="sub_idx" wx:for-item="sub_item">-->
+                    <!--<image class='design_imgurl' src='{{sub_item.design_imgurl}}'></image>-->
+                    <!--<view class='design_name'>{{sub_item.design_name}}</view>-->
+                    <!--<view class='design_des'>{{sub_item.design_des}}</view>-->
+                    <!--<view class='sale_price'>¥ {{sub_item.sale_price*1}}</view>-->
+                <!--</view>-->
+            <!--</swiper-item>-->
+        <!--</block>-->
+    <!--</swiper>-->
+<!--</view>-->
+<!--<view class="swiper-btn-wrapper" wx:if='{{recommendList.length > 1}}'>-->
+    <!--<view class="swiper-btn-list " >-->
+        <!--<view  class="dot {{idx==active?'on':''}}" wx:key='{{idx}}' wx:for="{{recommendList}}" wx:for-index="idx" wx:for-item="itemName"></view>-->
+    <!--</view>-->
+<!--</view>-->
+<!--<view bindtap='goNext' class="bottom_button {{flag?'highlighted':''}}">确认</view>-->
+<view class="bottom_btn_db" >
+    <view bindtap='goPre' class='goPre'></view>
+    <view bindtap='goNext' class="confirm {{flag?'highlighted':''}} ">确认</view>
+</view>

@@ -1,0 +1,151 @@
+<!-- 弹框 start-->
+<view class="popUp" wx:if='{{popUp}}'>
+    <view class="text">{{pop_content}}</view>
+    <view class="confirm" bindtap='confirmAction'>确认</view>
+    <view class="cancel" bindtap='cancelAction'>取消</view>
+</view>
+<!-- 弹框 end-->
+<!--私模 提示用户要寄送耳膜 start-->
+<view class="fade" wx:if='{{remindUsers}}'></view>
+<view id="remindUsers" wx:if='{{remindUsers}}'>
+    <view class="title">注意</view>
+    <view class="content">因您选择CIEMs定制</view>
+    <view class="content">该耳机需要用户自行到</view>
+    <view class="content">助听器店采集耳印</view>
+    <view class="content">并且用专用快递盒寄送到黑格</view>
+    <view class="content last">请充分了解后在选择下单</view>
+    <image class='stepImg' src='https://static.heygears.com/wxapp/imgs/stepAll.png'></image>
+    <view bindtap='toSubmit' class="toSubmit">了解并支付</view>
+</view>
+<!--私模 提示用户要寄送耳膜 end-->
+<view class="glo_err_tip" wx:if="{{err_tip}}">请输入有效的优惠码</view>
+<view class="order_status">{{orderList.create_date}}</view>
+<view class="order_img">
+    <!-- <image class='img' src='https://static.heygears.com/wxapp/imgs/user/tmp_1969791215o6zAJs3pNJnvlphHFFMrm_Q9XMyw49b3a826afa31774bc7a2b403fb51d24.jpg'></image> -->
+    <image class='img' src='https://static.heygears.com/{{aliyun}}'></image>
+    <view class="kezi">
+        <text class="kezi_content" style='color:{{kezi_color}}'>{{kezi_content}}</text>
+    </view>
+</view>
+<view scroll-y class="container" wx:if='{{isLoading}}'>
+    <view class="order_num flex_row list" style='justify-content:space-between'>
+        <text class="num" style='font-size: 28rpx'>总价</text>
+        <text class="price" style=''>¥{{price_pop*1}}</text>
+    </view>
+    <view class="order_detail flex_column">
+        <text class="list_title">优惠码</text>
+        <view class='wrap'>
+            <input value='{{promoCode}}' bindblur='inputCode2' type="text" class='promoCode' placeholder='请输入优惠码'/>
+            <view class='codeIconWrap' bindtap='inputCode' >
+                <image class='codeIcon' src='https://static.heygears.com/wxapp/imgs/icon_scan@2x.png'></image>
+            </view>
+            <image class='tip_img' wx:if="{{isCorrect}}" style='width:36rpx;height:36rpx'
+                   src="https://static.heygears.com/wxapp/imgs/icon_correct36x36@2x.png"></image>
+            <image class='tip_img' wx:if="{{isWrong}}" style='width:36rpx;height:36rpx'
+                   src="https://static.heygears.com/wxapp/imgs/icon_wrong36x36@2x.png"></image>
+        </view>
+        <text class="list_title">收件人信息</text>
+        <view class="list_content flex_row" style='justify-content:space-between'>
+            <text class='value'>{{addressList.rcvr_name}}</text>
+        </view>
+        <view class="list_content flex_row" style='justify-content:space-between'>
+            <text class='value'>{{addressList.rcvr_mobile}}</text>
+        </view>
+        <view class="list_content flex_row " style='justify-content:space-between'>
+            <text class='value w100'>{{addressList.prvn}}{{addressList.prvn}}{{addressList.cnty}}{{addressList.rcvr_addr_detl}}</text>
+        </view>
+        <text class="list_title">耳机详情</text>
+        <view wx:if='{{ismetal}}' class="list_content pro_list flex_row" style='justify-content:space-between'>
+            <text class='pro_name'>耳机材质</text>
+        </view>
+        <view class='list_style'>
+            <view class='list_detail'>
+                <text class="pro_title">机身颜色（左/右）</text>
+                <text class="pro_des">{{price_info[0].name_l}} / {{price_info[0].name_r}}</text>
+                <text class="pro_price">¥ {{price_info[0].price * 1}}</text>
+            </view>
+        </view>
+        <view class='list_style'>
+            <view class='list_detail'>
+                <text class="pro_title">面板信息（左/右）</text>
+                <text class="pro_des">{{price_info[1].name_l}} / {{price_info[1].name_r}}</text>
+                <text class="pro_price">¥ {{price_info[1].price * 1}}</text>
+            </view>
+        </view>
+        <view class='list_style' wx:if='{{price_info_line.length > 0}}'>
+            <view class='list_detail' wx:key='{{idx}}' wx:for="{{price_info_line}}" wx:for-index="idx"
+                  wx:for-item="itemName">
+                <text class="pro_title {{idx==0?'':'titleHide'}}">耳机线：</text>
+                <text class="pro_des">{{itemName.name}}</text>
+                <text class="pro_price">¥ {{itemName.price * 1}}</text>
+            </view>
+        </view>
+        <view class='list_style' wx:if='{{price_info_model.length > 0}}'>
+            <view class='list_detail' wx:key='{{idx}}' wx:for="{{price_info_model}}" wx:for-index="idx"
+                  wx:for-item="itemName">
+                <text class="pro_title {{idx==0?'':'titleHide'}}">模型：</text>
+                <text class="pro_des">{{itemName.name}}</text>
+                <text class="pro_price">¥ {{itemName.price * 1}}</text>
+            </view>
+        </view>
+        <view class='list_style' wx:if='{{price_info_fenpin.length > 0}}'>
+            <view class='list_detail' wx:key='{{idx}}' wx:for="{{price_info_fenpin}}" wx:for-index="idx"
+                  wx:for-item="itemName">
+                <text class="pro_title {{idx==0?'':'titleHide'}}">分频：</text>
+                <text class="pro_des">{{itemName.name}}</text>
+                <text class="pro_price">¥ {{itemName.price * 1}}</text>
+            </view>
+        </view>
+        <view wx:if='{{kezi_content!=""}}' class='list_style'>
+            <view class='list_detail'>
+                <text class="pro_title">刻字：</text>
+                <text class="pro_des">{{kezi_content}}</text>
+                <text class="pro_price">¥ {{kezi_price * 1}}</text>
+            </view>
+        </view>
+        <view class='list_style' wx:if='{{price_info_peijian.clean.length > 0}}'>
+            <view class='list_detail' wx:key='{{idx}}' wx:for="{{price_info_peijian.clean}}" wx:for-index="idx" wx:for-item="itemName">
+                <text class="pro_title {{idx==0?'':'titleHide'}}">清洁配件：</text>
+                <text class="pro_des">{{itemName.name}}</text>
+                <text class="pro_price">¥ {{itemName.price * 1}}</text>
+            </view>
+        </view>
+        <!--<view class='list_style' wx:if='{{price_info_peijian.sai.length > 0}}'>-->
+            <!--<view class='list_detail' wx:key='{{idx}}' wx:for="{{price_info_peijian.sai}}" wx:for-index="idx" wx:for-item="itemName">-->
+                <!--<text class="pro_title {{idx==0?'':'titleHide'}}">耳塞：</text>-->
+                <!--<text class="pro_des">{{itemName.name}}</text>-->
+                <!--<text class="pro_price">¥ {{itemName.price * 1}}</text>-->
+            <!--</view>-->
+        <!--</view>-->
+        <view class='list_style'  wx:if='{{price_info_peijian.sai.length > 0||model!="PRIVATEMODEL"}}'>
+            <view class='list_detail' wx:if='{{model!="PRIVATEMODEL"}}'>
+                <text class="pro_title ">耳塞：</text>
+                <text class="pro_des">单层套 (默认)</text>
+                <text class="pro_price">¥ 0</text>
+            </view>
+            <view class='list_detail' wx:key='{{idx}}' wx:for="{{price_info_peijian.sai}}" wx:for-index="idx" wx:for-item="itemName">
+                <text class="pro_title  {{model!='PRIVATEMODEL'?'titleHide':''}}">耳塞：</text>
+                <text class="pro_des">{{itemName.name}}</text>
+                <text class="pro_price">¥ {{itemName.price * 1}}</text>
+            </view>
+        </view>
+        <view class='list_style' wx:if='{{price_info_peijian.kou.length > 0}}'>
+            <view class='list_detail' wx:key='{{idx}}' wx:for="{{price_info_peijian.kou}}" wx:for-index="idx" wx:for-item="itemName">
+                <text class="pro_title {{idx==0?'':'titleHide'}}">转接口：</text>
+                <text class="pro_des">{{itemName.name}}</text>
+                <text class="pro_price">¥ {{itemName.price * 1}}</text>
+            </view>
+        </view>
+        <view class='list_style' wx:if='{{price_info_peijian.shou.length > 0}}'>
+            <view class='list_detail' wx:key='{{idx}}' wx:for="{{price_info_peijian.shou}}" wx:for-index="idx" wx:for-item="itemName">
+                <text class="pro_title {{idx==0?'':'titleHide'}}">包装：</text>
+                <text class="pro_des">{{itemName.name}}</text>
+                <text class="pro_price">¥ {{itemName.price * 1}}</text>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="bottom_new">
+    <view class="exit" bindtap='doExit'>退出</view>
+    <view class="goNext" bindtap='toPay'>立即付款</view>
+</view> 

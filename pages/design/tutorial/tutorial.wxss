@@ -1,0 +1,42 @@
+/* pages/design/tutorial/tutorial.wxss */
+swiper{
+    width: 750rpx;
+    height: 1096rpx;
+    background-color: #333333;
+    /*padding-bottom:238rpx;*/
+}
+.tutorial_img{
+    width: 750rpx;
+    height: 1334rpx;
+    margin-top: -120rpx;
+}
+.swiper-btn-wrapper{
+    box-sizing: border-box;
+    height:134rpx;
+    background-color: #333333;
+    padding-top:28rpx;
+}
+.swiper-btn-wrapper .swiper-btn-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.swiper-btn-wrapper .swiper-btn-list .dot{
+    margin-left: 16rpx;
+    width: 10rpx;
+    height: 10rpx;
+    border:1px solid #fff;
+    border-radius: 50%
+}
+.swiper-btn-wrapper .swiper-btn-list .dot.on{
+    background-color: #fff
+}
+.goOut{
+    position: fixed;
+    right: 47rpx;
+    bottom: 52rpx;
+    font-size: 30rpx;
+    color: #999999;
+    text-decoration:underline;
+}

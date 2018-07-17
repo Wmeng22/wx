@@ -1,0 +1,44 @@
+.container{
+    padding: 234rpx 122rpx 0;
+}
+.success_tip{
+    height: 117rpx;
+    line-height: 117rpx;
+    color:#c6451b;
+    font-size: 55rpx;
+    font-weight: 700;
+    text-align: center;
+}
+.thank_tip{
+    font-size: 26rpx;
+    color:#cecdcd;
+    text-align: center;
+    line-height: 36rpx;
+}
+.hasColor{
+    text-align: center;
+    width: 100%;
+    background-color: #c6451b;
+    height: 80rpx;
+    line-height: 80rpx;
+    border:none;
+    margin-top: 304rpx;
+    color:black;
+    border-radius: 14rpx;
+    font-size: 30rpx;
+    letter-spacing: 8rpx;
+    /*font-weight: bold;*/
+    /*box-shadow: 0rpx 1rpx 10rpx 2rpx #c6451b;*/
+}
+.noColor{
+    font-size: 30rpx;
+    border: 1px solid #c6451b;
+    border-radius: 14rpx;
+    text-align: center;
+    height: 80rpx;
+    line-height: 80rpx;
+    color:#c6451b;
+    margin-top: 40rpx;
+    font-weight: bold;
+    letter-spacing: 8rpx;
+}

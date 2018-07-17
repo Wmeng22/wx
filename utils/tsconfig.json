@@ -1,0 +1,116 @@
+{
+  "err": {
+    "pid": "10014",
+    "skuid": "225c1b90de664524aa1669998b9a7e5b",
+    "is_comb": 1,
+    "pty_list": [
+      {
+        "pty_num": "XOVER_MIRON",
+        "pty_val": ""
+      },
+      {
+        "pty_num": "DLE_FLUORESCEIN",
+        "pty_val": ""
+      },
+      {
+        "pty_num": "DRE_FLUORESCEIN",
+        "pty_val": ""
+      },
+      {
+        "pty_num": "ULE_CFRP4",
+        "pty_val": ""
+      },
+      {
+        "pty_num": "URE_CFRP4",
+        "pty_val": ""
+      },
+      -1,
+      {
+        "pty_num": "LOGOL_INDIGO",
+        "pty_val": ""
+      },
+      {
+        "pty_num": "LOGOR_YBLACK",
+        "pty_val": ""
+      }
+    ]
+  },
+  "ear_name": "12312132",
+  "peijian": [
+    {
+      "skuid": "896b6c52e6824c7fa15637ea639186cc",
+      "accessory_imgurl": "",
+      "property_name": "大陆",
+      "detail_des": "",
+      "property_imgurl": "",
+      "property_number": "SR_CN",
+      "comb_price": "0.00",
+      "litimg": "https://static.heygears.com/wxapp/imgs/custom2/asy/clean.png",
+      "sale_price": "10.00",
+      "category_id": "10202",
+      "accessory_name": "清洁套装",
+      "access_prodid": "10019",
+      "quantity": 3
+    },
+    {
+      "skuid": "6f34ad8427d74952aa01cb00dbdffd9b",
+      "accessory_imgurl": "",
+      "property_name": "黑色",
+      "detail_des": "",
+      "property_imgurl": "",
+      "property_number": "BB",
+      "comb_price": "0.00",
+      "litimg": "https://static.heygears.com/wxapp/imgs/custom2/asy/flug_one.png",
+      "sale_price": "10.00",
+      "category_id": "10203",
+      "accessory_name": "Syren硅胶塞套装",
+      "access_prodid": "10020",
+      "quantity": 1
+    },
+    {
+      "skuid": "c6d2576278c448e5a1b18aca1f2dc703",
+      "accessory_imgurl": "",
+      "property_name": "大陆",
+      "detail_des": "",
+      "property_imgurl": "",
+      "property_number": "SR_CN",
+      "comb_price": "0.00",
+      "litimg": "https://static.heygears.com/wxapp/imgs/custom2/asy/adp_hang.png",
+      "sale_price": "0.00",
+      "category_id": "10204",
+      "accessory_name": "航空转接头",
+      "access_prodid": "10030",
+      "quantity": 1
+    },
+    {
+      "skuid": "707f7b60cb2b4a70ac60f8ad3935f919",
+      "accessory_imgurl": "",
+      "property_name": "大陆",
+      "detail_des": "",
+      "property_imgurl": "",
+      "property_number": "SR_CN",
+      "comb_price": "0.00",
+      "litimg": "https://static.heygears.com/wxapp/imgs/custom2/asy/adp_typec.png",
+      "sale_price": "0.00",
+      "category_id": "10204",
+      "accessory_name": "Type-C转接头",
+      "access_prodid": "10032",
+      "quantity": 1
+    },
+    {
+      "skuid": "4c8206e6f007429f8707cfcacdfce35c",
+      "accessory_imgurl": "",
+      "property_name": "大陆",
+      "detail_des": "",
+      "property_imgurl": "",
+      "property_number": "SR_CN",
+      "comb_price": "0.00",
+      "litimg": "https://static.heygears.com/wxapp/imgs/custom2/asy/adp_iphone.png",
+      "sale_price": "0.00",
+      "category_id": "10204",
+      "accessory_name": "苹果转接头",
+      "access_prodid": "10033",
+      "quantity": 1
+    }
+  ]
+}

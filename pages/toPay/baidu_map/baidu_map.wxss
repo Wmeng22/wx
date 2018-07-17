@@ -1,0 +1,117 @@
+.map_container{ 
+    height: 852rpx;
+    width: 100%;
+    /*height: 100%;*/
+    /*position: fixed;*/
+    /*z-index: 9;*/
+}
+.map {
+    height: 100%;
+    width: 100%;
+}
+.placeList{
+    width: 750rpx;
+    /*height: 1164rpx;*/
+    background-color: #1a1a1a;
+    border-radius: 18rpx;
+    /*position: fixed;*/
+    /*top: 852rpx;*/
+    /*left: 50%;*/
+    /*margin-left: -352rpx;*/
+    box-sizing: border-box;
+    /*padding-top: 38rpx;*/
+    padding-bottom: 100rpx;
+}
+.placeDetail{
+    width: 704rpx;
+    background-color: #1a1a1a;
+    border-radius: 18rpx;
+    /*position: fixed;*/
+    /*left: 50%;*/
+    /*margin-left: -352rpx;*/
+    padding: 100rpx 0;
+    padding-left: 40rpx;
+    box-sizing: border-box;
+    bottom: 0;
+}
+.placeDetail .title{
+    color: #fff;
+    font-size: 32rpx;
+    line-height: 40rpx;
+    /*width: 500rpx;*/
+    padding-right: 20rpx;
+    position: relative;
+}
+.placeDetail .address{
+    font-size: 28rpx;
+    padding-top: 10rpx;
+    padding-bottom: 20rpx;
+    padding-right: 20rpx;
+    line-height: 38rpx;
+    height: 40rpx;
+    /*width: 500rpx;*/
+    display: block;
+    /*word-wrap: break-wrap*/
+}
+.placeDetail .telephone{
+    font-size: 28rpx;
+    padding-top: 36rpx;
+    line-height: 38rpx;
+}
+.placeList.hide{
+    top: 850rpx;
+}
+.placeList .title .line{
+    width: 6rpx;
+    height: 26rpx;
+    background-color: #c6451b;
+    position: absolute;
+    top:38rpx;
+    left:0;
+}
+.placeList .title{
+    color: #c6451b;
+    /*border-left: 6rpx solid #c6451b;*/
+    font-size: 26rpx;
+    padding:38rpx 0 10rpx 44rpx;
+}
+.placeList .placeItemWrap{
+    padding: 36rpx 0;
+    border-bottom: 1rpx solid #313131;
+    margin: 0 50rpx;
+}
+.placeList .placeItemWrap:last-child{
+    border-bottom: none ;
+}
+.placeList .placeItemWrap .placeName{
+    color: #fff;
+    font-size: 32rpx;
+}
+.placeList .placeItemWrap .placeAddress{
+    font-size: 28rpx;
+    padding-top: 32rpx;
+    line-height: 30rpx;
+}
+.placeList .scrollView{
+    height: 1050rpx;
+}
+
+/*重新定位*/
+.fixedPosition{
+    position: fixed;
+    right: 42rpx;
+    bottom: 285rpx;
+    width: 50rpx;
+    height: 50rpx;
+}
+.bottomButton{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    background-color: #c6451b;
+    height: 88rpx;
+    text-align: center;
+    line-height: 88rpx;
+    font-size: 30rpx
+}

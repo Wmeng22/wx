@@ -1,0 +1,118 @@
+.container{
+    position: relative;
+    padding: 0 40rpx;
+}
+.nav_wrap{
+    box-sizing: border-box;
+    height: 143rpx;
+    line-height: 143rpx;
+     /*vertical-align: middle;*/
+}
+.nav_wrap .nav_icon{
+    width: 40rpx;
+    height: 34rpx;
+    margin-left: 40rpx;
+    margin-right: 65rpx;
+    margin-top: 52rpx
+  /*  line-height: 143rpx*/
+}
+.nav_wrap navigator,.nav_wrap .service,.nav_wrap .clear{
+    display: inline-block;
+    border-bottom: 1px solid #2a2a2a;
+    width: 100%;
+    margin-right: 36rpx;
+    background:url('https://static.heygears.com/wxapp/imgs/icon_arrow20X20@2x.png') no-repeat center right;
+    background-size: 20rpx 20rpx;
+    font-size: 30rpx;
+     color:#ffffff;
+}
+.nav_wrap .service{
+    border:none;
+    border-bottom: 1px solid #2a2a2a;
+    font-size: 30rpx;
+    text-align: left;
+    line-height: 143rpx;
+}
+.container_1 .exit_account{
+    color:#d3b787;
+    font-size: 30rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    width: 210rpx;
+    margin:350rpx auto 0;
+    border:none;
+
+}
+.login_nav{
+    height: 64rpx;
+    box-sizing: border-box;
+    width: 184rpx;
+    top: 964rpx;
+    position: absolute;
+    left: 50%;
+    margin-left: -90rpx
+}
+.login_nav .navigator{
+    color:#aeaeae;
+    width: 100%;
+    height: 64rpx;
+    text-align: center;
+    line-height: 64rpx;
+    border:1px solid #747474;
+}
+
+.fade_pop2{
+    width: 534rpx;
+    height: 284rpx;
+    background: black;
+    position: fixed;
+    left: 50%;
+    top: 45%;
+    margin-left: -267rpx;
+    margin-top: -142rpx;
+    z-index: 999;
+    box-sizing: border-box;
+}
+.fade_pop2 .text{
+    position: absolute;
+    top: 67rpx;
+    left: 70rpx;
+    color:#fbfbfb;
+    font-size: 32rpx
+}
+.fade_pop2 .cancel{
+    position: absolute;
+    left: 406rpx;
+    top: 179rpx;
+    color:#c6451b;
+    font-size: 30rpx
+}
+.fade_pop2 .confirm{
+    position: absolute;
+    color:#7e7e7e;
+    top: 179rpx;
+    left: 240rpx;
+    font-size: 30rpx
+}
+.glo_err_tip{
+    position: fixed;
+    top:0;
+    left: 0;
+    height: 48rpx;
+    width:100%;
+    background-color:#e52739;
+    line-height: 48rpx;
+    text-align: center;
+    color:#ffffff;
+    font-size: 26rpx;
+    z-index: 999
+}
+.yellow{
+    background-color: #c6451b;
+    color: black
+}
+.green{
+    background-color: #5ae077;
+    color: black
+}

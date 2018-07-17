@@ -1,0 +1,46 @@
+/* pages/order/detail/makerecordlist/makerecordlist.wxss */
+.wrap{
+    height: 204rpx;
+}
+.progress_img{
+    top: 86rpx;
+    position: absolute;
+    width: 118rpx;
+    height: 118rpx;
+    left: 216rpx;
+}
+.progress_line{
+    position: absolute;
+    height: 86rpx;
+    width: 1rpx;
+    top: 0;
+    background-color: #313131;
+    left: 275rpx;
+}
+.progress_status{
+    position: absolute;
+    top: 108rpx;
+    left: 387rpx;
+    color:#fff;
+    font-size: 28rpx;
+}
+.progress_time{
+    position: absolute;
+    top: 150rpx;
+    left: 387rpx;
+    font-size: 20rpx;
+    color:#747474
+}
+button[plain].bottomButton{
+    position:fixed;
+    bottom:0;
+    width: 100%;
+    background-color:#c6451b;
+    color:#fff;
+    height:88rpx;
+    text-align:center;
+    line-height:88rpx;
+    font-size:30rpx;
+    border-radius:0;
+    border:none;
+}

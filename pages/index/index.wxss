@@ -1,0 +1,174 @@
+page{
+  background: #1a1a1a url('https://static.heygears.com/wxapp/imgs/index_bg.png') 0 -100rpx no-repeat;
+  background-size: 750rpx 1334rpx;
+  /*height: 1334rpx;*/
+}
+.goMenu{
+  height: 64rpx;
+  width: 64rpx;
+  background-image:url('https://static.heygears.com/wxapp/imgs/icon_list.png');
+  background-repeat:no-repeat;
+  background-size:64rpx 64rpx;
+  position: absolute;
+  top:20rpx;
+  right:40rpx;
+  z-index: 999
+}
+.goMenu.showMenu{
+  background-image:url('https://static.heygears.com/wxapp/imgs/icon_close64x64.png');
+  background-repeat:no-repeat;
+  background-size:64rpx 64rpx;
+}
+.closeAudit{
+  height: 64rpx;
+  width: 64rpx;
+  background-image:url('https://static.heygears.com/wxapp/imgs/icon_close64x64.png');
+  background-repeat:no-repeat;
+  background-size:64rpx 64rpx;
+  position: absolute;
+  top:20rpx;
+  right:40rpx;
+  z-index: 999
+}
+.MenuList{
+  position: absolute;
+  height: 670rpx;
+  width: 590rpx;
+  left:50%;
+  margin-left: -285rpx;
+  z-index: 999;
+  background-color: #0e0f0f;
+  padding-top: 50rpx;
+  top: 157rpx;
+}
+.MenuList .item{
+  height: 150rpx;
+  border-bottom: 3rpx solid #333333;
+  box-sizing: border-box;
+  line-height: 150rpx;
+  color: #fff;
+  font-size: 30rpx;
+  width: 394rpx;
+  margin: 0 auto;
+  padding-left: 178rpx;
+}
+.MenuList .item:last-child{
+  border-bottom: none
+}
+.MenuList .item.index{
+  background: url('https://static.heygears.com/wxapp/imgs/icon_design44x44@2x.png') 80rpx center no-repeat;
+  background-size: 42rpx 42rpx;
+}
+.MenuList .item.order{
+  background: url('https://static.heygears.com/wxapp/imgs/icon_orde_listr44x44@2x.png') 80rpx center no-repeat;
+  background-size: 42rpx 42rpx;
+}
+.MenuList .item.setting{
+  background: url('https://static.heygears.com/wxapp/imgs/icon_setting44x44@2x.png') 80rpx center no-repeat;
+  background-size: 42rpx 42rpx;
+}
+.MenuList .item.login{
+  background: url('https://static.heygears.com/wxapp/imgs/User.png') 80rpx center no-repeat;
+  background-size: 34rpx 34rpx;
+}
+
+/* 提示耳印 start*/
+#earAudit{
+  width: 592rpx;
+  height: 700rpx;
+  background-color: #0e0f0f;
+  position: fixed;
+  left: 50%;
+  margin-left: -286rpx;
+  margin-top: 200rpx;
+  z-index: 999;
+  box-sizing: border-box;
+}
+
+#earAudit .toOrder{
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  text-align: center;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 30rpx;
+  background-color: #c6451b;
+  width: 100%;
+}
+#earAudit .toOrder.fail{
+  background-color: #262626;
+  color: #686868
+}
+#earAudit .title{
+  color: #c6451b;
+  font-size: 60rpx;
+  font-weight: bold;
+  text-align: center;
+  margin: 70rpx 0 0;
+  padding-top: 176rpx;
+  padding-bottom: 60rpx;
+  background: url('https://static.heygears.com/wxapp/imgs/successICON.png') no-repeat center 0 ;
+  background-size: 154rpx 150rpx;
+}
+#earAudit .title.fail{
+  color: #d40c0c;
+  background: url('https://static.heygears.com/wxapp/imgs/failICON.png') no-repeat center 0 ;
+  background-size: 154rpx 150rpx;
+}
+#earAudit .content{
+  font-size: 30rpx;
+  text-align: center;
+  color: #575757;
+  height: 34rpx;
+  line-height: 34rpx;
+}
+#earAudit .content.last{
+  line-height: 98rpx;
+  height: 98rpx;
+}
+/* 提示耳印 end*/
+
+/*联系客服start*/
+.header .customer_service{
+  right: 30rpx;
+  top: 24rpx;
+}
+/*联系客服end*/
+
+/*底部按钮start*/
+.bottom_button{
+  position: fixed;
+  bottom:0;
+  height: 90rpx;
+  width: 100%;
+  text-align: center;
+  line-height: 90rpx;
+  font-size: 30rpx;
+  font-weight: bold
+}
+.bottom_button .item{
+  float: left;
+  height: 90rpx;
+}
+.bottom_button .setting,.bottom_button .order{
+  width: 180rpx;
+  background-color: pink;
+}
+.bottom_button .setting{
+  background:#4d4d4d url('https://static.heygears.com/wxapp/imgs/icon_setting2.png') center center no-repeat;
+  background-size: 32rpx 36rpx;
+}
+.bottom_button .index{
+  width: 390rpx;
+  background-color: #c6451b;
+  color: #fff;
+}
+.bottom_button .order{
+  background:#4d4d4d url('https://static.heygears.com/wxapp/imgs/icon_order2.png') center center no-repeat;
+  background-size: 32rpx 36rpx;
+}
+/*底部按钮end*/
+
+
+

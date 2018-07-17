@@ -1,0 +1,39 @@
+.container{
+    padding:80rpx 76rpx 0;
+}
+.container .log{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.log .name{
+    font-size: 26rpx;
+    margin-top: 40rpx;
+}
+.logo_img{
+    width: 196rpx;
+    height: 196rpx;
+}
+.log .ban{
+    font-size: 20rpx;
+    color:#c6451b;
+    margin-top: 20rpx;
+}
+.list {
+    margin-top: 80rpx;
+}
+.list .li{
+    width: 100%;
+    position: relative;
+    height: 140rpx;
+    line-height: 140rpx;
+    color:#ffffff;
+    font-size: 30rpx;
+    border-bottom: 1px solid #2a2a2a;
+    background:url('https://static.heygears.com/wxapp/imgs/icon_arrow20X20@2x.png') no-repeat center right;
+    background-size: 20rpx 20rpx;
+}
+.list .li .icon{
+  position: absolute;
+}

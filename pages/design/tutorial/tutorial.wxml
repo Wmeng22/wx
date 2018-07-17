@@ -1,0 +1,43 @@
+<view>
+    <swiper interval="{{interval}}" bindchange="swiperChange"
+            autoplay="{{autoplay}}" class='swiper' indicator-dots="{{indicatorDots}}"
+            indicator-active-color='#fff'>
+        <!--私模-->
+        <block  wx:if='{{isPrivate}}'>
+            <swiper-item >
+                <image class='tutorial_img' src='https://static.heygears.com/wxapp/imgs/tutorial/pro1.jpg'></image>
+            </swiper-item >
+            <swiper-item >
+                <image class='tutorial_img' src='https://static.heygears.com/wxapp/imgs/tutorial/pro2.jpg'></image>
+            </swiper-item >
+            <swiper-item >
+                <image class='tutorial_img' src='https://static.heygears.com/wxapp/imgs/tutorial/pro3.jpg'></image>
+            </swiper-item >
+            <swiper-item >
+                <image class='tutorial_img' src='https://static.heygears.com/wxapp/imgs/tutorial/pro4.jpg'></image>
+            </swiper-item >
+            <swiper-item >
+                <image class='tutorial_img' src='https://static.heygears.com/wxapp/imgs/tutorial/pro5_2.jpg'></image>
+            </swiper-item >
+        </block>
+        <block  wx:else>
+            <swiper-item >
+                <image class='tutorial_img' src='https://static.heygears.com/wxapp/imgs/tutorial/syren1.jpg'></image>
+            </swiper-item >
+            <swiper-item >
+                <image class='tutorial_img' src='https://static.heygears.com/wxapp/imgs/tutorial/syren2.jpg'></image>
+            </swiper-item >
+            <swiper-item >
+                <image class='tutorial_img' src='https://static.heygears.com/wxapp/imgs/tutorial/syren3.jpg'></image>
+            </swiper-item >
+        </block>
+        <swiper-item>
+        </swiper-item>
+    </swiper>
+</view>
+<view class="swiper-btn-wrapper">
+    <view class="swiper-btn-list ">
+        <view  class="dot {{idx==active?'on':''}}" wx:key='{{idx}}' wx:for="{{prolist}}" wx:for-index="idx" wx:for-item="itemName"></view>
+    </view>
+</view>
+<view bindtap='goOut' class='goOut'>跳出教程</view>

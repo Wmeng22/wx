@@ -1,0 +1,16 @@
+<view class="container">
+    
+    <view class="log">
+        <image class="logo_img" src='https://static.heygears.com/wxapp/imgs/SYREN@2x.png'></image>
+        <text class="name">Syren系列耳机定制</text>
+        <text class="ban">版本：2.0</text>
+    </view>
+    <view class="list">
+        <view class="li" bindtap='goContact'>定制介绍
+            <view class="icon"></view>
+        </view>
+        <!-- <view class="li">意见反馈
+            <view class="icon"></view>
+        </view> -->
+    </view>
+</view>

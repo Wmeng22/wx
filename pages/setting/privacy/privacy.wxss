@@ -1,0 +1,23 @@
+.container{
+    padding:36rpx 80rpx 0;
+}
+.gray{
+    color:#b9b9b9;
+    justify-content:center;
+}
+.container .text{
+    color:#b9b9b9;
+    font-size: 28rpx;
+    line-height: 40rpx;
+    padding-top: 44rpx;
+    justify-content:center;
+}
+.container .text .strong{
+    color:#ffffff;
+    font-size: 30rpx;
+
+}
+.container .text .small{
+    color:#b9b9b9;
+    font-size: 24rpx;
+}

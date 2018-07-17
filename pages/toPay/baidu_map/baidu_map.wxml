@@ -1,0 +1,19 @@
+<view class="map_container"> 
+  <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" bindmarkertap="makertap"></map> 
+</view> 
+<image bindtap='fixedPosition' class='fixedPosition' src='https://static.heygears.com/wxapp/imgs/icon_location@2x.png'></image>
+<view wx:if='{{!showDetail}}' class='placeList {{!showMap?"hide":""}}' enable-back-to-top >
+  <view bindtap='showMap' class="title"><view class='line'></view>附近共 {{count}} 家助听器店</view>
+  <!--<scroll-view class='scrollView' scroll-y style="width: 100%">-->
+      <view class='placeItemWrap' wx:key='{{idx}}' wx:for="{{placeList}}" wx:for-index="idx" wx:for-item="item">
+        <view class="placeName">{{item.name}}</view>
+        <view class='placeAddress'>{{item.address}}</view>
+      </view>
+  <!--</scroll-view>-->
+</view>
+<view wx:else class='placeDetail'>
+    <text class='title'>{{textData.name}}</text>
+    <text class='address'>{{textData.desc}}</text>
+    <!--<text wx:if='{{placeData.telephone!="undefined"}}' class='telephone'>{{placeData.telephone}}</text>-->
+</view>
+<view bindtap='confirm' class='bottomButton'>确认</view>

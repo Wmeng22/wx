@@ -1,0 +1,195 @@
+<!-- 弹框 start-->
+<view class="popUp" wx:if='{{popUp}}'>
+    <view class="text">{{pop_content}}</view>
+    <view class="confirm" bindtap='confirmAction'>确认</view>
+    <view class="cancel" bindtap='cancelAction'>取消</view>
+</view>
+<!-- 弹框 end-->
+<view class="order_status">{{status}}</view>
+<view class="order_img">
+    <image class='img' src='{{err.sku_litimg}}'></image>
+    <view class="kezi">
+        <text class="kezi_content" style='color:{{kezi_color}}'>{{kezi_content}}</text>
+    </view>
+</view>
+<view class='detailWrap' wx:if='{{isLoading}}'>
+    <view class="container">
+        <view class="order_num flex_row list" style='justify-content:space-between'>
+            <text class="num earName">昵称：{{err.ear_nickname}}</text>
+            <text wx:if="{{status != '设计中' && status != '设计完成'}}" class="price earPrice">¥ {{orderList.order_amt*1}}</text>
+            <text wx:else class="price earPrice">¥ {{orderList.design_price*1}}</text>
+        </view>
+        <view wx:if='{{status!="设计中" && status != "设计完成"}}' class="order_num flex_row list" style='justify-content:space-between'>
+            <text class="num" style='font-size: 28rpx'>订单号：</text>
+            <text class="order_number d3b787">{{order_no}}</text>
+        </view>
+        <view wx:if='{{promo != ""&& status!="设计中"&& status != "设计完成"}}' class="order_num flex_row list"
+              style='justify-content:space-between'>
+            <text class="num" style='font-size: 28rpx'>优惠码：</text>
+            <text class="order_number d3b787">{{promo}}</text>
+        </view>
+        <view class="order_detail flex_column">
+            <block wx:if='{{status!="设计中" && status != "设计完成"}}'>
+                <text class="list_title">收件人信息</text>
+                <view class="list_content flex_row" style='justify-content:space-between'>
+                    <text class='value'>{{orderList.rcvr_name}}</text>
+                </view>
+                <view class="list_content flex_row" style='justify-content:space-between'>
+                    <text class='value'>{{orderList.rcvr_mobile}}</text>
+                </view>
+                <view class="list_content flex_row " style='justify-content:space-between'>
+                    <text class='value w100'>{{orderList.rcvr_addr_prvn}}{{orderList.rcvr_addr_city}}{{orderList.rcvr_addr_cnty}}{{orderList.rcvr_addr_detl}}</text>
+                </view>
+            </block>
+            <text class="list_title">耳机详情</text>
+            <view class='list_style'>
+                <view class='list_detail'>
+                    <text class="pro_title">机身颜色(左/右)</text>
+                    <block wx:if="{{status != '设计中' && status != '设计完成'}}">
+                        <text class="pro_des"> {{fuselagePtylist[0].ptycategory_name}},{{fuselagePtylist[0].ptylist[0].property_name}} / {{fuselagePtylist[1].ptycategory_name}},{{fuselagePtylist[1].ptylist[0].property_name}}</text>
+                        <text class="pro_price">¥ {{fuselagePtylist[0].ptylist[0].property_sale_amount*2 }}</text>
+                    </block>
+                    <block wx:else>
+                        <text class="pro_des"> {{fuselagePtylist[0].property_name}} / {{fuselagePtylist[1].property_name}}</text>
+                        <text class="pro_price">¥ {{fuselagePtylist[0].property_price*1 +fuselagePtylist[1].property_price*1}}</text>
+                    </block>
+                </view>
+            </view>
+            <view class='list_style'>
+                <view class='list_detail'>
+                    <text class="pro_title">面板信息(左/右)</text>
+                    <block wx:if="{{status != '设计中' && status != '设计完成'}}">
+                        <text class="pro_des"> {{panelPtylist[0].ptycategory_name}},{{panelPtylist[0].ptylist[0].property_name}} / {{panelPtylist[1].ptycategory_name}},{{panelPtylist[1].ptylist[0].property_name}}</text>
+                        <text class="pro_price">¥ {{panelPtylist[0].ptylist[0].property_sale_amount*2 }}</text>
+                    </block>
+                    <block wx:else>
+                        <text class="pro_des"> {{panelPtylist[0].property_name}} / {{panelPtylist[1].property_name}}</text>
+                        <text class="pro_price">¥ {{panelPtylist[0].property_price*1 +panelPtylist[1].property_price*1}}</text>
+                    </block>
+                </view>
+            </view>
+            <view class='list_style' wx:if='{{fenpinPtylist.length > 0}}'>
+                <view class='list_detail' wx:key='{{idx}}' wx:for="{{fenpinPtylist}}" wx:for-index="idx"
+                      wx:for-item="itemName">
+                    <text class="pro_title {{idx==0?'':'titleHide'}}">分频：</text>
+                    <text class="pro_des">{{itemName.property_name}}</text>
+                    <block  wx:if="{{status != '设计中' && status != '设计完成'}}">
+                        <text class="pro_price">¥ {{itemName.property_sale_amount * 1 + orderList.product_sale_price *1}}</text>
+                    </block>
+                    <block wx:else>
+                        <text class="pro_price">¥ {{itemName.property_price * 1 + orderList.sale_price *1}}</text>
+                    </block>
+                </view>
+            </view>
+            <view class='list_style' wx:if='{{modelPtylist.length > 0}}'>
+                <view class='list_detail' wx:key='{{idx}}' wx:for="{{modelPtylist}}" wx:for-index="idx"
+                      wx:for-item="itemName">
+                    <text class="pro_title {{idx==0?'':'titleHide'}}">模型：</text>
+                    <text class="pro_des">{{itemName.property_name}}</text>
+                    <block  wx:if="{{status != '设计中' && status != '设计完成'}}">
+                        <text class="pro_price">¥ {{itemName.property_sale_amount * 1 }}</text>
+                    </block>
+                    <block wx:else>
+                        <text class="pro_price">¥ {{itemName.property_price * 1 }}</text>
+                    </block>
+                </view>
+            </view>
+            <view class='list_style' wx:if='{{linePtylist.length > 0}}'>
+                <view class='list_detail' wx:key='{{idx}}' wx:for="{{linePtylist}}" wx:for-index="idx"
+                      wx:for-item="itemName">
+                    <text class="pro_title {{idx==0?'':'titleHide'}}">耳机线：</text>
+                    <text class="pro_des">{{itemName.pty_name}}{{itemName.prod_name}} (x{{itemName.quantity}})</text>
+                    <text class="pro_price">¥ {{itemName.sale_price * 1 }}</text>
+                </view>
+            </view>
+            <view class='list_style' wx:if='{{keziPtylist.length > 0}}'>
+                <view class='list_detail' wx:key='{{idx}}' wx:for="{{keziPtylist}}" wx:for-index="idx"
+                      wx:for-item="itemName">
+                    <text class="pro_title {{idx==0?'':'titleHide'}}">刻字：</text>
+                    <text class="pro_des">{{kezi_content}}</text>
+                    <block  wx:if="{{status != '设计中' && status != '设计完成'}}">
+                        <text class="pro_price">¥ {{itemName.property_sale_amount * 1}}</text>
+                    </block>
+                    <block wx:else>
+                        <text class="pro_price">¥ {{itemName.property_price * 1}}</text>
+                    </block>
+                </view>
+            </view>
+            <view class='list_style' wx:if='{{cleanPtylist.length > 0}}'>
+                <view class='list_detail' wx:key='{{idx}}' wx:for="{{cleanPtylist}}" wx:for-index="idx"
+                      wx:for-item="itemName">
+                    <text class="pro_title {{idx==0?'':'titleHide'}}">清洁配件：</text>
+                    <text class="pro_des">{{itemName.prod_name}} (x{{itemName.quantity}})</text>
+                    <text class="pro_price">¥ {{itemName.sale_price * 1}}</text>
+                </view>
+            </view>
+            <!--<view class='list_style' wx:if='{{saiPtylist.length > 0}}'>-->
+                <!--<view class='list_detail' wx:key='{{idx}}' wx:for="{{saiPtylist}}" wx:for-index="idx"-->
+                      <!--wx:for-item="itemName">-->
+                    <!--<text class="pro_title {{idx==0?'':'titleHide'}}">耳塞：</text>-->
+                    <!--<text class="pro_des">{{itemName.prod_name}} (x{{itemName.quantity}})</text>-->
+                    <!--<text class="pro_price">¥ {{itemName.sale_price * 1}}</text>-->
+                <!--</view>-->
+            <!--</view>-->
+            <view class='list_style' wx:if='{{saiPtylist.length >0 || modelPtylist[0].property_number!="PRIVATEMODEL"}}'>
+                <view class='list_detail' wx:if='{{modelPtylist[0].property_number!="PRIVATEMODEL"}}'>
+                    <text class="pro_title ">耳塞：</text>
+                    <text class="pro_des">单层套 (默认)</text>
+                    <text class="pro_price">¥ 0</text>
+                </view>
+                <view class='list_detail' wx:key='{{idx}}' wx:for="{{saiPtylist}}" wx:for-index="idx" wx:for-item="itemName"  wx:if="{{status != '设计中' && status != '设计完成' && itemName.quantity>1}}">
+                        <text class="pro_title {{modelPtylist[0].property_number!='PRIVATEMODEL'?'titleHide':''}}">耳塞：</text>
+                        <text class="pro_des" wx:if='{{modelPtylist[0].property_number!="PRIVATEMODEL"}}' >{{itemName.prod_name}} (x{{itemName.quantity-1}})</text>
+                        <text class="pro_des" wx:else >{{itemName.prod_name}} (x{{itemName.quantity}})</text>
+                        <text class="pro_price" >¥ {{itemName.sale_price * 1}}</text>
+                </view>
+                <view class='list_detail'  wx:if="{{status == '设计中' || status == '设计完成'}}" wx:key='{{idx}}' wx:for="{{saiPtylist}}" wx:for-index="idx" wx:for-item="itemName">
+                        <text class="pro_title  {{modelPtylist[0].property_number!='PRIVATEMODEL'?'titleHide':''}}">耳塞：</text>
+                        <text class="pro_des" >{{itemName.prod_name}} (x{{itemName.quantity}})</text>
+                        <text class="pro_price" >¥ {{itemName.sale_price * 1}}</text>
+                </view>
+            </view>
+            <view class='list_style' wx:if='{{kouPtylist.length > 0}}'>
+                <view class='list_detail' wx:key='{{idx}}' wx:for="{{kouPtylist}}" wx:for-index="idx"
+                      wx:for-item="itemName">
+                    <text class="pro_title {{idx==0?'':'titleHide'}}">转接口：</text>
+                    <text class="pro_des">{{itemName.prod_name}} (x{{itemName.quantity}})</text>
+                    <text class="pro_price">¥ {{itemName.sale_price * 1 }}</text>
+                </view>
+            </view>
+            <view class='list_style' wx:if='{{shouPtylist.length > 0}}'>
+                <view class='list_detail' wx:key='{{idx}}' wx:for="{{shouPtylist}}" wx:for-index="idx"
+                      wx:for-item="itemName">
+                    <text class="pro_title {{idx==0?'':'titleHide'}}">包装：</text>
+                    <text class="pro_des">{{itemName.prod_name}} (x{{itemName.quantity}})</text>
+                    <text class="pro_price">¥ {{itemName.sale_price * 1 }}</text>
+                </view>
+            </view>
+        </view>
+        <view class="wrap">
+            <!-- <navigator class='service' open-type="navigateTo" url=''>联系客服</navigator> -->
+            <button open-type='contact' plain='true' class='service'>联系客服</button>
+        </view>
+    </view>
+    <!-- <navigator class='bottomButton' open-type="navigateTo" url=''>联系售后</navigator> -->
+    <view class="bottom_btn_db"
+          wx:if='{{orderList.status == 102 || orderList.status == 106 || orderList.status == 107 || orderList.status == 110}}'>
+        <button class='bottomButton' open-type='contact' plain='true'>联系客服</button>
+        <view class='bottomButton check_makerecordlist' bindtap='check_makerecordlist'>查看制作进度</view>
+    </view>
+    <view bindtap='toPay' wx:if='{{orderList.status == 100}}' class='bottomButton_2'>立即付款</view>
+    <view bindtap='toAddress' wx:if='{{status=="设计完成"}}' class='bottomButton_2'>立即下单</view>
+    <view wx:if='{{status=="设计完成"}}' class="bottom_btn_db">
+        <view bindtap='goDelete' class='goPre'>删除</view>
+        <view bindtap='toAddress' class="confirm highlighted ">立即下单</view>
+    </view>
+    <view bindtap='toDesign' wx:if='{{status=="设计中"}}' class='bottomButton_2'>继续设计</view>
+    <view wx:if='{{status=="设计中"}}' class="bottom_btn_db">
+        <view bindtap='goDelete' class='goPre'>删除</view>
+        <view bindtap='toDesign' class="confirm highlighted ">继续设计</view>
+    </view>
+</view>
+
+
+
+

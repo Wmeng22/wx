@@ -1,0 +1,10 @@
+<view>
+    <view wx:if='{{itemName.is_background == 0}}' class="wrap" wx:for="{{makerecordlist}}" wx:for-index="idx" wx:for-item="itemName" wx:key='{{idx}}'>
+        <image src='{{itemName.img}}' class='progress_img'></image>
+        <view wx:if='{{idx!=0}}' class="progress_line"></view>
+        <!--<text class="progress_status">{{itemName.flow_name}}<text wx:if='{{itemName.audit_user != ""}}'>中</text></text>-->
+        <text class="progress_status">{{itemName.flow_name}}</text>
+        <text class="progress_time">{{itemName.audit_date}}</text>
+    </view>
+    <button class='bottomButton' open-type='contact' plain='true'>联系客服</button>
+</view>

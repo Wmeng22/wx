@@ -1,0 +1,257 @@
+.fenpin_wrap{
+    position: relative;
+    background-color: #2f2f2f;
+    width: 626rpx;
+    border-radius: 12rpx;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-top: 36rpx;
+    /*height: 100rpx;*/
+}
+.fenpin_wrap .productName{
+    font-size: 60rpx;
+    color:#efefef;
+    width: 100%;
+    text-align: center;
+    padding-top:30rpx;
+}
+.fenpin_wrap .productTip{
+    color: #6d6d6d;
+    font-size: 24rpx;
+    padding-top: 14rpx;
+    text-align: center;
+}
+.fenpin_wrap .product{
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+    margin: 40rpx 0 46rpx;
+    height: 304rpx;
+    /*background-color: pink;*/
+    float: left;
+    border-right: 4rpx solid #171717;
+}
+.fenpin_wrap .product:last-child{
+    border-right: none;
+}
+.fenpin_wrap .product .proImg{
+    position: absolute;
+    font-size: 30rpx;
+    width: 624rpx;
+    height: 624rpx;
+    top: -150rpx;
+    left: -80rpx;
+}
+.fenpin_wrap .product .proName{
+    color: #5c5c5c;
+    position: absolute;
+    top: 145rpx;
+    left: 43rpx;
+}
+.fenpin_wrap .product .proName.highlighted{
+    color: #fff
+}
+.fenpin_wrap .product .proDes{
+    position: absolute;
+    top: 137rpx;
+    left: 43rpx;
+}
+.fenpin_wrap .product .proDes view{
+    color: #5c5c5c;
+    padding-top: 35rpx;
+}
+.fenpin_wrap .product .proDes view.highlighted{
+    color: #fff
+}
+.fenpin_wrap .product .proPrice{
+    position: absolute;
+    font-size: 30rpx;
+    color: #fff;
+    top: 290rpx;
+    left: 43rpx;
+    padding-right: 36rpx;
+}
+.fenpin_wrap .product .proPrice.highlighted{
+    color: #c6451b;
+}
+.fenpin_wrap .product .proPrice .proPrice_t{
+    position: absolute;
+    right: 0;
+    top: 5rpx;
+    color: #adadad
+}
+.fenpin_wrap .product .proPrice .proPrice_t.highlighted{
+    color: #c6451b;
+}
+.fenpin_wrap .questionWrap{
+    position: absolute;
+    top: 16rpx;
+    right: 17rpx;
+    z-index: 99;
+    width: 70rpx;
+    height: 50rpx;
+}
+.fenpin_wrap .question{
+    margin-left: 20rpx;
+    width: 33rpx;
+    height: 33rpx;
+}
+.fenpin_wrap .choosedIcon{
+    position: absolute;
+    width: 40rpx;
+    height: 40rpx;
+    top: 290rpx;
+    left: 204rpx;
+}
+.productName .theColor{
+    display: inline-block;
+    padding-left: 12rpx;
+}
+.showQuestion{
+    width: 487rpx;
+    height: 488rpx;
+    background-color: #313131;
+    border-radius: 10rpx;
+    position: absolute;
+    top: 200rpx;
+    left: 50%;
+    margin-left: -243rpx;
+    z-index: 999;
+}
+.showQuestion .title{
+    color: #fff;
+    text-align: center;
+    padding-bottom: 18rpx;
+    padding-top: 54rpx;
+    font-size: 30rpx;
+}
+.showQuestion .content{
+    color: #6f6f6f;
+    margin-top: 30rpx ;
+    margin-left: 50rpx;
+    margin-right: 40rpx;
+    font-size: 26rpx;
+    line-height: 30rpx;
+}
+.showQuestion .closeQuestion{
+    position: absolute;
+    width: 34rpx;
+    height: 34rpx;
+    top: 10rpx;
+    right: 20rpx;
+}
+/* 分频详情start*/
+.detailWrap{
+    position: absolute;
+    z-index: 99;
+    background-color: #313131;
+    height: 0;
+    width: 630rpx;
+    left: 50%;
+    margin-left: -315rpx;
+    top: 35rpx;
+    /*top: -1050rpx;*/
+    /*top: -100%;*/
+    overflow: hidden;
+    border-radius: 14rpx;
+}
+.detailWrap swiper{
+    height: 926rpx;
+    /*background-color: pink;*/
+}
+.detailWrap .productName{
+    font-size: 60rpx;
+    color:#efefef;
+    width: 100%;
+    text-align: center;
+    padding-top:30rpx;
+}
+.detailWrap .propertyWrap{
+    position: relative;
+    overflow: hidden;
+    height: 310rpx;
+    box-sizing: border-box;
+}
+.detailWrap  .Pre{
+    position: absolute;
+    left: 24rpx;
+    top: 113rpx;
+    height: 160rpx;
+    width: 78rpx;
+    box-sizing: border-box;
+    padding-top: 50rpx;
+    padding-left: 5rpx;
+    z-index: 99;
+}
+.detailWrap  .Next{
+    position: absolute;
+    right: 24rpx;
+    top: 113rpx;
+    height: 160rpx;
+    width: 78rpx;
+    box-sizing: border-box;
+    padding-top: 50rpx;
+    padding-left: 45rpx;
+    z-index: 99;
+}
+.detailWrap  .Pre image,.detailWrap  .Next image{
+    width: 35rpx;
+    height: 64rpx;
+}
+.detailWrap .propertyWrap .propertyImg{
+    width: 624rpx;
+    height: 624rpx;
+    position: absolute;
+    left: -10rpx;
+    top:-95rpx;
+}
+.detailWrap .propertyWrap .propertyName{
+    font-size: 36rpx;
+    color:#c6451b;
+    position: absolute;
+    top: 77rpx;
+    left: 335rpx;
+    letter-spacing:2rpx
+}
+.detailWrap .propertyWrap .propertyPrice{
+    font-size: 30rpx;
+    color:#c6451b;
+    position: absolute;
+    top: 137rpx;
+    left: 335rpx;
+}
+.detailWrap .desWrap{
+    position: absolute;
+    top: 320rpx;
+}
+.desWrap .textDes{
+    margin-top: 42rpx;
+    color: #fff;
+    padding-left: 66rpx;
+}
+.detailWrap .closeDetail {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 47rpx;
+    text-align: center;
+    padding-top: 53rpx;
+    background: url('https://static.heygears.com/wxapp/imgs/upArrow.png') center 20rpx no-repeat;
+    background-size: 30rpx 18rpx;
+}
+/* 分频详情end*/
+
+/* 折线动图*/
+.desc-detail {
+    height:226rpx;
+    width: 0rpx;
+    position: absolute;
+    top: 500rpx;
+    /*left: 190px;*/
+    overflow: hidden;
+}
+.desc-detail.secanimation {
+    height: 226rpx;
+    width:750rpx;
+    transition: all 2s ease;
+}

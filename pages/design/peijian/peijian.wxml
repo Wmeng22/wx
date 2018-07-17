@@ -1,0 +1,77 @@
+<!-- 价格的遮罩层 start-->
+<view class="fade_price" wx:if='{{showPriceFade}}' bindtap='remove_price_fade' catchtouchmove='remove_price_fade'></view>
+<!-- 价格的遮罩层 end-->
+<!-- 价格列表 start -->
+<view class="price_list"  animation='{{animationData}}'>
+    <view class="list_title"  bindtap='remove_price_fade'>
+        当前价格：
+        <text class="total_price">¥{{total_price}}</text>
+    </view>
+    <scroll-view class="list_content" scroll-y>
+        <view wx:key='{{idx}}' wx:for="{{fenpinList}}" wx:for-index="idx" wx:for-item="item" class="list_content_item">
+            <view class='wrap'>
+                <view class="item_title">分频 - {{item.name}}</view>
+            </view>
+            <view class="item_price">+{{item.price}}</view>
+        </view>
+        <view wx:key='{{idx}}' wx:for="{{modelList}}" wx:for-index="idx" wx:for-item="item" class="list_content_item">
+            <view class='wrap'>
+                <view class="item_title">模型 - {{item.name}}</view>
+            </view>
+            <view class="item_price">+{{item.price*1}}</view>
+        </view>
+        <view wx:key='{{idx}}' wx:for="{{list}}" wx:for-index="idx" wx:for-item="item" class="list_content_item">
+            <view class='wrap'>
+                <view class="item_title">{{item.name_l}}<text wx:if='{{item.name_l!=item.name_r}}' class=''>【左】</text></view>
+                <view wx:if='{{item.name_l!=item.name_r}}' class="item_title">{{item.name_r}}<text wx:if='{{item.name_l!=item.name_r}}' class=''>【右】</text></view>
+            </view>
+            <view class="item_price {{item.name_l!=item.name_r?'double':''}}">+{{item.price}}</view>
+        </view>
+        <view wx:key='{{idx}}' wx:for="{{lineList}}" wx:for-index="idx" wx:for-item="item" class="list_content_item">
+            <view class='wrap'>
+                <view class="item_title">{{item.name}}</view>
+            </view>
+            <view class="item_price">+{{item.price}}</view>
+        </view>
+        <view wx:key='{{idx}}' wx:for="{{peijianList}}" wx:for-index="idx" wx:for-item="item" class="list_content_item">
+            <view class='wrap'>
+                <view class="item_title">{{item.name}}</view>
+            </view>
+            <view class="item_price">+{{item.price}}</view>
+        </view>
+    </scroll-view>
+</view>
+<!-- 价格列表 end -->
+<view class='peijian_wrap_PB'>
+    <view wx:key='{{idx}}' wx:for="{{catelist}}" wx:for-index="idx" wx:for-item="item" class='peijian_wrap'>
+        <view class="label">{{item.category_name}} <view wx:if='{{item.ptylist[0].category_id==10203}}' class='sai_tip'>*标准版均配有耳塞，该配件为附加</view></view>
+        <view class="peijian_item {{subitem.show?'show':''}}" wx:key='{{subidx}}' wx:for="{{item.ptylist}}" wx:for-index="subidx" wx:for-item="subitem">
+            <view class='tapWrap' bindtap='showDetail' data-idx='{{idx}}' data-subidx='{{subidx}}'>
+                <image class="icon" src='{{subitem.litimg}}'></image>
+                <view class="pro_name {{subitem.issale != 1?'gray':''}}">{{subitem.accessory_name}}</view>
+                <view class="pro_price">¥{{subitem.sale_price*1}}</view>
+                <view class='pro_des'>具体介绍或者文案可以添加在这里，最多两行，最大字数为60个字符</view>
+            </view>
+            <block wx:if='{{subitem.issale == 1}}'>
+                <view class='subtractIconWrap'>
+                    <image data-idx='{{idx}}' data-subidx='{{subidx}}' bindtap='subtract' class='subtractIcon' src='https://static.heygears.com/wxapp/imgs/subtract.png'></image>
+                </view>
+                <text class="quantity">{{subitem.quantity*1}}</text>
+                <view class="addIconWrap">
+                    <image data-idx='{{idx}}' data-subidx='{{subidx}}' bindtap='add' class='addIcon' src='https://static.heygears.com/wxapp/imgs/add.png'></image>
+                </view>
+            </block>
+            <block wx:else>
+                <text class="noSale">暂不销售</text>
+            </block>
+            <view wx:if='{{subidx!=(item.ptylist.length-1)}}' class='line'></view>
+        </view>
+    </view>
+    <view class="bottom_price">
+        <view bindtap='goPre' class="goPre" ></view>
+        <view bindtap='view_price' class="price_wrap">
+            当前价格：<text class="price_total">¥{{total_price}}</text>
+        </view>
+        <view bindtap='goNext' class="goNext" ></view>
+    </view>
+</view>

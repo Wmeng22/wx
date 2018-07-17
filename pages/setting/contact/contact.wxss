@@ -1,0 +1,5 @@
+.contact_img{
+    width: 750rpx;
+    height: 2151rpx;
+    margin-bottom: 120rpx;
+}

@@ -1,0 +1,607 @@
+/*临时 start*/
+
+/*临时 end*/
+page{
+    overflow-x: hidden;
+}
+.flex_column{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+.wrap {
+    height: 100%;
+    position: relative;
+}
+.wrap .design_button {
+    position: absolute;
+    bottom: 188rpx;
+    right: 70rpx;
+    width: 154rpx;
+    height: 150rpx;
+    background: url('https://static.heygears.com/wxapp/imgs/icon_design@2x.png') no-repeat center center;
+    background-size: 154rpx 150rpx;
+}
+/* 导航 start*/
+.fade_content .nav {
+    position: relative;
+    margin-top: 48rpx;
+    height: 120rpx;
+    margin: 0 auto;
+    width: 660rpx;
+
+}
+.fade_content .nav .nav_item {
+    height: 100%;
+    width: 132rpx;
+    float: left;
+    background-color: #0e0f0f;
+    box-sizing: border-box;
+}
+.fade_content .nav .nav_item .nav_item_i {
+    height: 104rpx;
+    margin-top: 9rpx;
+    border-right: 1rpx solid #434343;
+    text-align: center;
+    padding-top: 72rpx;
+    box-sizing: border-box;
+    font-size: 26rpx;
+    color: #555656;
+}
+.fade_content .nav .nav_item .nav_item_i.highlighted{
+    color: #c6451b;
+}
+.fade_content .nav .nav_item .nav_item_i.noborderR {
+    border-right: none;
+}
+.fade_content .nav .nav_item:nth-child(1) .nav_item_i {
+    background: url('https://static.heygears.com/wxapp/imgs/icon_shell_nor@2x.png') center 6rpx no-repeat;
+    background-size: 44rpx 44rpx;
+}
+.fade_content .nav .nav_item:nth-child(1) .nav_item_i.highlighted {
+    background: url('https://static.heygears.com/wxapp/imgs/icon_shell_sel@2x.png') center 6rpx no-repeat;
+    background-size: 44rpx 44rpx;
+}
+.fade_content .nav .nav_item:nth-child(2) .nav_item_i {
+    background: url('https://static.heygears.com/wxapp/imgs/icon_plate_nor@2x.png') center 6rpx no-repeat;
+    background-size: 44rpx 44rpx;
+}
+.fade_content .nav .nav_item:nth-child(2) .nav_item_i.highlighted {
+    background: url('https://static.heygears.com/wxapp/imgs/icon_plate_sel@2x.png') center 6rpx no-repeat;
+    background-size: 44rpx 44rpx;
+}
+
+.fade_content .nav .nav_item:nth-child(3) .nav_item_i {
+    background: url('https://static.heygears.com/wxapp/imgs/icon_word_nor@2x.png') center 6rpx no-repeat;
+    background-size: 48rpx 48rpx;
+}
+.fade_content .nav .nav_item:nth-child(3) .nav_item_i.highlighted {
+    background: url('https://static.heygears.com/wxapp/imgs/icon_word_sel@2x.png') center 6rpx no-repeat;
+    background-size: 48rpx 48rpx;
+}
+
+.fade_content .nav .nav_item:nth-child(4) .nav_item_i {
+    background: url('https://static.heygears.com/wxapp/imgs/icon_logo_nor@2x.png') center 6rpx no-repeat;
+    background-size: 48rpx 48rpx;
+}
+.fade_content .nav .nav_item:nth-child(4) .nav_item_i.highlighted {
+    background: url('https://static.heygears.com/wxapp/imgs/icon_logo_sel@2x.png') center 6rpx no-repeat;
+    background-size: 48rpx 48rpx;
+}
+
+.fade_content .nav .nav_item:nth-child(5) .nav_item_i {
+    background: url('https://static.heygears.com/wxapp/imgs/icon_line_nor@2x.png') center 6rpx no-repeat;
+    background-size: 48rpx 48rpx;
+}
+.fade_content .nav .nav_item:nth-child(5) .nav_item_i.highlighted {
+    background: url('https://static.heygears.com/wxapp/imgs/icon_line_sel@2x.png') center 6rpx no-repeat;
+    background-size: 48rpx 48rpx;
+}
+
+/* 导航 end*/
+
+/* 底壳、面板、耳线列表start*/
+.list {
+    /*width: 100%;*/
+    padding: 30rpx 44rpx 400rpx;
+    width: 662rpx;
+    height: 920rpx;
+    /*background-color: #0e0f0f;*/
+}
+.list .tipWrap{
+    padding-bottom: 30rpx;
+}
+.list .tip{
+    font-size: 26rpx;
+    color: #a7a7a7;
+    padding-left: 14rpx;
+    line-height: 40rpx;
+    height: 40rpx;
+}
+.list .list_wrap {
+    background-color: #0e0f0f;
+    padding: 0 25rpx;
+    border: 2rpx solid #0e0f0f;
+}
+.list .list_wrap.choosed {
+    padding: 0 25rpx;
+    border: 2rpx solid #c6451b;
+    border-radius: 10rpx;
+    z-index: 2
+}
+.list .list_item {
+    position: relative;
+    width: 100%;
+    height: 170rpx;
+}
+.list .list_item .line {
+    position: absolute;
+    bottom: -3rpx;
+    z-index: 1;
+    height: 2rpx;
+    background-color: #333333;
+    width: 100%;
+}
+.list .list_wrap.choosed .line {
+    background-color: #c6451b;
+}
+.list .list_item image.small_kind {
+    position: absolute;
+    width: 102rpx;
+    height: 102rpx;
+    top: 32rpx;
+    border-radius: 14rpx;
+}
+.list .list_item .list_title {
+    color: #787979;
+    font-size: 30rpx;
+    position: absolute;
+    top: 32rpx;
+    left: 128rpx;
+}
+.list .list_item .list_price {
+    color: #787979;
+    font-size: 30rpx;
+    position: absolute;
+    top: 32rpx;
+    left: 320rpx;
+}
+.list .list_item .list_price.linePrice{
+    left: 318rpx;
+}
+.list .list_item .list_des {
+    color: #787979;
+    font-size: 24rpx;
+    position: absolute;
+    top: 80rpx;
+    left: 132rpx;
+    line-height: 30rpx;
+}
+.list .list_item .list_des .star{
+    width: 25rpx;
+    height: 26rpx;
+}
+.list .list_item .list_des .suport{
+    width: 27rpx;
+    height: 27rpx;
+    vertical-align: middle;
+}
+.list .list_item .list_des .hassuport{
+    color:#c6451b;
+}
+.list .list_item .list_des2 {
+    color: #787979;
+    font-size: 24rpx;
+    position: absolute;
+    top: 110rpx;
+    left: 132rpx;
+    line-height: 30rpx;
+}
+.list .list_item .subtractIcon{
+    width: 39rpx;
+    height: 39rpx;
+    position: absolute;
+    top: 60rpx;
+    left: 476rpx;
+}
+.list .list_item .addIcon{
+    width: 39rpx;
+    height: 39rpx;
+    position: absolute;
+    top: 60rpx;
+    left: 574rpx;
+}
+.list .list_item .quantity{
+    position: absolute;
+    top: 66rpx;
+    left: 515rpx;
+    width: 60rpx;
+    text-align: center;
+    font-size: 30rpx;
+    color: #fff;
+}
+.list_des .quality{
+    color:#565757;
+    width:100rpx;
+}
+.list_des .appearance{
+    position: absolute;
+    left: 140rpx;
+    top: 0;
+    color:#565757;
+    width:100rpx;
+}
+.list_des .driveByWire{
+    position: absolute;
+    width:100rpx;
+    /*margin-top: 10rpx;*/
+    color:#565757
+}
+.list .list_item.show {
+    height: 345rpx;
+}
+.list .list_item .tapWrap {
+    height: 170rpx;
+    width: 450rpx;
+    /*background-color: pink;*/
+}
+.list .list_item.show .tapWrap {
+    height: 260rpx;
+    width: 100%;
+    /*background-color: pink;*/
+}
+.list .list_item.show .list_des {
+    /*display: none;*/
+    left: 230rpx;
+}
+.list .list_item.show .quantity{
+    top: 286rpx;
+}
+.list .list_item.show .subtractIcon{
+    top: 280rpx;
+}
+.list .list_item.show .addIcon{
+    top: 280rpx;
+}
+.list .list_item.show .list_price{
+    left: 500rpx;
+}
+.list .list_item.show .list_title {
+    left: 318rpx;
+}
+.list .list_item.show image.small_kind {
+    height: 272rpx;
+    width: 206rpx;
+}
+.list .list_item.show .appearance{
+    left: 190rpx;
+    width: 200rpx;
+}
+.list .list_item.show .quality{
+    width: 200rpx;
+}
+.list .list_item.show .driveByWire{
+    margin-top: 6rpx;
+    width: 200rpx;
+}
+/* 底壳、面板、耳线列表end */
+/* 刻字列表start*/
+.list .kezi_wrap{
+    position: relative;
+    height: 978rpx;
+    background-color: none;
+    color: #5f5f5f
+}
+.list .kezi_wrap text{
+    position: absolute;
+    font-size: 24rpx;
+}
+.list .kezi_wrap text:nth-child(1){
+    font-size: 30rpx;
+    color: #fff;
+    height: 66rpx;
+    line-height: 66rpx;
+    top: 0;
+    left: 10rpx;
+}
+.list .kezi_wrap text:nth-child(2){
+    top: 68rpx;
+    left: 10rpx;
+}
+.list .kezi_wrap text:nth-child(2).highlighted{
+    color: #d40c0c
+}
+.list .kezi_wrap text:nth-child(3){
+    top: 98rpx;
+    left: 10rpx;
+}
+.list .kezi_wrap text:nth-child(3).highlighted{
+    color: #d40c0c
+}
+.list .kezi_wrap text:nth-child(4){
+    top: 128rpx;
+    left: 10rpx;
+    width: 600rpx;
+    line-height: 32rpx;
+}
+.list .kezi_wrap .kezi_input{
+    position: absolute;
+    left: 0;
+    top: 210rpx;
+    height: 55rpx;
+    line-height: 55rpx;
+    font-size: 24rpx;
+    color: #fff;
+    padding-left: 14rpx;
+    background-color: #313131;
+    border-radius: 10rpx;
+    width: 326rpx;
+}
+.list .kezi_wrap .icon{
+    position: absolute;
+    top: 200rpx;
+    left: 364rpx;
+    width: 60rpx;
+    height: 60rpx;
+}
+.list .kezi_wrap text.choose_position{
+    font-size: 30rpx;
+    color: #fff;
+    left: 10rpx;
+    top: 300rpx;
+}
+.list .kezi_wrap .front{
+    position: absolute;
+    left: 2rpx;
+    top: 384rpx;
+    width: 288rpx;
+    height: 307rpx;
+    background: url('https://static.heygears.com/wxapp/imgs/front.png') 0 0 no-repeat;
+    background-size: 288rpx 307rpx;
+    border: 1rpx solid #c6451b;
+    border-radius: 14rpx;
+}
+.list .kezi_wrap .front .keziContent{
+    position: absolute;
+    left: 146rpx;
+    top: 90rpx;
+    width: 48rpx;
+    text-align: center;
+    overflow: hidden;
+    word-break:keep-all;
+    white-space:nowrap;
+}
+.list .kezi_wrap .upside{
+    position: absolute;
+    left: 319rpx;
+    top: 364rpx;
+    width: 288rpx;
+    height: 307rpx;
+    background: url('https://static.heygears.com/wxapp/imgs/upside.png') 0 0 no-repeat;
+    background-size: 288rpx 307rpx;
+}
+/* 刻字列表end*/
+/* logo列表start*/
+.list .logo_wrap {
+    position: relative;
+    height: 978rpx;
+    color: #fff
+}
+.list .logo_wrap text{
+    position: absolute;
+    line-height: 32rpx;
+    /*width: 580rpx;*/
+    font-size: 26rpx;
+}
+.list .logo_wrap text:nth-child(1){
+    font-size: 30rpx;
+    top: 20rpx;
+    left: 2rpx;
+}
+.list .logo_wrap text:nth-child(2){
+    top: 70rpx;
+}
+.list .logo_wrap text:nth-child(3){
+    top: 102rpx;
+}
+/* logo列表end*/
+/* 耳机图片展示 start */
+.img_wrap {
+    position: relative;
+    height: 653rpx;
+}
+.img_wrap .the_img{
+    position: absolute;
+    top: 5rpx;
+    width: 750rpx;
+    height: 640rpx;
+}
+.img_wrap .the_logo_l{
+    position: absolute;
+    width: 74rpx;
+    height: 74rpx;
+    top: 320rpx;
+    left: 70rpx;
+}
+.img_wrap .the_logo_r{
+    position: absolute;
+    width: 74rpx;
+    height: 74rpx;
+    top: 322rpx;
+    right: 60rpx;
+}
+.img_wrap .the_kezi{
+    position: absolute;
+    color:#fff;
+    top:350rpx;
+    left:60rpx;
+    font-size:30rpx;
+    transform:rotate(6deg);
+    text-align: center;
+    width: 100rpx;
+    /*-webkit-mask-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#ff0000), to(rgba(0, 0, 255, 0)));*/
+}
+.img_wrap .left_tap{
+    position: absolute;
+    background-color: rgba(0,0,0,0);
+    /*background-color: pink;*/
+    height:  530rpx;
+    width: 375rpx;
+    z-index: 99;
+}
+.img_wrap .left_tap.gray{
+    background-color: rgba(0,0,0,0.5);
+}
+.img_wrap .right_tap{
+    position: absolute;
+    background-color: rgba(0,0,0,0);
+    /*background-color: darkcyan;*/
+    right: 0;
+    height: 530rpx;
+    width: 375rpx;
+    z-index: 99;
+}
+.img_wrap .right_tap.gray{
+    background-color: rgba(0,0,0,0.5);
+}
+.img_wrap .circle{
+    position: absolute;
+    top: 548rpx;
+    left: 150rpx;
+    width: 32rpx;
+    height: 32rpx;
+    background-color: #262626;
+    border-radius: 50%;
+}
+.img_wrap .circle.right{
+    left: 570rpx;
+}
+.img_wrap .circle .inCircle{
+    position: absolute;
+    width: 21rpx;
+    height: 21rpx;
+    border-radius: 50%;
+    background-color: #4d4d4d;
+    top: 50%;
+    left: 50%;
+    margin-left: -12rpx;
+    margin-top: -12rpx;
+    border: 3rpx solid #1a1a1a;
+}
+.img_wrap .circle .inCircle.highlighted{
+    background-color: #c6451b;
+}
+.img_wrap .tip{
+    position: absolute;
+    width: 300rpx;
+    text-align: center;
+    bottom: 74rpx;
+    color: #5e5e5e;
+    left: 50%;
+    margin-left: -150rpx;
+}
+/* 耳机图片展示 end */
+
+/* 选择列表 start */
+.choose_list {
+    padding: 0 40rpx;
+    height: 360rpx;
+    width: 750rpx;
+    box-sizing: border-box;
+}
+
+.choose_list .list_item {
+    float: left;
+    /*border:3rpx solid #c6451b;*/
+    height: 176rpx;
+    width: 166rpx;
+    text-align: center;
+    border-radius: 13rpx;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.choose_list .list_item.highlighted {
+    border: 3rpx solid #c6451b;
+}
+
+.choose_list .list_item .line {
+    position: absolute;
+    top: 35rpx;
+    right: 0;
+    height: 108rpx;
+    width: 2rpx;
+    background-color: #272727
+}
+
+.choose_list .list_item.top33 {
+    margin-top: -30rpx
+}
+
+.choose_list .item_img {
+    width: 56rpx;
+    height: 56rpx;
+    border-radius: 10rpx;
+}
+
+.choose_list .item_title {
+    font-size: 24rpx;
+    color: #ffffff;
+    margin-top: 16rpx;
+}
+
+/* 选择列表 end */
+.bottom_price .goNext.hide{
+    background: #262626;
+}
+
+/* 导航教程*/
+.tutorial_wrap{
+    position: absolute;
+    z-index: 99999;
+    width: 750rpx;
+    height: 100%;
+    overflow: hidden;
+}
+.tutorial_wrap image{
+    height:100%;
+    width:100%;
+}
+.tutorial_wrap .tutorial_nav_close,.tutorial_wrap .tutorial_err_close{
+    position: absolute;
+    right: 60rpx;
+    bottom: 50rpx;
+    font-size: 32rpx;
+    width: 154rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    text-align: center;
+    text-decoration: underline
+}
+.tutorial_wrap swiper{
+    position: absolute;
+    height:100%;
+    width:100%;
+}
+.swiper-btn-wrapper {
+    position: absolute;
+    bottom: 50rpx;
+    left: 327rpx;
+}
+.swiper-btn-wrapper .swiper-btn-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-btn-wrapper .swiper-btn-list .dot{
+    margin-left: 16rpx;
+    width: 10rpx;
+    height: 10rpx;
+    /*border:1px solid #c6451b;*/
+    background-color: #484848;
+    border-radius: 50%
+}
+.swiper-btn-wrapper .swiper-btn-list .dot.on{
+    background-color: #fff
+}
