@@ -3,7 +3,7 @@ App({
     globalData: {
         //开发环境
         // apiURL: 'http://192.168./',
-        // api_key: 'e38170f0db0a42bebbc61f92b74ba228',
+        // api_key: 'e381',
         //正式环境
         apiURL:'https://.com/',
         api_key:'a98',
