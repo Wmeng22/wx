@@ -28,7 +28,7 @@ Page({
         })
         var orderImg = '';
         if (info.aliyun) {
-            orderImg = info.aliyun.replace('https://static.heygears.com/', '');
+            orderImg = info.aliyun.replace('https://static.heys.com/', '');
         } else {
             orderImg = options.aliyun
         }
@@ -168,10 +168,10 @@ Page({
                                         uid: uid,
                                         skuid: info.err.skuid,
                                         design_name: info.err.ear_name,
-                                        // design_imgurl:  'https://static.heygears.com/'  + aliyunTpm,
-                                        design_imgurl: 'https://static.heygears.com/' + aliyun,
+                                        // design_imgurl:  'https://static.heys.com/'  + aliyunTpm,
+                                        design_imgurl: 'https://static.heys.com/' + aliyun,
                                         design_id: info.design_id,
-                                        // design_imgurl:  'https://static.heygears.com/'  + aliyun.replace('http://', ''),
+                                        // design_imgurl:  'https://static.heys.com/'  + aliyun.replace('http://', ''),
                                         model_isprivate: model,
                                         design_status: 1,   //设计完成
                                         designinfolist: designinfolist,
@@ -194,9 +194,9 @@ Page({
                                         uid: uid,
                                         skuid: info.err.skuid,
                                         design_name: info.err.ear_name,
-                                        // design_imgurl:  'https://static.heygears.com/'  + aliyunTpm,
-                                        design_imgurl: 'https://static.heygears.com/' + aliyun,
-                                        // design_imgurl:  'https://static.heygears.com/'  + aliyun.replace('http://', ''),
+                                        // design_imgurl:  'https://static.heys.com/'  + aliyunTpm,
+                                        design_imgurl: 'https://static.heys.com/' + aliyun,
+                                        // design_imgurl:  'https://static.heys.com/'  + aliyun.replace('http://', ''),
                                         model_isprivate: model,
                                         design_status: 1, //设计完成
                                         designinfolist: designinfolist,
@@ -327,7 +327,7 @@ Page({
             }
         }
         info.err.pty_list = pty_list;
-        info.err.lit_img = 'https://static.heygears.com/' + aliyun
+        info.err.lit_img = 'https://static.heys.com/' + aliyun
         total_pty_list.push(info.err);
         /* 耳机属性 end*/
         /* 耳机配件 start*/

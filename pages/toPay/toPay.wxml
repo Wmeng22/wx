@@ -14,15 +14,15 @@
     <view class="content">助听器店采集耳印</view>
     <view class="content">并且用专用快递盒寄送到黑格</view>
     <view class="content last">请充分了解后在选择下单</view>
-    <image class='stepImg' src='https://static.heygears.com/wxapp/imgs/stepAll.png'></image>
+    <image class='stepImg' src='https://static.heys.com/wxapp/imgs/stepAll.png'></image>
     <view bindtap='toSubmit' class="toSubmit">了解并支付</view>
 </view>
 <!--私模 提示用户要寄送耳膜 end-->
 <view class="glo_err_tip" wx:if="{{err_tip}}">请输入有效的优惠码</view>
 <view class="order_status">{{orderList.create_date}}</view>
 <view class="order_img">
-    <!-- <image class='img' src='https://static.heygears.com/wxapp/imgs/user/tmp_1969791215o6zAJs3pNJnvlphHFFMrm_Q9XMyw49b3a826afa31774bc7a2b403fb51d24.jpg'></image> -->
-    <image class='img' src='https://static.heygears.com/{{aliyun}}'></image>
+    <!-- <image class='img' src='https://static.heys.com/wxapp/imgs/user/tmp_1969791215o6zAJs3pNJnvlphHFFMrm_Q9XMyw49b3a826afa31774bc7a2b403fb51d24.jpg'></image> -->
+    <image class='img' src='https://static.heys.com/{{aliyun}}'></image>
     <view class="kezi">
         <text class="kezi_content" style='color:{{kezi_color}}'>{{kezi_content}}</text>
     </view>
@@ -37,12 +37,12 @@
         <view class='wrap'>
             <input value='{{promoCode}}' bindblur='inputCode2' type="text" class='promoCode' placeholder='请输入优惠码'/>
             <view class='codeIconWrap' bindtap='inputCode' >
-                <image class='codeIcon' src='https://static.heygears.com/wxapp/imgs/icon_scan@2x.png'></image>
+                <image class='codeIcon' src='https://static.heys.com/wxapp/imgs/icon_scan@2x.png'></image>
             </view>
             <image class='tip_img' wx:if="{{isCorrect}}" style='width:36rpx;height:36rpx'
-                   src="https://static.heygears.com/wxapp/imgs/icon_correct36x36@2x.png"></image>
+                   src="https://static.heys.com/wxapp/imgs/icon_correct36x36@2x.png"></image>
             <image class='tip_img' wx:if="{{isWrong}}" style='width:36rpx;height:36rpx'
-                   src="https://static.heygears.com/wxapp/imgs/icon_wrong36x36@2x.png"></image>
+                   src="https://static.heys.com/wxapp/imgs/icon_wrong36x36@2x.png"></image>
         </view>
         <text class="list_title">收件人信息</text>
         <view class="list_content flex_row" style='justify-content:space-between'>

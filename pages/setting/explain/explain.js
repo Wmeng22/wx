@@ -63,8 +63,8 @@ Page({
     },
     preview: function () {
         wx.previewImage({
-            current: 'https://static.heygears.com/wxapp/imgs/err/%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg', // 当前显示图片的http链接
-            urls: ['https://static.heygears.com/wxapp/imgs/err/%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg'] // 需要预览的图片http链接列表
+            current: 'https://static.heys.com/wxapp/imgs/err/%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg', // 当前显示图片的http链接
+            urls: ['https://static.heys.com/wxapp/imgs/err/%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg'] // 需要预览的图片http链接列表
         })
     }
 })

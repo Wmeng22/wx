@@ -81,7 +81,7 @@
 .goMenu{
     height: 64rpx;
     width: 64rpx;
-    background-image:url('https://static.heygears.com/wxapp/imgs/icon_list.png');
+    background-image:url('https://static.heys.com/wxapp/imgs/icon_list.png');
     background-repeat:no-repeat;
     background-size:64rpx 64rpx;
     position: absolute;
@@ -90,7 +90,7 @@
     z-index: 999
 }
 .goMenu.showMenu{
-    background-image:url('https://static.heygears.com/wxapp/imgs/icon_close64x64.png');
+    background-image:url('https://static.heys.com/wxapp/imgs/icon_close64x64.png');
     background-repeat:no-repeat;
     background-size:64rpx 64rpx;
 }
@@ -120,18 +120,18 @@
     border-bottom: none
 }
 .MenuList .item.index{
-    background: url('https://static.heygears.com/wxapp/imgs/icon_design44x44@2x.png') 80rpx center no-repeat;
+    background: url('https://static.heys.com/wxapp/imgs/icon_design44x44@2x.png') 80rpx center no-repeat;
     background-size: 42rpx 42rpx;
 }
 .MenuList .item.order{
-    background: url('https://static.heygears.com/wxapp/imgs/icon_orde_listr44x44@2x.png') 80rpx center no-repeat;
+    background: url('https://static.heys.com/wxapp/imgs/icon_orde_listr44x44@2x.png') 80rpx center no-repeat;
     background-size: 42rpx 42rpx;
 }
 .MenuList .item.setting{
-    background: url('https://static.heygears.com/wxapp/imgs/icon_setting44x44@2x.png') 80rpx center no-repeat;
+    background: url('https://static.heys.com/wxapp/imgs/icon_setting44x44@2x.png') 80rpx center no-repeat;
     background-size: 42rpx 42rpx;
 }
 .MenuList .item.login{
-    background: url('https://static.heygears.com/wxapp/imgs/User.png') 80rpx center no-repeat;
+    background: url('https://static.heys.com/wxapp/imgs/User.png') 80rpx center no-repeat;
     background-size: 34rpx 34rpx;
 }

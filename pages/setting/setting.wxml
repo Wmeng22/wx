@@ -8,23 +8,23 @@
 <view class="glo_err_tip green" wx:if="{{green_tip}}" >{{err_content}}</view>
 <view class="container" style='padding-top: 10rpx'>
     <view class="nav_wrap flex_row">
-        <image class="nav_icon" src='https://static.heygears.com/wxapp/imgs/icon_cache36x36@2x.png'></image>
+        <image class="nav_icon" src='https://static.heys.com/wxapp/imgs/icon_cache36x36@2x.png'></image>
         <view class='clear' bindtap='toClearAction'>清除缓存</view>
     </view>
     <view class="nav_wrap flex_row">
-        <image class="nav_icon" src='https://static.heygears.com/wxapp/imgs/icon_provision36x36@2x.png'></image>
+        <image class="nav_icon" src='https://static.heys.com/wxapp/imgs/icon_provision36x36@2x.png'></image>
         <navigator url='privacy/privacy' open-type="navigateTo" class='privacy' >隐私条款</navigator>
     </view>
     <view class="nav_wrap flex_row">
-        <image class="nav_icon" src='https://static.heygears.com/wxapp/imgs/icon_after-sales_service36x36@2x.png'></image>
+        <image class="nav_icon" src='https://static.heys.com/wxapp/imgs/icon_after-sales_service36x36@2x.png'></image>
         <navigator url='explain/explain' open-type="navigateTo" class='explain' >售后说明</navigator>
     </view>
     <view class="nav_wrap flex_row">
-        <image class="nav_icon" src='https://static.heygears.com/wxapp/imgs/icon_about_us36x36@2x.png'></image>
+        <image class="nav_icon" src='https://static.heys.com/wxapp/imgs/icon_about_us36x36@2x.png'></image>
         <navigator url='about/about' open-type="navigateTo" class='about' >关于我们</navigator>
     </view>
     <view class="nav_wrap flex_row">
-        <image class="nav_icon" src='https://static.heygears.com/wxapp/imgs/icon_connect36x36@2x.png'></image>
+        <image class="nav_icon" src='https://static.heys.com/wxapp/imgs/icon_connect36x36@2x.png'></image>
         <!-- <navigator  open-type="navigateTo" class='service' > -->
             <!-- <contact-button class='service'  size="27" session-from="weapp" >联系客服</contact-button> -->
         <!-- </navigator> -->

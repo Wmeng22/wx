@@ -2,14 +2,11 @@
 App({
     globalData: {
         //开发环境
-        // apiURL: 'http://192.168.2.23/',
+        // apiURL: 'http://192.168./',
         // api_key: 'e38170f0db0a42bebbc61f92b74ba228',
-        // 测试环境
-        // apiURL: 'http://112.74.28.75/',
-        // api_key: 'a2875a8ed263429fad473b7f5bb7d68f',
         //正式环境
-        apiURL:'https://business.heygears.com/',
-        api_key:'a982db9d7cf4471ea54d5683826be8e2',
+        apiURL:'https://.com/',
+        api_key:'a98',
         code: '',
         isMock: true, //是否要使用mock
         isSubmit: false,

@@ -1,18 +1,18 @@
 <canvas wx:if='{{hasCanvas}}' style="width: 750px; height: 640px;visibility:hidden;position: fixed;top:1500rpx;"  canvas-id='mycanvas'></canvas>
 <!-- 导航栏教程 -->
 <view class='tutorial_wrap' wx:if='{{tutorial_nav}}' disable-scroll="true" >
-    <image src='https://static.heygears.com/wxapp/imgs/tutorial/design_nav.png'></image>
+    <image src='https://static.heys.com/wxapp/imgs/tutorial/design_nav.png'></image>
     <view bindtap='tutorial_nav_close' class='tutorial_nav_close'>关闭教程</view>
 </view>
 <!-- 左右耳切换教程 -->
 <view class='tutorial_wrap' wx:if='{{tutorial_err}}'>
     <swiper bindchange="swiperChange" >
         <swiper-item>
-            <image src='https://static.heygears.com/wxapp/imgs/tutorial/design_err1.png'></image>
+            <image src='https://static.heys.com/wxapp/imgs/tutorial/design_err1.png'></image>
             <view bindtap='tutorial_err_close' class='tutorial_err_close'>关闭教程</view>
         </swiper-item>
         <swiper-item >
-            <image src='https://static.heygears.com/wxapp/imgs/tutorial/design_err2.png'></image>
+            <image src='https://static.heys.com/wxapp/imgs/tutorial/design_err2.png'></image>
             <view bindtap='tutorial_err_close' class='tutorial_err_close'>关闭教程</view>
         </swiper-item>
         <swiper-item >
@@ -90,8 +90,8 @@
             <text class="{{kezi_wrong1?'highlighted':''}}">* 您最多可输入2个中文字符，4个英文/数字字符</text>
             <text>* 温馨提示：刻字目前只限左耳</text>
             <input value='{{kezi}}' bindinput='writeName' placeholder='点击输入' class='kezi_input' type="text" />
-            <image  wx:if='{{kezi!=""&&!kezi_wrong2&&!kezi_wrong1}}'  class='icon' src='https://static.heygears.com/wxapp/imgs/success.png'></image>
-            <image wx:if='{{kezi_wrong2 || kezi_wrong1}}' class='icon' src='https://static.heygears.com/wxapp/imgs/wrong.png'></image>
+            <image  wx:if='{{kezi!=""&&!kezi_wrong2&&!kezi_wrong1}}'  class='icon' src='https://static.heys.com/wxapp/imgs/success.png'></image>
+            <image wx:if='{{kezi_wrong2 || kezi_wrong1}}' class='icon' src='https://static.heys.com/wxapp/imgs/wrong.png'></image>
             <text class='choose_position'>选择刻字位置</text>
             <view class='front'>
                 <view class='keziContent'>{{kezi}}</view>
@@ -126,26 +126,26 @@
                         </view>
                         <view wx:else  class="list_des">
                             <view class="quality">音质
-                                <image wx:if='{{subidx<=item.detail_des.tone}}' wx:key='{{subidx}}' wx:for="{{starArr}}" wx:for-index="subidx" wx:for-item="subitem" class='star' src='https://static.heygears.com/wxapp/imgs/star.png'></image>
+                                <image wx:if='{{subidx<=item.detail_des.tone}}' wx:key='{{subidx}}' wx:for="{{starArr}}" wx:for-index="subidx" wx:for-item="subitem" class='star' src='https://static.heys.com/wxapp/imgs/star.png'></image>
                             </view>
                             <view class="appearance" >外观
-                                <image wx:if='{{subidx<=item.detail_des.facade}}' wx:key='{{subidx}}' wx:for="{{starArr}}" wx:for-index="subidx" wx:for-item="subitem" class='star' src='https://static.heygears.com/wxapp/imgs/star.png'></image>
+                                <image wx:if='{{subidx<=item.detail_des.facade}}' wx:key='{{subidx}}' wx:for="{{starArr}}" wx:for-index="subidx" wx:for-item="subitem" class='star' src='https://static.heys.com/wxapp/imgs/star.png'></image>
                             </view>
                             <view class="driveByWire" >线控
                                 <block wx:if='{{item.detail_des.dbw}}'>
-                                    <image class='suport' src='https://static.heygears.com/wxapp/imgs/successSuport.png'></image>
+                                    <image class='suport' src='https://static.heys.com/wxapp/imgs/successSuport.png'></image>
                                     <text class="hassuport"> 支持</text>
                                 </block>
                                 <block wx:else>
-                                    <image class='suport' src='https://static.heygears.com/wxapp/imgs/wrongSuport.png'></image>
+                                    <image class='suport' src='https://static.heys.com/wxapp/imgs/wrongSuport.png'></image>
                                     <text class=""> 不支持</text>
                                 </block>
                             </view>
                         </view>
                     </view>
-                    <image data-idx='{{idx}}' bindtap='subtract' class='subtractIcon' src='https://static.heygears.com/wxapp/imgs/subtract.png'></image>
+                    <image data-idx='{{idx}}' bindtap='subtract' class='subtractIcon' src='https://static.heys.com/wxapp/imgs/subtract.png'></image>
                     <text class="quantity">{{item.quantity}}</text>
-                    <image data-idx='{{idx}}' bindtap='add' class='addIcon' src='https://static.heygears.com/wxapp/imgs/add.png'></image>
+                    <image data-idx='{{idx}}' bindtap='add' class='addIcon' src='https://static.heys.com/wxapp/imgs/add.png'></image>
                 </view>
             </view>
         </block>
@@ -215,10 +215,10 @@
     <!-- 耳机展示 -->
     <view class="img_wrap">
         <!--默认黑图 公模-->
-        <image wx:if='{{model_isprivate=="PUBLICMODEL"}}' class="the_img" src='https://static.heygears.com/wxapp/imgs/model_nor_L@2x.png'></image>
-        <image wx:if='{{model_isprivate=="PUBLICMODEL"}}' class="the_img" src='https://static.heygears.com/wxapp/imgs/model_nor_R@2x.png'></image>
+        <image wx:if='{{model_isprivate=="PUBLICMODEL"}}' class="the_img" src='https://static.heys.com/wxapp/imgs/model_nor_L@2x.png'></image>
+        <image wx:if='{{model_isprivate=="PUBLICMODEL"}}' class="the_img" src='https://static.heys.com/wxapp/imgs/model_nor_R@2x.png'></image>
         <!--默认黑图 私模-->
-        <image wx:if='{{model_isprivate=="PRIVATEMODEL"}}' class="the_img" src='https://static.heygears.com/wxapp/imgs/Private_mode.png'></image>
+        <image wx:if='{{model_isprivate=="PRIVATEMODEL"}}' class="the_img" src='https://static.heys.com/wxapp/imgs/Private_mode.png'></image>
             <!--左右机身-->
         <image class="the_img" src='{{fl_img}}'></image>
         <image class="the_img" src='{{fr_img}}'></image>
@@ -237,13 +237,13 @@
         <view wx:if='{{isDesign}}' class='right_tap' data-idx='1' bindtap='bindPickerChange'></view>
         <!--灰图 公模-->
         <block wx:if='{{model_isprivate=="PUBLICMODEL"}}'>
-            <image  wx:if='{{(kezi!=""&&nav_idx==3&&isDesign)||(err==1&&isDesign)}}'  class="the_img gray_left" src='https://static.heygears.com/wxapp/imgs/model_dis_L2@2x.png'></image>
-            <image  wx:if='{{err==0&&isDesign}}'  class="the_img gray_right" src='https://static.heygears.com/wxapp/imgs/model_dis_R2@2x.png'></image>
+            <image  wx:if='{{(kezi!=""&&nav_idx==3&&isDesign)||(err==1&&isDesign)}}'  class="the_img gray_left" src='https://static.heys.com/wxapp/imgs/model_dis_L2@2x.png'></image>
+            <image  wx:if='{{err==0&&isDesign}}'  class="the_img gray_right" src='https://static.heys.com/wxapp/imgs/model_dis_R2@2x.png'></image>
         </block>
         <!--灰图 私模-->
         <block wx:if='{{model_isprivate=="PRIVATEMODEL"}}'>
-            <image  wx:if='{{(kezi!=""&&nav_idx==3&&isDesign)||(err==1&&isDesign)}}'  class="the_img gray_left" src='https://static.heygears.com/wxapp/imgs/Private_mode_dis_L2@2x.png'></image>
-            <image  wx:if='{{err==0&&isDesign}}'  class="the_img gray_right" src='https://static.heygears.com/wxapp/imgs/Private_mode_dis_R2@2x.png'></image>
+            <image  wx:if='{{(kezi!=""&&nav_idx==3&&isDesign)||(err==1&&isDesign)}}'  class="the_img gray_left" src='https://static.heys.com/wxapp/imgs/Private_mode_dis_L2@2x.png'></image>
+            <image  wx:if='{{err==0&&isDesign}}'  class="the_img gray_right" src='https://static.heys.com/wxapp/imgs/Private_mode_dis_R2@2x.png'></image>
         </block>
         <!--左右圆点-->
         <view  wx:if='{{isDesign}}'  class='circle left'>

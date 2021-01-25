@@ -236,7 +236,7 @@
     height: 47rpx;
     text-align: center;
     padding-top: 53rpx;
-    background: url('https://static.heygears.com/wxapp/imgs/upArrow.png') center 20rpx no-repeat;
+    background: url('https://static.heys.com/wxapp/imgs/upArrow.png') center 20rpx no-repeat;
     background-size: 30rpx 18rpx;
 }
 /* 分频详情end*/

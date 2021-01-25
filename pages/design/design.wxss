@@ -20,7 +20,7 @@ page{
     right: 70rpx;
     width: 154rpx;
     height: 150rpx;
-    background: url('https://static.heygears.com/wxapp/imgs/icon_design@2x.png') no-repeat center center;
+    background: url('https://static.heys.com/wxapp/imgs/icon_design@2x.png') no-repeat center center;
     background-size: 154rpx 150rpx;
 }
 /* 导航 start*/
@@ -56,46 +56,46 @@ page{
     border-right: none;
 }
 .fade_content .nav .nav_item:nth-child(1) .nav_item_i {
-    background: url('https://static.heygears.com/wxapp/imgs/icon_shell_nor@2x.png') center 6rpx no-repeat;
+    background: url('https://static.heys.com/wxapp/imgs/icon_shell_nor@2x.png') center 6rpx no-repeat;
     background-size: 44rpx 44rpx;
 }
 .fade_content .nav .nav_item:nth-child(1) .nav_item_i.highlighted {
-    background: url('https://static.heygears.com/wxapp/imgs/icon_shell_sel@2x.png') center 6rpx no-repeat;
+    background: url('https://static.heys.com/wxapp/imgs/icon_shell_sel@2x.png') center 6rpx no-repeat;
     background-size: 44rpx 44rpx;
 }
 .fade_content .nav .nav_item:nth-child(2) .nav_item_i {
-    background: url('https://static.heygears.com/wxapp/imgs/icon_plate_nor@2x.png') center 6rpx no-repeat;
+    background: url('https://static.heys.com/wxapp/imgs/icon_plate_nor@2x.png') center 6rpx no-repeat;
     background-size: 44rpx 44rpx;
 }
 .fade_content .nav .nav_item:nth-child(2) .nav_item_i.highlighted {
-    background: url('https://static.heygears.com/wxapp/imgs/icon_plate_sel@2x.png') center 6rpx no-repeat;
+    background: url('https://static.heys.com/wxapp/imgs/icon_plate_sel@2x.png') center 6rpx no-repeat;
     background-size: 44rpx 44rpx;
 }
 
 .fade_content .nav .nav_item:nth-child(3) .nav_item_i {
-    background: url('https://static.heygears.com/wxapp/imgs/icon_word_nor@2x.png') center 6rpx no-repeat;
+    background: url('https://static.heys.com/wxapp/imgs/icon_word_nor@2x.png') center 6rpx no-repeat;
     background-size: 48rpx 48rpx;
 }
 .fade_content .nav .nav_item:nth-child(3) .nav_item_i.highlighted {
-    background: url('https://static.heygears.com/wxapp/imgs/icon_word_sel@2x.png') center 6rpx no-repeat;
+    background: url('https://static.heys.com/wxapp/imgs/icon_word_sel@2x.png') center 6rpx no-repeat;
     background-size: 48rpx 48rpx;
 }
 
 .fade_content .nav .nav_item:nth-child(4) .nav_item_i {
-    background: url('https://static.heygears.com/wxapp/imgs/icon_logo_nor@2x.png') center 6rpx no-repeat;
+    background: url('https://static.heys.com/wxapp/imgs/icon_logo_nor@2x.png') center 6rpx no-repeat;
     background-size: 48rpx 48rpx;
 }
 .fade_content .nav .nav_item:nth-child(4) .nav_item_i.highlighted {
-    background: url('https://static.heygears.com/wxapp/imgs/icon_logo_sel@2x.png') center 6rpx no-repeat;
+    background: url('https://static.heys.com/wxapp/imgs/icon_logo_sel@2x.png') center 6rpx no-repeat;
     background-size: 48rpx 48rpx;
 }
 
 .fade_content .nav .nav_item:nth-child(5) .nav_item_i {
-    background: url('https://static.heygears.com/wxapp/imgs/icon_line_nor@2x.png') center 6rpx no-repeat;
+    background: url('https://static.heys.com/wxapp/imgs/icon_line_nor@2x.png') center 6rpx no-repeat;
     background-size: 48rpx 48rpx;
 }
 .fade_content .nav .nav_item:nth-child(5) .nav_item_i.highlighted {
-    background: url('https://static.heygears.com/wxapp/imgs/icon_line_sel@2x.png') center 6rpx no-repeat;
+    background: url('https://static.heys.com/wxapp/imgs/icon_line_sel@2x.png') center 6rpx no-repeat;
     background-size: 48rpx 48rpx;
 }
 
@@ -357,7 +357,7 @@ page{
     top: 384rpx;
     width: 288rpx;
     height: 307rpx;
-    background: url('https://static.heygears.com/wxapp/imgs/front.png') 0 0 no-repeat;
+    background: url('https://static.heys.com/wxapp/imgs/front.png') 0 0 no-repeat;
     background-size: 288rpx 307rpx;
     border: 1rpx solid #c6451b;
     border-radius: 14rpx;
@@ -378,7 +378,7 @@ page{
     top: 364rpx;
     width: 288rpx;
     height: 307rpx;
-    background: url('https://static.heygears.com/wxapp/imgs/upside.png') 0 0 no-repeat;
+    background: url('https://static.heys.com/wxapp/imgs/upside.png') 0 0 no-repeat;
     background-size: 288rpx 307rpx;
 }
 /* 刻字列表end*/

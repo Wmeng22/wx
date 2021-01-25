@@ -61,7 +61,7 @@
     font-size:22rpx;
     color:#c6451b;
     padding-left: 40rpx;
-    background: url('https://static.heygears.com/wxapp/imgs/icon_service24x24@2x.png') no-repeat left center;
+    background: url('https://static.heys.com/wxapp/imgs/icon_service24x24@2x.png') no-repeat left center;
     background-size: 20rpx 20rpx;
     border: none;
 }

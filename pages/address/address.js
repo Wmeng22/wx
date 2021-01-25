@@ -735,7 +735,7 @@ Page({
                                     if (res.success) {
                                         // 上传图片
                                         wx.uploadFile({
-                                            url: 'https://static.heygears.com',
+                                            url: 'https://static.heys.com',
                                             filePath: imageSrc,
                                             name: 'file',
                                             formData: {

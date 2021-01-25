@@ -338,7 +338,7 @@ Page({
                             }
                             fuse_Ptylist_l.push({
                                 ptycategory_des: "Coming soon",
-                                ptycategory_imgurl: "https://static.heygears.com/wxapp/imgs/metal@2x.png",
+                                ptycategory_imgurl: "https://static.heys.com/wxapp/imgs/metal@2x.png",
                                 ptycategory_name: "金属炫彩底壳",
                                 ptylist:[{property_price:0}]
                             })
@@ -1523,7 +1523,7 @@ Page({
                                 var aliyun = res.data.dir + imageSrc.replace('wxfile://', '')
                                 // var aliyunTpm = res.data.dir + imageSrcTpm;
                                 wx.uploadFile({
-                                    url: 'https://static.heygears.com',
+                                    url: 'https://static.heys.com',
                                     filePath: imageSrc,
                                     name: 'file',
                                     formData: {
@@ -1582,10 +1582,10 @@ Page({
                                                                     uid: uid,
                                                                     skuid: t.data.skuid,
                                                                     design_name: info.err.ear_name,
-                                                                    // design_imgurl:  'https://static.heygears.com/'  + aliyunTpm,
-                                                                    design_imgurl:  'https://static.heygears.com/'  + aliyun,
+                                                                    // design_imgurl:  'https://static.heys.com/'  + aliyunTpm,
+                                                                    design_imgurl:  'https://static.heys.com/'  + aliyun,
                                                                     design_id: info.design_id,
-                                                                    // design_imgurl:  'https://static.heygears.com/'  + aliyun.replace('http://', ''),
+                                                                    // design_imgurl:  'https://static.heys.com/'  + aliyun.replace('http://', ''),
                                                                     model_isprivate: model,
                                                                     design_status: 0,
                                                                     designinfolist:designinfolist,
@@ -1612,9 +1612,9 @@ Page({
                                                                     uid: uid,
                                                                     skuid: t.data.skuid,
                                                                     design_name: info.err.ear_name,
-                                                                    // design_imgurl:  'https://static.heygears.com/'  + aliyunTpm,
-                                                                    design_imgurl:  'https://static.heygears.com/'  + aliyun,
-                                                                    // design_imgurl:  'https://static.heygears.com/'  + aliyun.replace('http://', ''),
+                                                                    // design_imgurl:  'https://static.heys.com/'  + aliyunTpm,
+                                                                    design_imgurl:  'https://static.heys.com/'  + aliyun,
+                                                                    // design_imgurl:  'https://static.heys.com/'  + aliyun.replace('http://', ''),
                                                                     model_isprivate: model,
                                                                     design_status: 0,
                                                                     designinfolist:designinfolist,

@@ -5,30 +5,30 @@
         <!--私模-->
         <block  wx:if='{{isPrivate}}'>
             <swiper-item >
-                <image class='tutorial_img' src='https://static.heygears.com/wxapp/imgs/tutorial/pro1.jpg'></image>
+                <image class='tutorial_img' src='https://static.heys.com/wxapp/imgs/tutorial/pro1.jpg'></image>
             </swiper-item >
             <swiper-item >
-                <image class='tutorial_img' src='https://static.heygears.com/wxapp/imgs/tutorial/pro2.jpg'></image>
+                <image class='tutorial_img' src='https://static.heys.com/wxapp/imgs/tutorial/pro2.jpg'></image>
             </swiper-item >
             <swiper-item >
-                <image class='tutorial_img' src='https://static.heygears.com/wxapp/imgs/tutorial/pro3.jpg'></image>
+                <image class='tutorial_img' src='https://static.heys.com/wxapp/imgs/tutorial/pro3.jpg'></image>
             </swiper-item >
             <swiper-item >
-                <image class='tutorial_img' src='https://static.heygears.com/wxapp/imgs/tutorial/pro4.jpg'></image>
+                <image class='tutorial_img' src='https://static.heys.com/wxapp/imgs/tutorial/pro4.jpg'></image>
             </swiper-item >
             <swiper-item >
-                <image class='tutorial_img' src='https://static.heygears.com/wxapp/imgs/tutorial/pro5_2.jpg'></image>
+                <image class='tutorial_img' src='https://static.heys.com/wxapp/imgs/tutorial/pro5_2.jpg'></image>
             </swiper-item >
         </block>
         <block  wx:else>
             <swiper-item >
-                <image class='tutorial_img' src='https://static.heygears.com/wxapp/imgs/tutorial/syren1.jpg'></image>
+                <image class='tutorial_img' src='https://static.heys.com/wxapp/imgs/tutorial/syren1.jpg'></image>
             </swiper-item >
             <swiper-item >
-                <image class='tutorial_img' src='https://static.heygears.com/wxapp/imgs/tutorial/syren2.jpg'></image>
+                <image class='tutorial_img' src='https://static.heys.com/wxapp/imgs/tutorial/syren2.jpg'></image>
             </swiper-item >
             <swiper-item >
-                <image class='tutorial_img' src='https://static.heygears.com/wxapp/imgs/tutorial/syren3.jpg'></image>
+                <image class='tutorial_img' src='https://static.heys.com/wxapp/imgs/tutorial/syren3.jpg'></image>
             </swiper-item >
         </block>
         <swiper-item>

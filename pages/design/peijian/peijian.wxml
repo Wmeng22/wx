@@ -54,11 +54,11 @@
             </view>
             <block wx:if='{{subitem.issale == 1}}'>
                 <view class='subtractIconWrap'>
-                    <image data-idx='{{idx}}' data-subidx='{{subidx}}' bindtap='subtract' class='subtractIcon' src='https://static.heygears.com/wxapp/imgs/subtract.png'></image>
+                    <image data-idx='{{idx}}' data-subidx='{{subidx}}' bindtap='subtract' class='subtractIcon' src='https://static.heys.com/wxapp/imgs/subtract.png'></image>
                 </view>
                 <text class="quantity">{{subitem.quantity*1}}</text>
                 <view class="addIconWrap">
-                    <image data-idx='{{idx}}' data-subidx='{{subidx}}' bindtap='add' class='addIcon' src='https://static.heygears.com/wxapp/imgs/add.png'></image>
+                    <image data-idx='{{idx}}' data-subidx='{{subidx}}' bindtap='add' class='addIcon' src='https://static.heys.com/wxapp/imgs/add.png'></image>
                 </view>
             </block>
             <block wx:else>

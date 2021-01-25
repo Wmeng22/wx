@@ -74,7 +74,7 @@
         <view class="flex_column">
             <text class='t1'>列表为空</text>
             <text class='t2'>开始定制第一款专属耳机吧!</text>
-            <image class="icon" src='https://static.heygears.com/wxapp/imgs/icon_design@2x.png'></image>
+            <image class="icon" src='https://static.heys.com/wxapp/imgs/icon_design@2x.png'></image>
             <navigator class="start"  open-type="reLaunch" url='/pages/index/index'>开始定制</navigator>
         </view>
     </view>    

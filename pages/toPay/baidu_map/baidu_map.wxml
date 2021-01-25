@@ -1,7 +1,7 @@
 <view class="map_container"> 
   <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" bindmarkertap="makertap"></map> 
 </view> 
-<image bindtap='fixedPosition' class='fixedPosition' src='https://static.heygears.com/wxapp/imgs/icon_location@2x.png'></image>
+<image bindtap='fixedPosition' class='fixedPosition' src='https://static.heys.com/wxapp/imgs/icon_location@2x.png'></image>
 <view wx:if='{{!showDetail}}' class='placeList {{!showMap?"hide":""}}' enable-back-to-top >
   <view bindtap='showMap' class="title"><view class='line'></view>附近共 {{count}} 家助听器店</view>
   <!--<scroll-view class='scrollView' scroll-y style="width: 100%">-->

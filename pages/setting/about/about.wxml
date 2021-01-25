@@ -1,7 +1,7 @@
 <view class="container">
     
     <view class="log">
-        <image class="logo_img" src='https://static.heygears.com/wxapp/imgs/SYREN@2x.png'></image>
+        <image class="logo_img" src='https://static.heys.com/wxapp/imgs/SYREN@2x.png'></image>
         <text class="name">Syren系列耳机定制</text>
         <text class="ban">版本：2.0</text>
     </view>

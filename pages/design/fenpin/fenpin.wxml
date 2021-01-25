@@ -5,11 +5,11 @@
           </view>
           <view wx:if='{{item.product_id == 10015}}' class="productTip">增加贵金属与CIEMs私模定制</view>
           <view  bindtap='openQuestion'  class='questionWrap' wx:if='{{item.product_id == 10015}}' >
-              <image src='https://static.heygears.com/wxapp/imgs/问号.png' class='question' ></image>
+              <image src='https://static.heys.com/wxapp/imgs/问号.png' class='question' ></image>
           </view>
           <view data-pid='{{item.product_id}}' data-idx='{{idx}}' data-subidx='{{subidx}}' bindtap='choose_fenpin' class="product" wx:key='{{subidx}}' wx:for="{{item.ptylist}}" wx:for-index="subidx" wx:for-item="subitem">
               <image src='{{subitem.attribute_imgurl}}' class="proImg"></image>
-              <!--<image src='https://static.heygears.com/wxapp/linshi/single_dynamic_big@2x.png' class="proImg"></image>-->
+              <!--<image src='https://static.heys.com/wxapp/linshi/single_dynamic_big@2x.png' class="proImg"></image>-->
               <view class="proName  {{active==idx&&active_sub==subidx?'highlighted':''}}">{{subitem.property_name}}</view>
               <view class="proDes">
                   <view class="{{active==idx&&active_sub==subidx?'highlighted':''}}"  wx:key='{{subsubidx}}' wx:for="{{subitem.property_des}}" wx:for-index="subsubidx" wx:for-item="subsubitem">{{subsubitem}}</view>
@@ -17,17 +17,17 @@
               <view class='proPrice {{active==idx&&active_sub==subidx?"highlighted":""}}'>¥{{subitem.property_price*1 + item.sale_price*1}}
                 <text class='proPrice_t {{active==idx&&active_sub==subidx?"highlighted":""}}'>起</text>
               </view>
-              <image wx:if='{{active==idx && active_sub==subidx}}' class='choosedIcon' src='https://static.heygears.com/wxapp/imgs/icon_selected_sel44x44@2x.png' ></image>
+              <image wx:if='{{active==idx && active_sub==subidx}}' class='choosedIcon' src='https://static.heys.com/wxapp/imgs/icon_selected_sel44x44@2x.png' ></image>
           </view>
       </view>
 </view>
 <view class='detailWrap' wx:if='{{showDetail}}'  animation='{{animationData}}'>
     <swiper  bindchange="swiperChange" current="{{currentTab}}" circular='{{circular}}'  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
         <view class='Pre'  bindtap='preCurrent'>
-            <image src='https://static.heygears.com/wxapp/imgs/leftA.png'></image>
+            <image src='https://static.heys.com/wxapp/imgs/leftA.png'></image>
         </view>
         <view class='Next'  bindtap='nextCurrent'>
-            <image src='https://static.heygears.com/wxapp/imgs/rightA.png'></image>
+            <image src='https://static.heys.com/wxapp/imgs/rightA.png'></image>
         </view>
         <!--<block wx:key='{{idx}}' wx:for="{{prolist}}" wx:for-index="idx" wx:for-item="item">-->
             <swiper-item  data-pid='{{item.product_id}}' data-idx='{{item.idx}}' data-subidx='{{item.subidx}}' wx:key='{{subidx}}' wx:for="{{fenpinArr}}" wx:for-index="subidx" wx:for-item="subitem">
@@ -36,7 +36,7 @@
                 </view>
                 <view class='propertyWrap'>
                     <!--<image class='propertyImg' src='{{subitem.attribute_imgurl}}'></image>-->
-                    <image src='https://static.heygears.com/wxapp/linshi/single_dynamic_big@2x.png' class="propertyImg"></image>
+                    <image src='https://static.heys.com/wxapp/linshi/single_dynamic_big@2x.png' class="propertyImg"></image>
                     <view class='propertyName'>{{subitem.property_name}}</view>
                     <view class='propertyPrice'>¥{{subitem.property_price*1 + subitem.sale_price*1}} 起</view>
                 </view>
@@ -49,7 +49,7 @@
                     </view>
                 </view>
                 <view bindtap='go' class=" desc-detail {{subidx==currentTab?'secanimation': ''}}">
-                    <image src="https://static.heygears.com/hg_website_v2.0/static/imgs/YpvaV2R.png" alt="" />
+                    <image src="https://static.heys.com/hg_website_v2.0/static/imgs/YpvaV2R.png" alt="" />
                 </view>
             </swiper-item>
         <!--</block>-->
@@ -59,7 +59,7 @@
 
 <view class="fade" wx:if='{{showQuestion}}' bindtap='remove_question_fade' catchtouchmove='remove_question_fade'></view>
 <view class='showQuestion' wx:if='{{showQuestion}}'>
-    <image class='closeQuestion' bindtap='remove_question_fade' src='https://static.heygears.com/wxapp/imgs/closeICON.png'></image>
+    <image class='closeQuestion' bindtap='remove_question_fade' src='https://static.heys.com/wxapp/imgs/closeICON.png'></image>
     <view class='title'>注意</view>
     <view class='content'>SYREN PRO提供贵金属材质及CIEMs定制；</view>
     <view class='content'>SYREN PRO与普通版的差别不仅在配置与价格上，PRO版需要您花费一些时间到线下门店提供耳印；</view>

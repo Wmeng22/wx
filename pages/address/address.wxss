@@ -36,7 +36,7 @@ background-color: #1a1a1a
 .arrow{
     width: 20rpx;
     height: 20rpx;
-    background: url('https://static.heygears.com/wxapp/imgs/icon_pull.png') no-repeat center 5rpx;
+    background: url('https://static.heys.com/wxapp/imgs/icon_pull.png') no-repeat center 5rpx;
     display: inline-block;
     background-size: 18rpx 10rpx;
 }

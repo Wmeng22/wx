@@ -31,8 +31,8 @@
       <view class="wrap">
         <input name='code' bindblur='isCodeNull'  placeholder="请输入验证码" value='{{code}}' />
         <text class='err_tip' wx:if="{{code_tip}}">验证码不能为空</text>
-        <image class='tip_img' wx:if="{{isCorrect}}" style='width:36rpx;height:36rpx' src="https://static.heygears.com/wxapp/imgs/icon_correct36x36@2x.png"></image>
-        <image class='tip_img' wx:if="{{isWrong}}" style='width:36rpx;height:36rpx' src="https://static.heygears.com/wxapp/imgs/icon_wrong36x36@2x.png"></image>
+        <image class='tip_img' wx:if="{{isCorrect}}" style='width:36rpx;height:36rpx' src="https://static.heys.com/wxapp/imgs/icon_correct36x36@2x.png"></image>
+        <image class='tip_img' wx:if="{{isWrong}}" style='width:36rpx;height:36rpx' src="https://static.heys.com/wxapp/imgs/icon_wrong36x36@2x.png"></image>
       </view>
       <button type="submit" bindtap='submit' class='submit'>注册</button>
     </form>

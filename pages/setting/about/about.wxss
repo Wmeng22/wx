@@ -31,7 +31,7 @@
     color:#ffffff;
     font-size: 30rpx;
     border-bottom: 1px solid #2a2a2a;
-    background:url('https://static.heygears.com/wxapp/imgs/icon_arrow20X20@2x.png') no-repeat center right;
+    background:url('https://static.heys.com/wxapp/imgs/icon_arrow20X20@2x.png') no-repeat center right;
     background-size: 20rpx 20rpx;
 }
 .list .li .icon{

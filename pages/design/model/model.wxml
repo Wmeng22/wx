@@ -10,7 +10,7 @@
             </view>
         </view>
         <view class='modelPrice'> ¥ {{item.property_price*1 + fenpinPrice*1}}</view>
-        <image bindtap='openQuestion' src='https://static.heygears.com/wxapp/imgs/问号.png' class='question' wx:if='{{item.property_number == "PRIVATEMODEL"}}' ></image>
+        <image bindtap='openQuestion' src='https://static.heys.com/wxapp/imgs/问号.png' class='question' wx:if='{{item.property_number == "PRIVATEMODEL"}}' ></image>
     </view>
 </view>
 <view wx:else class='treaty'>
@@ -29,7 +29,7 @@
 </view>
 <view class="fade" wx:if='{{showQuestion}}' bindtap='remove_question_fade' catchtouchmove='remove_question_fade'></view>
 <view class='showQuestion' wx:if='{{showQuestion}}'>
-    <image class='closeQuestion' bindtap='remove_question_fade' src='https://static.heygears.com/wxapp/imgs/closeICON.png'></image>
+    <image class='closeQuestion' bindtap='remove_question_fade' src='https://static.heys.com/wxapp/imgs/closeICON.png'></image>
     <view class='title'>注意</view>
     <view class='content'>CIEMs是一种高度定制化的耳机解决方案，需要您提供耳印；</view>
     <view class='content'>您可在附近助听器门店采集耳印，然后将耳印寄送回黑格科技；</view>

@@ -82,20 +82,20 @@ view,input,button,textarea{
 .header .panoramic_view{
     /*border-radius: 6rpx 0 0 6rpx;*/
     right: 138rpx;
-    background: #0e0f0f url('https://static.heygears.com/wxapp/imgs/icon_all@2x.png') no-repeat  32rpx 13rpx;
+    background: #0e0f0f url('https://static.heys.com/wxapp/imgs/icon_all@2x.png') no-repeat  32rpx 13rpx;
     background-size: 35rpx 35rpx;
 }
 .header .home_page{
     border-radius: 0 6rpx 6rpx 0;
     right: 42rpx;
-    background: #0e0f0f url('https://static.heygears.com/wxapp/imgs/icon_home@2x.png') no-repeat  32rpx 13rpx;
+    background: #0e0f0f url('https://static.heys.com/wxapp/imgs/icon_home@2x.png') no-repeat  32rpx 13rpx;
     background-size: 35rpx 35rpx;
 }
 .header .customer_service{
      border-radius: 0 6rpx 6rpx 0;
      /*right: 234rpx;*/
      right: 138rpx;
-     background: #0e0f0f url('https://static.heygears.com/wxapp/imgs/icon_service.png') no-repeat  32rpx 13rpx;
+     background: #0e0f0f url('https://static.heys.com/wxapp/imgs/icon_service.png') no-repeat  32rpx 13rpx;
      background-size: 35rpx 35rpx;
 }
 /* 底部按钮 带价格 start*/
@@ -112,11 +112,11 @@ view,input,button,textarea{
     height: 100%;
     width: 180rpx;
     box-sizing: border-box;
-    background: #4d4d4d url('https://static.heygears.com/wxapp/imgs/icon_back@2x.png') no-repeat  69rpx 22rpx; 
+    background: #4d4d4d url('https://static.heys.com/wxapp/imgs/icon_back@2x.png') no-repeat  69rpx 22rpx; 
     background-size: 40rpx 44rpx;
 }
 .bottom_price .goPre.isDesign{
-    background: #4d4d4d url('https://static.heygears.com/wxapp/imgs/icon_close40@2x.png') no-repeat  69rpx 22rpx; 
+    background: #4d4d4d url('https://static.heys.com/wxapp/imgs/icon_close40@2x.png') no-repeat  69rpx 22rpx; 
     background-size: 40rpx 44rpx;
 }
 .bottom_price .price_wrap{
@@ -139,11 +139,11 @@ view,input,button,textarea{
     height: 100%;
     width: 180rpx;
     box-sizing: border-box;
-    background: #c6451b url('https://static.heygears.com/wxapp/imgs/icon_next@2x.png') no-repeat  69rpx 22rpx;
+    background: #c6451b url('https://static.heys.com/wxapp/imgs/icon_next@2x.png') no-repeat  69rpx 22rpx;
     background-size: 40rpx 44rpx;
 }
 .bottom_price .goNext.isDesign{
-    background: #c6451b url('https://static.heygears.com/wxapp/imgs/icon_ok40@2x.png') no-repeat  69rpx 22rpx; 
+    background: #c6451b url('https://static.heys.com/wxapp/imgs/icon_ok40@2x.png') no-repeat  69rpx 22rpx; 
     background-size: 40rpx 44rpx;
 }
 /* 底部按钮 带价格 end*/
@@ -178,7 +178,7 @@ view,input,button,textarea{
      width: 180rpx;
      height: 90rpx;
      line-height: 90rpx;
-     background: #4d4d4d url('https://static.heygears.com/wxapp/imgs/icon_back@2x.png') no-repeat  69rpx 22rpx;
+     background: #4d4d4d url('https://static.heys.com/wxapp/imgs/icon_back@2x.png') no-repeat  69rpx 22rpx;
      background-size: 40rpx 44rpx;
  }
  .bottom_btn_db .confirm{

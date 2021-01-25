@@ -27,38 +27,38 @@ Page({
                 if (makerecordlist[i].flow_seq == 1) {
                     tmp1.push(makerecordlist[i]);
                     if (makerecordlist[i].audit_user == "") {
-                        tmp1[0].img = 'https://static.heygears.com/wxapp/imgs/icon_printing_nor@2x.png';
+                        tmp1[0].img = 'https://static.heys.com/wxapp/imgs/icon_printing_nor@2x.png';
                     } else {
-                        tmp1[0].img = 'https://static.heygears.com/wxapp/imgs/icon_printing_sel@2x.png';
+                        tmp1[0].img = 'https://static.heys.com/wxapp/imgs/icon_printing_sel@2x.png';
                     }
                 } else if (makerecordlist[i].flow_seq == 2) {
                     tmp2.push(makerecordlist[i])
                     if (makerecordlist[i].audit_user == "") {
-                        tmp2[0].img = 'https://static.heygears.com/wxapp/imgs/icon_assemble_nor@2x.png';
+                        tmp2[0].img = 'https://static.heys.com/wxapp/imgs/icon_assemble_nor@2x.png';
                     } else {
-                        tmp2[0].img = 'https://static.heygears.com/wxapp/imgs/icon_assemble_sel@2x.png';
+                        tmp2[0].img = 'https://static.heys.com/wxapp/imgs/icon_assemble_sel@2x.png';
                     }
                 } else if (makerecordlist[i].flow_seq == 3) {
                     tmp3.push(makerecordlist[i])
                     if (makerecordlist[i].audit_user == "") {
-                        tmp3[0].img = 'https://static.heygears.com/wxapp/imgs/icon_handle_nor@2x.png';
+                        tmp3[0].img = 'https://static.heys.com/wxapp/imgs/icon_handle_nor@2x.png';
                     } else {
-                        tmp3[0].img = 'https://static.heygears.com/wxapp/imgs/icon_handle_sel@2x.png';
+                        tmp3[0].img = 'https://static.heys.com/wxapp/imgs/icon_handle_sel@2x.png';
                     }
                 } else if (makerecordlist[i].flow_seq == 4) {
                     tmp4.push(makerecordlist[i])
                     if (makerecordlist[i].audit_user == "") {
-                        tmp4[0].img = 'https://static.heygears.com/wxapp/imgs/icon_check_nor@2x.png';
+                        tmp4[0].img = 'https://static.heys.com/wxapp/imgs/icon_check_nor@2x.png';
                     } else {
-                        tmp4[0].img = 'https://static.heygears.com/wxapp/imgs/icon_check_sel@2x.png';
+                        tmp4[0].img = 'https://static.heys.com/wxapp/imgs/icon_check_sel@2x.png';
                     }
                 }
             }
             makerecordlist_now = [tmp1[0], tmp2[0], tmp3[0], tmp4[0]];
             var isShipped = false;
-            var img = 'https://static.heygears.com/wxapp/imgs/icon_delivery_nor@2x.png';
+            var img = 'https://static.heys.com/wxapp/imgs/icon_delivery_nor@2x.png';
             if(status == 107 || status == 106){
-                img = 'https://static.heygears.com/wxapp/imgs/icon_delivery_sel@2x.png';
+                img = 'https://static.heys.com/wxapp/imgs/icon_delivery_sel@2x.png';
             }
             makerecordlist_now.push({
                 flow_name: '已发货',

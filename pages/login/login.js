@@ -14,7 +14,7 @@ Page({
         count: 60,
         iphone_err_tip: '',
         setTimeout_time: null
-        // avatar: 'https://static.heygears.com/wxapp/imgs/avatar.png'
+        // avatar: 'https://static.heys.com/wxapp/imgs/avatar.png'
     },
     submit: function () {
         var that = this;
@@ -236,7 +236,7 @@ Page({
         //   })
         // }else{
         //   that.setData({
-        //     avatar:'https://static.heygears.com/wxapp/imgs/avatar.png'
+        //     avatar:'https://static.heys.com/wxapp/imgs/avatar.png'
         //   })
         // }
     },
